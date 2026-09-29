@@ -1,0 +1,30 @@
+id: micro-coffee-accelerator
+name: micro-coffee-accelerator
+version: 0.1.0
+services:
+  auth:
+    enabled: true
+    password:
+      enabled: false
+    fabric:
+      enabled: true
+    allowedRedirectUris:
+      - http://127.0.0.1:4186
+      - http://127.0.0.1:4186/auth/callback
+      - http://127.0.0.1:4187
+      - http://localhost:5174
+      - http://127.0.0.1:5174
+  data:
+    enabled: true
+    dialect: mssql
+  storage:
+    enabled: false
+  functions:
+    enabled: false
+  staticHosting:
+    enabled: true
+    root: .
+    folder: dist
+    buildCommand: npm run build
+    indexDocument: index.html
+    assetAccess: protected

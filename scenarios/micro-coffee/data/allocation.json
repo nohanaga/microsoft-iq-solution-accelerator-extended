@@ -1,0 +1,57 @@
+{
+  "datasetId": "maikuro-jp-v1:allocation-demo",
+  "version": "2026-09-22.2",
+  "asOf": "2026-07-08T18:00:00+09:00",
+  "dataOrigin": "synthetic",
+  "description": "Rayfin に登録する供給停止・受注引当の合成シナリオ。実取引ではありません。商品・店舗・供給会社は operations の既存レコードを参照します。",
+  "customers": [
+    { "id": "CUS-ALLOC-001", "displayName": "引当検証顧客01", "loyaltyTier": "VIP" },
+    { "id": "CUS-ALLOC-002", "displayName": "引当検証顧客02", "loyaltyTier": "VIP" },
+    { "id": "CUS-ALLOC-003", "displayName": "引当検証顧客03", "loyaltyTier": "一般" },
+    { "id": "CUS-ALLOC-004", "displayName": "引当検証顧客04", "loyaltyTier": "一般" }
+  ],
+  "orders": [
+    { "id": "DEMO-ALLOC-1", "customerId": "CUS-ALLOC-001", "storeId": "STR-04", "orderedAt": "2026-07-08T18:00:00+09:00", "pickupAt": "2026-07-08T18:00:00+09:00", "fulfilledAt": null, "status": "confirmed" },
+    { "id": "DEMO-ALLOC-2", "customerId": "CUS-ALLOC-002", "storeId": "STR-04", "orderedAt": "2026-07-08T18:00:00+09:00", "pickupAt": "2026-07-08T18:00:00+09:00", "fulfilledAt": null, "status": "confirmed" },
+    { "id": "DEMO-ALLOC-3", "customerId": "CUS-ALLOC-003", "storeId": "STR-04", "orderedAt": "2026-07-08T18:00:00+09:00", "pickupAt": "2026-07-08T18:00:00+09:00", "fulfilledAt": null, "status": "confirmed" },
+    { "id": "DEMO-ALLOC-4", "customerId": "CUS-ALLOC-004", "storeId": "STR-04", "orderedAt": "2026-07-08T18:00:00+09:00", "pickupAt": "2026-07-08T18:00:00+09:00", "fulfilledAt": null, "status": "confirmed" },
+    { "id": "ALLOC-SUP01-1", "customerId": "CUS-ALLOC-001", "storeId": "STR-01", "orderedAt": "2026-07-08T18:00:00+09:00", "pickupAt": "2026-07-08T18:00:00+09:00", "fulfilledAt": null, "status": "confirmed" },
+    { "id": "ALLOC-SUP01-2", "customerId": "CUS-ALLOC-002", "storeId": "STR-01", "orderedAt": "2026-07-08T18:00:00+09:00", "pickupAt": "2026-07-08T18:00:00+09:00", "fulfilledAt": null, "status": "confirmed" },
+    { "id": "ALLOC-SUP01-3", "customerId": "CUS-ALLOC-003", "storeId": "STR-01", "orderedAt": "2026-07-08T18:00:00+09:00", "pickupAt": "2026-07-08T18:00:00+09:00", "fulfilledAt": null, "status": "confirmed" },
+    { "id": "ALLOC-SUP03-1", "customerId": "CUS-ALLOC-001", "storeId": "STR-02", "orderedAt": "2026-07-08T18:00:00+09:00", "pickupAt": "2026-07-08T18:00:00+09:00", "fulfilledAt": null, "status": "confirmed" },
+    { "id": "ALLOC-SUP03-2", "customerId": "CUS-ALLOC-002", "storeId": "STR-02", "orderedAt": "2026-07-08T18:00:00+09:00", "pickupAt": "2026-07-08T18:00:00+09:00", "fulfilledAt": null, "status": "confirmed" },
+    { "id": "ALLOC-SUP03-3", "customerId": "CUS-ALLOC-003", "storeId": "STR-02", "orderedAt": "2026-07-08T18:00:00+09:00", "pickupAt": "2026-07-08T18:00:00+09:00", "fulfilledAt": null, "status": "confirmed" },
+    { "id": "ALLOC-SUP04-1", "customerId": "CUS-ALLOC-001", "storeId": "STR-04", "orderedAt": "2026-07-08T18:00:00+09:00", "pickupAt": "2026-07-08T18:00:00+09:00", "fulfilledAt": null, "status": "confirmed" },
+    { "id": "ALLOC-SUP04-2", "customerId": "CUS-ALLOC-002", "storeId": "STR-04", "orderedAt": "2026-07-08T18:00:00+09:00", "pickupAt": "2026-07-08T18:00:00+09:00", "fulfilledAt": null, "status": "confirmed" },
+    { "id": "ALLOC-SUP05-1", "customerId": "CUS-ALLOC-001", "storeId": "STR-06", "orderedAt": "2026-07-08T18:00:00+09:00", "pickupAt": "2026-07-08T18:00:00+09:00", "fulfilledAt": null, "status": "confirmed" },
+    { "id": "ALLOC-SUP05-2", "customerId": "CUS-ALLOC-002", "storeId": "STR-06", "orderedAt": "2026-07-08T18:00:00+09:00", "pickupAt": "2026-07-08T18:00:00+09:00", "fulfilledAt": null, "status": "confirmed" },
+    { "id": "ALLOC-SUP05-3", "customerId": "CUS-ALLOC-003", "storeId": "STR-06", "orderedAt": "2026-07-08T18:00:00+09:00", "pickupAt": "2026-07-08T18:00:00+09:00", "fulfilledAt": null, "status": "confirmed" }
+  ],
+  "orderLines": [
+    { "id": "DEMO-ALLOC-1-LINE", "orderId": "DEMO-ALLOC-1", "productId": "PRD-002", "quantity": 6, "priceExTax": 600, "taxPercent": 8, "discountExTax": 0 },
+    { "id": "DEMO-ALLOC-2-LINE", "orderId": "DEMO-ALLOC-2", "productId": "PRD-002", "quantity": 4, "priceExTax": 600, "taxPercent": 8, "discountExTax": 0 },
+    { "id": "DEMO-ALLOC-3-LINE", "orderId": "DEMO-ALLOC-3", "productId": "PRD-002", "quantity": 6, "priceExTax": 600, "taxPercent": 8, "discountExTax": 0 },
+    { "id": "DEMO-ALLOC-4-LINE", "orderId": "DEMO-ALLOC-4", "productId": "PRD-003", "quantity": 5, "priceExTax": 650, "taxPercent": 8, "discountExTax": 0 },
+    { "id": "ALLOC-SUP01-1-LINE", "orderId": "ALLOC-SUP01-1", "productId": "PRD-007", "quantity": 4, "priceExTax": 400, "taxPercent": 8, "discountExTax": 0 },
+    { "id": "ALLOC-SUP01-2-LINE", "orderId": "ALLOC-SUP01-2", "productId": "PRD-011", "quantity": 3, "priceExTax": 350, "taxPercent": 8, "discountExTax": 0 },
+    { "id": "ALLOC-SUP01-3-LINE", "orderId": "ALLOC-SUP01-3", "productId": "PRD-007", "quantity": 6, "priceExTax": 400, "taxPercent": 8, "discountExTax": 0 },
+    { "id": "ALLOC-SUP03-1-LINE", "orderId": "ALLOC-SUP03-1", "productId": "PRD-004", "quantity": 5, "priceExTax": 350, "taxPercent": 8, "discountExTax": 0 },
+    { "id": "ALLOC-SUP03-2-LINE", "orderId": "ALLOC-SUP03-2", "productId": "PRD-005", "quantity": 3, "priceExTax": 550, "taxPercent": 8, "discountExTax": 0 },
+    { "id": "ALLOC-SUP03-3-LINE", "orderId": "ALLOC-SUP03-3", "productId": "PRD-004", "quantity": 4, "priceExTax": 350, "taxPercent": 8, "discountExTax": 0 },
+    { "id": "ALLOC-SUP04-1-LINE", "orderId": "ALLOC-SUP04-1", "productId": "PRD-003", "quantity": 6, "priceExTax": 650, "taxPercent": 8, "discountExTax": 0 },
+    { "id": "ALLOC-SUP04-2-LINE", "orderId": "ALLOC-SUP04-2", "productId": "PRD-003", "quantity": 4, "priceExTax": 650, "taxPercent": 8, "discountExTax": 0 },
+    { "id": "ALLOC-SUP05-1-LINE", "orderId": "ALLOC-SUP05-1", "productId": "PRD-009", "quantity": 4, "priceExTax": 400, "taxPercent": 8, "discountExTax": 0 },
+    { "id": "ALLOC-SUP05-2-LINE", "orderId": "ALLOC-SUP05-2", "productId": "PRD-010", "quantity": 3, "priceExTax": 550, "taxPercent": 8, "discountExTax": 0 },
+    { "id": "ALLOC-SUP05-3-LINE", "orderId": "ALLOC-SUP05-3", "productId": "PRD-009", "quantity": 5, "priceExTax": 400, "taxPercent": 8, "discountExTax": 0 }
+  ],
+  "stocks": [
+    { "id": "ALLOC-STOCK-STR04-PRD002", "storeId": "STR-04", "productId": "PRD-002", "onHand": 8 },
+    { "id": "ALLOC-STOCK-STR01-PRD007", "storeId": "STR-01", "productId": "PRD-007", "onHand": 6 },
+    { "id": "ALLOC-STOCK-STR01-PRD011", "storeId": "STR-01", "productId": "PRD-011", "onHand": 2 },
+    { "id": "ALLOC-STOCK-STR02-PRD004", "storeId": "STR-02", "productId": "PRD-004", "onHand": 6 },
+    { "id": "ALLOC-STOCK-STR02-PRD005", "storeId": "STR-02", "productId": "PRD-005", "onHand": 2 },
+    { "id": "ALLOC-STOCK-STR04-PRD003", "storeId": "STR-04", "productId": "PRD-003", "onHand": 7 },
+    { "id": "ALLOC-STOCK-STR06-PRD009", "storeId": "STR-06", "productId": "PRD-009", "onHand": 5 },
+    { "id": "ALLOC-STOCK-STR06-PRD010", "storeId": "STR-06", "productId": "PRD-010", "onHand": 2 }
+  ]
+}

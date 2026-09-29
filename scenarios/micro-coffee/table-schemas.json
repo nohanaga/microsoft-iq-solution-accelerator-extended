@@ -1,0 +1,1426 @@
+{
+  "version": 1,
+  "description": "Explicit schemas imported from the existing data compiler; rows are rebuilt from canonical sources.",
+  "tables": [
+    {
+      "name": "mc_v3_supply_products",
+      "source": "operations",
+      "table": "products",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "category": {
+            "type": "string",
+            "minLength": 1
+          },
+          "serving": {
+            "type": "string",
+            "minLength": 1
+          },
+          "priceExTax": {
+            "type": "number"
+          },
+          "taxPercent": {
+            "type": "number"
+          },
+          "supplierId": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "category",
+          "serving",
+          "priceExTax",
+          "taxPercent",
+          "supplierId"
+        ],
+        "additionalProperties": false
+      },
+      "fields": [
+        "id",
+        "name",
+        "category",
+        "serving",
+        "priceExTax",
+        "taxPercent",
+        "supplierId"
+      ],
+      "primaryKey": [
+        "id"
+      ]
+    },
+    {
+      "name": "mc_v3_supply_stores",
+      "source": "operations",
+      "table": "stores",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "city": {
+            "type": "string",
+            "minLength": 1
+          },
+          "coldEquipment": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "cupsPerDay": {
+            "type": [
+              "number",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "city",
+          "coldEquipment",
+          "cupsPerDay"
+        ],
+        "additionalProperties": false
+      },
+      "fields": [
+        "id",
+        "name",
+        "city",
+        "coldEquipment",
+        "cupsPerDay"
+      ],
+      "primaryKey": [
+        "id"
+      ]
+    },
+    {
+      "name": "mc_v3_supply_suppliers",
+      "source": "operations",
+      "table": "suppliers",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "city": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "city"
+        ],
+        "additionalProperties": false
+      },
+      "fields": [
+        "id",
+        "name",
+        "city"
+      ],
+      "primaryKey": [
+        "id"
+      ]
+    },
+    {
+      "name": "mc_v3_supply_customers",
+      "source": "operations",
+      "table": "customers",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "displayName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "loyaltyTier": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "displayName",
+          "loyaltyTier"
+        ],
+        "additionalProperties": false
+      },
+      "fields": [
+        "id",
+        "displayName",
+        "loyaltyTier"
+      ],
+      "primaryKey": [
+        "id"
+      ]
+    },
+    {
+      "name": "mc_v3_supply_orders",
+      "source": "operations",
+      "table": "orders",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "customerId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "storeId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "orderedAt": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+          },
+          "fulfilledAt": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time",
+                "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "completed",
+              "cancelled",
+              "delayed"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "customerId",
+          "storeId",
+          "orderedAt",
+          "fulfilledAt",
+          "status"
+        ],
+        "additionalProperties": false
+      },
+      "fields": [
+        "id",
+        "customerId",
+        "storeId",
+        "orderedAt",
+        "fulfilledAt",
+        "status"
+      ],
+      "primaryKey": [
+        "id"
+      ]
+    },
+    {
+      "name": "mc_v3_supply_orderLines",
+      "source": "operations",
+      "table": "orderLines",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "orderId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "productId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "quantity": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "priceExTax": {
+            "type": "number"
+          },
+          "taxPercent": {
+            "type": "number"
+          },
+          "discountExTax": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "id",
+          "orderId",
+          "productId",
+          "quantity",
+          "priceExTax",
+          "taxPercent",
+          "discountExTax"
+        ],
+        "additionalProperties": false
+      },
+      "fields": [
+        "id",
+        "orderId",
+        "productId",
+        "quantity",
+        "priceExTax",
+        "taxPercent",
+        "discountExTax"
+      ],
+      "primaryKey": [
+        "id"
+      ]
+    },
+    {
+      "name": "mc_v3_supply_reviews",
+      "source": "operations",
+      "table": "reviews",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "lineId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "customerId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "revision": {
+            "type": "integer",
+            "exclusiveMinimum": 0,
+            "maximum": 9007199254740991
+          },
+          "rating": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "publishedAt": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+          },
+          "analyzedAt": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time",
+                "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "published",
+              "pending",
+              "withdrawn"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "lineId",
+          "customerId",
+          "revision",
+          "rating",
+          "text",
+          "publishedAt",
+          "analyzedAt",
+          "status"
+        ],
+        "additionalProperties": false
+      },
+      "fields": [
+        "id",
+        "lineId",
+        "customerId",
+        "revision",
+        "rating",
+        "text",
+        "publishedAt",
+        "analyzedAt",
+        "status"
+      ],
+      "primaryKey": [
+        "id"
+      ]
+    },
+    {
+      "name": "mc_v3_supply_reviewTopics",
+      "source": "operations",
+      "table": "reviewTopics",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reviewId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "revision": {
+            "type": "integer",
+            "exclusiveMinimum": 0,
+            "maximum": 9007199254740991
+          },
+          "topic": {
+            "type": "string",
+            "minLength": 1
+          },
+          "classifierVersion": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "reviewId",
+          "revision",
+          "topic",
+          "classifierVersion"
+        ],
+        "additionalProperties": false
+      },
+      "fields": [
+        "id",
+        "reviewId",
+        "revision",
+        "topic",
+        "classifierVersion"
+      ],
+      "primaryKey": [
+        "id"
+      ]
+    },
+    {
+      "name": "mc_v3_supply_serviceFeedback",
+      "source": "operations",
+      "table": "serviceFeedback",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "orderId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "rating": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "dissatisfied": {
+            "type": "boolean"
+          },
+          "publishedAt": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+          }
+        },
+        "required": [
+          "id",
+          "orderId",
+          "rating",
+          "text",
+          "dissatisfied",
+          "publishedAt"
+        ],
+        "additionalProperties": false
+      },
+      "fields": [
+        "id",
+        "orderId",
+        "rating",
+        "text",
+        "dissatisfied",
+        "publishedAt"
+      ],
+      "primaryKey": [
+        "id"
+      ]
+    },
+    {
+      "name": "mc_v3_supply_shipments",
+      "source": "operations",
+      "table": "shipments",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "supplierId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "storeId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "expectedAt": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+          },
+          "arrivedAt": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time",
+                "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "arrived",
+              "delayed"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "supplierId",
+          "storeId",
+          "expectedAt",
+          "arrivedAt",
+          "status",
+          "reason"
+        ],
+        "additionalProperties": false
+      },
+      "fields": [
+        "id",
+        "supplierId",
+        "storeId",
+        "expectedAt",
+        "arrivedAt",
+        "status",
+        "reason"
+      ],
+      "primaryKey": [
+        "id"
+      ]
+    },
+    {
+      "name": "mc_v3_supply_supplyImpacts",
+      "source": "operations",
+      "table": "supplyImpacts",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "shipmentId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "lineId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "productId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "shortageAt": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+          },
+          "evidence": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "shipmentId",
+          "lineId",
+          "productId",
+          "shortageAt",
+          "evidence"
+        ],
+        "additionalProperties": false
+      },
+      "fields": [
+        "id",
+        "shipmentId",
+        "lineId",
+        "productId",
+        "shortageAt",
+        "evidence"
+      ],
+      "primaryKey": [
+        "id"
+      ]
+    },
+    {
+      "name": "mc_v3_development_products",
+      "source": "development",
+      "table": "products",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "beverage",
+              "blend"
+            ]
+          },
+          "unit": {
+            "type": "string",
+            "minLength": 1
+          },
+          "gramsPerUnit": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "category",
+          "unit",
+          "gramsPerUnit"
+        ],
+        "additionalProperties": false
+      },
+      "fields": [
+        "id",
+        "name",
+        "category",
+        "unit",
+        "gramsPerUnit"
+      ],
+      "primaryKey": [
+        "id"
+      ]
+    },
+    {
+      "name": "mc_v3_development_materials",
+      "source": "development",
+      "table": "materials",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "originId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "supplierId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "specification": {
+            "type": "string",
+            "minLength": 1
+          },
+          "pricePerKg": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "originId",
+          "supplierId",
+          "specification",
+          "pricePerKg"
+        ],
+        "additionalProperties": false
+      },
+      "fields": [
+        "id",
+        "name",
+        "originId",
+        "supplierId",
+        "specification",
+        "pricePerKg"
+      ],
+      "primaryKey": [
+        "id"
+      ]
+    },
+    {
+      "name": "mc_v3_development_origins",
+      "source": "development",
+      "table": "origins",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "region": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "region"
+        ],
+        "additionalProperties": false
+      },
+      "fields": [
+        "id",
+        "name",
+        "region"
+      ],
+      "primaryKey": [
+        "id"
+      ]
+    },
+    {
+      "name": "mc_v3_development_suppliers",
+      "source": "development",
+      "table": "suppliers",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "city": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "city"
+        ],
+        "additionalProperties": false
+      },
+      "fields": [
+        "id",
+        "name",
+        "city"
+      ],
+      "primaryKey": [
+        "id"
+      ]
+    },
+    {
+      "name": "mc_v3_development_facilities",
+      "source": "development",
+      "table": "facilities",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "name"
+        ],
+        "additionalProperties": false
+      },
+      "fields": [
+        "id",
+        "name"
+      ],
+      "primaryKey": [
+        "id"
+      ]
+    },
+    {
+      "name": "mc_v3_development_recipes",
+      "source": "development",
+      "table": "recipes",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "productId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "productId",
+          "name",
+          "status"
+        ],
+        "additionalProperties": false
+      },
+      "fields": [
+        "id",
+        "productId",
+        "name",
+        "status"
+      ],
+      "primaryKey": [
+        "id"
+      ]
+    },
+    {
+      "name": "mc_v3_development_recipeLines",
+      "source": "development",
+      "table": "recipeLines",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "recipeId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "materialId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "percent": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "maximum": 100
+          }
+        },
+        "required": [
+          "id",
+          "recipeId",
+          "materialId",
+          "percent"
+        ],
+        "additionalProperties": false
+      },
+      "fields": [
+        "id",
+        "recipeId",
+        "materialId",
+        "percent"
+      ],
+      "primaryKey": [
+        "id"
+      ]
+    },
+    {
+      "name": "mc_v3_development_plans",
+      "source": "development",
+      "table": "plans",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "productId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "recipeId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "facilityId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "units": {
+            "type": "integer",
+            "exclusiveMinimum": 0,
+            "maximum": 9007199254740991
+          },
+          "status": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "productId",
+          "recipeId",
+          "facilityId",
+          "units",
+          "status"
+        ],
+        "additionalProperties": false
+      },
+      "fields": [
+        "id",
+        "productId",
+        "recipeId",
+        "facilityId",
+        "units",
+        "status"
+      ],
+      "primaryKey": [
+        "id"
+      ]
+    },
+    {
+      "name": "mc_v3_development_reservations",
+      "source": "development",
+      "table": "reservations",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "planId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "materialId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "grams": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "id",
+          "planId",
+          "materialId",
+          "grams"
+        ],
+        "additionalProperties": false
+      },
+      "fields": [
+        "id",
+        "planId",
+        "materialId",
+        "grams"
+      ],
+      "primaryKey": [
+        "id"
+      ]
+    },
+    {
+      "name": "mc_v3_development_stocks",
+      "source": "development",
+      "table": "stocks",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "materialId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "facilityId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "grams": {
+            "anyOf": [
+              {
+                "type": "number",
+                "minimum": 0
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "materialId",
+          "facilityId",
+          "grams"
+        ],
+        "additionalProperties": false
+      },
+      "fields": [
+        "id",
+        "materialId",
+        "facilityId",
+        "grams"
+      ],
+      "primaryKey": [
+        "id"
+      ]
+    },
+    {
+      "name": "mc_v3_voices",
+      "source": "voices",
+      "table": "entries",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source": {
+            "type": "string",
+            "enum": [
+              "survey",
+              "social"
+            ]
+          },
+          "revision": {
+            "type": "integer",
+            "exclusiveMinimum": 0,
+            "maximum": 9007199254740991
+          },
+          "productId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "storeId": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "rating": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "topics": {
+            "type": "string"
+          },
+          "publishedAt": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+          },
+          "analyzedAt": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time",
+                "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "published",
+              "pending",
+              "withdrawn"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "source",
+          "revision",
+          "productId",
+          "storeId",
+          "rating",
+          "text",
+          "topics",
+          "publishedAt",
+          "analyzedAt",
+          "status"
+        ],
+        "additionalProperties": false
+      },
+      "fields": [
+        "id",
+        "source",
+        "revision",
+        "productId",
+        "storeId",
+        "rating",
+        "text",
+        "topics",
+        "publishedAt",
+        "analyzedAt",
+        "status"
+      ],
+      "primaryKey": [
+        "id"
+      ]
+    },
+    {
+      "name": "mc_v3_conversations",
+      "source": "chats",
+      "table": "conversations",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "storeId": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "channel": {
+            "type": "string",
+            "enum": [
+              "text",
+              "voice"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "included",
+              "withdrawn"
+            ]
+          },
+          "analyzedAt": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time",
+                "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "storeId",
+          "channel",
+          "status",
+          "analyzedAt"
+        ],
+        "additionalProperties": false
+      },
+      "fields": [
+        "id",
+        "storeId",
+        "channel",
+        "status",
+        "analyzedAt"
+      ],
+      "primaryKey": [
+        "id"
+      ]
+    },
+    {
+      "name": "mc_v3_messages",
+      "source": "chats",
+      "table": "messages",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "customer",
+              "assistant"
+            ]
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sentAt": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+          },
+          "productId": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "topics": {
+            "type": "string"
+          },
+          "conversationId": {
+            "type": "string"
+          },
+          "sequence": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          }
+        },
+        "required": [
+          "id",
+          "role",
+          "text",
+          "sentAt",
+          "productId",
+          "topics",
+          "conversationId",
+          "sequence"
+        ],
+        "additionalProperties": false
+      },
+      "fields": [
+        "id",
+        "role",
+        "text",
+        "sentAt",
+        "productId",
+        "topics",
+        "conversationId",
+        "sequence"
+      ],
+      "primaryKey": [
+        "id"
+      ]
+    },
+    {
+      "name": "mc_v3_sentiments",
+      "source": "sentiments",
+      "table": "entries",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "voiceId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "overall": {
+            "type": "string",
+            "enum": [
+              "positive",
+              "neutral",
+              "negative"
+            ]
+          },
+          "topics": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "voiceId",
+          "text",
+          "overall",
+          "topics"
+        ],
+        "additionalProperties": false
+      },
+      "fields": [
+        "voiceId",
+        "text",
+        "overall",
+        "topics"
+      ],
+      "primaryKey": [
+        "voiceId"
+      ]
+    },
+    {
+      "name": "mc_v3_metadata",
+      "source": "metadata",
+      "table": "metadata",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "payload": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "source",
+          "payload"
+        ],
+        "additionalProperties": false
+      },
+      "fields": [
+        "id",
+        "source",
+        "payload"
+      ],
+      "primaryKey": [
+        "id"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "conceptId": "CON-A",
+  "start": "2026-07-14",
+  "end": "2026-07-20",
+  "storeQuantities": {
+    "STR-04": 100,
+    "STR-06": 60
+  }
+}

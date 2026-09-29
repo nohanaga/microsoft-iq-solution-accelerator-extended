@@ -1,0 +1,139 @@
+{
+  "name": "<AGENT_NAME>",
+  "definition": {
+    "kind": "prompt",
+    "model": "<MODEL_DEPLOYMENT_NAME>",
+    "instructions": "<FULL_CONTENT_OF_scenarios/micro-coffee/prompts/agent-instructions.txt>",
+    "tools": [
+      {
+        "type": "function",
+        "name": "ui_navigate",
+        "description": "Propose switching the workspace page without updating business data.",
+        "strict": true,
+        "parameters": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "page": { "type": "string", "enum": ["reviews", "development", "blend", "supply"] },
+            "reason": { "type": "string", "description": "Explain the reason for changing the page." }
+          },
+          "required": ["page", "reason"]
+        }
+      },
+      {
+        "type": "function",
+        "name": "customer_voice_propose_filter",
+        "description": "Propose customer voice display filters without updating business data. Null preserves the current product, stores or date.",
+        "strict": true,
+        "parameters": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "productId": { "type": ["string", "null"] },
+            "storeIds": { "type": ["array", "null"], "items": { "type": "string" } },
+            "from": { "type": ["string", "null"], "description": "Start date, YYYY-MM-DD in JST." },
+            "to": { "type": ["string", "null"], "description": "End date, YYYY-MM-DD in JST." },
+            "source": { "type": "string", "enum": ["all", "review", "survey", "social", "chat"] },
+            "topic": { "type": "string", "description": "An empty string removes the topic filter." }
+          },
+          "required": ["productId", "storeIds", "from", "to", "source", "topic"]
+        }
+      },
+      {
+        "type": "function",
+        "name": "development_propose_scenario",
+        "description": "Propose an on-screen recipe and production scenario. Do not save or approve it. Use only IDs present in the screen or evidence.",
+        "strict": true,
+        "parameters": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "view": { "type": "string", "enum": ["beverage", "blend"] },
+            "productId": { "type": "string" },
+            "recipeId": { "type": "string" },
+            "facilityId": { "type": "string" },
+            "units": { "type": "integer", "description": "Production quantity, from 1 through 10000." },
+            "components": {
+              "type": ["array", "null"],
+              "description": "Null uses the registered recipe. Custom percentages must total 100.",
+              "items": {
+                "type": "object", "additionalProperties": false,
+                "properties": { "materialId": { "type": "string" }, "percent": { "type": "number" } },
+                "required": ["materialId", "percent"]
+              }
+            }
+          },
+          "required": ["view", "productId", "recipeId", "facilityId", "units", "components"]
+        }
+      },
+      {
+        "type": "function",
+        "name": "supply_propose_filter",
+        "description": "Propose supply and order display filters without updating business data. Null removes the store, supplier or date boundary.",
+        "strict": true,
+        "parameters": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "storeId": { "type": ["string", "null"] },
+            "supplierId": { "type": ["string", "null"] },
+            "from": { "type": ["string", "null"], "description": "Start date, YYYY-MM-DD in JST." },
+            "to": { "type": ["string", "null"], "description": "End date, YYYY-MM-DD in JST." },
+            "tab": { "type": "string", "enum": ["shipments", "orders"] },
+            "status": { "type": "string", "description": "For shipments: all, late, on-time, late-pending, unknown, scheduled. For orders: all, confirmed, completed, cancelled, delayed." },
+            "graphMode": { "type": "string", "enum": ["network", "impact"] }
+          },
+          "required": ["storeId", "supplierId", "from", "to", "tab", "status", "graphMode"]
+        }
+      },
+      {
+        "type": "function",
+        "name": "ontology_select_record",
+        "description": "Select a record in the ontology view. Use a table and record that exist in the specified model.",
+        "strict": true,
+        "parameters": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "model": { "type": "string", "enum": ["development", "supply"] },
+            "tableId": { "type": "string", "enum": ["customers", "facilities", "materials", "orderLines", "orders", "origins", "plans", "products", "recipeLines", "recipes", "reservations", "shipments", "stocks", "stores", "suppliers", "supplyImpacts"] },
+            "recordId": { "type": "string" }
+          },
+          "required": ["model", "tableId", "recordId"]
+        }
+      },
+      {
+        "type": "function",
+        "name": "copilot_open_reference",
+        "description": "Open one evidence reference presented in the same Data Copilot answer.",
+        "strict": true,
+        "parameters": {
+          "type": "object", "additionalProperties": false,
+          "properties": { "referenceId": { "type": "string" } },
+          "required": ["referenceId"]
+        }
+      },
+      {
+        "type": "work_iq_preview",
+        "project_connection_id": "<WORK_IQ_CONNECTION_RESOURCE_ID>"
+      },
+      {
+        "type": "fabric_iq_preview",
+        "server_label": "maikuro-development",
+        "server_url": "<DEVELOPMENT_ONTOLOGY_MCP_URL>",
+        "project_connection_id": "<DEVELOPMENT_FABRIC_IQ_CONNECTION_RESOURCE_ID>",
+        "require_approval": "always"
+      },
+      {
+        "type": "fabric_iq_preview",
+        "server_label": "maikuro-supply",
+        "server_url": "<SUPPLY_ONTOLOGY_MCP_URL>",
+        "project_connection_id": "<SUPPLY_FABRIC_IQ_CONNECTION_RESOURCE_ID>",
+        "require_approval": "always"
+      },
+      {
+        "type": "mcp",
+        "server_label": "maikuro-policies",
+        "server_url": "https://<SEARCH_SERVICE_NAME>.search.windows.net/knowledgebases/<KNOWLEDGE_BASE_NAME>/mcp?api-version=2026-08-01-preview",
+        "project_connection_id": "<KNOWLEDGE_BASE_CONNECTION_NAME>",
+        "allowed_tools": ["knowledge_base_retrieve"],
+        "require_approval": "never"
+      }
+    ]
+  }
+}

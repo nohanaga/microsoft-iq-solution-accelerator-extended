@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Microsoft Authentication</title>
+    <style>
+      :root { color: #161616; background: #f7f7f5; font-family: "BIZ UDPGothic", "Yu Gothic UI", Meiryo, sans-serif; }
+      body { min-height: 100vh; margin: 0; display: grid; place-items: center; }
+      main { width: min(320px, calc(100vw - 40px)); }
+      h1 { margin: 0 0 12px; font-size: 20px; }
+      p { margin: 0 0 20px; color: #525252; line-height: 1.6; }
+      button { min-height: 42px; padding: 0 18px; border: 1px solid #175d45; background: #175d45; color: white; font: inherit; cursor: pointer; }
+      button:focus-visible { outline: 3px solid #0f6cbd; outline-offset: 3px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Microsoft アカウント認証</h1>
+      <p>現在の Fabric ユーザーで認証を続けます。</p>
+      <button id="continue" type="button" disabled>続行</button>
+    </main>
+    <script type="module" src="/src/graph-auth-popup-relay.ts"></script>
+  </body>
+</html>

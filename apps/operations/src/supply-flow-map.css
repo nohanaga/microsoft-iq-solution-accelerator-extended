@@ -1,0 +1,119 @@
+.supply-flow-map { min-width: 0; }
+.sfm-toolbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 10px; }
+.sfm-counts { display: flex; flex-wrap: wrap; gap: 14px; }
+.sfm-counts span, .sfm-precision { display: flex; align-items: center; gap: 6px; font-size: 10px; color: var(--cp-text-muted); }
+.sfm-counts strong, .sfm-counts .is-late { color: var(--cp-danger); }
+.sfm-precision { padding: 4px 9px; border: 1px solid var(--cp-border); border-radius: 999px; background: var(--cp-surface-soft); }
+
+.sfm-canvas { position: relative; height: clamp(430px, 54vh, 620px); border: 1px solid var(--cp-border); border-radius: 10px; overflow: hidden; background: var(--cp-surface-soft); }
+.sfm-surface { display: block; width: 100%; height: 100%; cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none; }
+.sfm-surface.is-dragging { cursor: grabbing; }
+.sfm-tiles image { filter: saturate(0.32) brightness(1.09) contrast(0.86); }
+html:is([data-theme="dark"], [data-theme="cyber"], [data-theme="contrast"]) .sfm-tiles image { filter: invert(1) hue-rotate(180deg) saturate(0.3) brightness(0.82) contrast(1.05); }
+.sfm-paper-top { stop-color: var(--cp-surface); }
+.sfm-paper-bottom { stop-color: var(--cp-surface-soft); }
+.sfm-hub-core { stop-color: var(--cp-accent); stop-opacity: 0.1; }
+.sfm-hub-edge { stop-color: var(--cp-accent); stop-opacity: 0; }
+
+.sfm-flow { cursor: pointer; --tone: var(--cp-text-muted); }
+.sfm-flow.is-late { --tone: var(--cp-danger); }
+.sfm-flow.is-ontime { --tone: var(--cp-success); }
+.sfm-flow.is-scheduled { --tone: var(--cp-link); }
+.sfm-flow.is-unknown { --tone: var(--cp-warning); }
+.sfm-flow-hit { fill: none; stroke: transparent; stroke-width: 24; }
+.sfm-flow-line { fill: none; stroke: var(--tone); stroke-width: 2.6; stroke-linecap: round; transition: stroke-width 0.16s ease, opacity 0.16s ease; }
+.sfm-flow.is-open .sfm-flow-line { stroke-dasharray: 7 6; }
+.sfm-flow:hover .sfm-flow-line, .sfm-flow:focus-visible .sfm-flow-line { stroke-width: 4.4; }
+.sfm-flow:focus, .sfm-flow:focus-visible { outline: none; }
+.sfm-flow.is-selected .sfm-flow-line { stroke-width: 4.6; filter: url(#sfm-glow); }
+.sfm-flows.has-selection .sfm-flow:not(.is-selected) { opacity: 0.38; }
+.sfm-flows.has-selection .sfm-flow:not(.is-selected) .sfm-flow-tag { opacity: 0; }
+.sfm-flows.has-selection .sfm-flow:not(.is-selected):hover { opacity: 0.85; }
+.sfm-flow-tag rect { fill: var(--cp-panel-strong); stroke: var(--tone); stroke-width: 1.2; }
+.sfm-flow-tag text { font: 10px Bahnschrift, 'Segoe UI', sans-serif; fill: var(--cp-text); text-anchor: middle; }
+.sfm-arrow path { stroke: none; }
+.sfm-arrow.is-late path { fill: var(--cp-danger); }
+.sfm-arrow.is-ontime path { fill: var(--cp-success); }
+.sfm-arrow.is-scheduled path { fill: var(--cp-link); }
+.sfm-arrow.is-unknown path { fill: var(--cp-warning); }
+
+.sfm-node { cursor: pointer; }
+.sfm-node:focus, .sfm-node:focus-visible { outline: none; }
+.sfm-node-name { font: 600 12px "Yu Gothic UI", Meiryo, sans-serif; fill: var(--cp-text); text-anchor: middle; paint-order: stroke; stroke: var(--cp-surface); stroke-width: 5.5; stroke-linejoin: round; }
+.sfm-node-city { font: 10px "Yu Gothic UI", Meiryo, sans-serif; fill: var(--cp-text-muted); text-anchor: middle; paint-order: stroke; stroke: var(--cp-surface); stroke-width: 4.5; stroke-linejoin: round; }
+.sfm-supplier rect { fill: var(--cp-surface); stroke: var(--cp-accent); stroke-width: 2.6; }
+.sfm-store-halo { fill: none; stroke: transparent; stroke-width: 2; transition: stroke 0.16s ease; }
+.sfm-store-dot { fill: var(--cp-link); fill-opacity: 0.18; stroke: var(--cp-link); stroke-width: 2.4; transition: fill-opacity 0.16s ease; }
+.sfm-store.is-late .sfm-store-dot { fill: var(--cp-danger); stroke: var(--cp-danger); }
+.sfm-store.is-idle { opacity: 0.62; }
+.sfm-store:hover .sfm-store-dot { fill-opacity: 0.42; }
+.sfm-store.is-focused .sfm-store-halo, .sfm-store:focus-visible .sfm-store-halo { stroke: var(--cp-accent); stroke-dasharray: 3 4; }
+.sfm-store-dot.is-unknown { fill: none; stroke: var(--cp-text-muted); stroke-dasharray: 4 4; }
+
+.sfm-scale line { stroke: var(--cp-text); stroke-width: 1.6; opacity: 0.75; }
+.sfm-scale text { font: 10px Bahnschrift, 'Segoe UI', sans-serif; fill: var(--cp-text); text-anchor: middle; paint-order: stroke; stroke: var(--cp-surface); stroke-width: 3.5; }
+.sfm-controls { position: absolute; top: 14px; left: 14px; display: grid; gap: 4px; }
+.sfm-controls button { width: 32px; height: 32px; min-height: 32px; padding: 0; display: grid; place-items: center; background: var(--cp-panel-strong); border: 1px solid var(--cp-border); backdrop-filter: blur(6px); }
+.sfm-attribution { position: absolute; right: 8px; bottom: 6px; margin: 0; padding: 2px 7px; font-size: 9px; color: var(--cp-text-muted); background: var(--cp-panel-strong); border-radius: 4px; }
+.sfm-attribution a { color: inherit; }
+.sfm-offline { position: absolute; left: 50%; top: 16px; transform: translateX(-50%); margin: 0; padding: 6px 12px; font-size: 10px; color: var(--cp-text); background: var(--cp-panel-strong); border: 1px solid var(--cp-border); border-radius: 6px; }
+
+.sfm-tip { position: absolute; z-index: 2; width: 232px; transform: translate(-50%, calc(-100% - 18px)); padding: 12px 14px; pointer-events: none; background: var(--cp-panel-strong); border: 1px solid var(--cp-border); border-radius: 8px; box-shadow: var(--cp-shadow); backdrop-filter: blur(6px); }
+.sfm-tip[data-flip="down"] { transform: translate(-50%, 18px); }
+.sfm-tip strong { display: block; font: 13px Bahnschrift, 'Segoe UI', sans-serif; }
+.sfm-tip p { font-size: 10px; color: var(--cp-text-muted); margin: 3px 0 9px; }
+.sfm-tip dl { display: grid; gap: 4px; margin: 0; }
+.sfm-tip dl > div { display: flex; justify-content: space-between; gap: 10px; font-size: 10px; }
+.sfm-tip dt { color: var(--cp-text-muted); }
+.sfm-tip dd { margin: 0; font-variant-numeric: tabular-nums; }
+.sfm-tip .is-late { color: var(--cp-danger); }
+.sfm-tip small { display: block; margin-top: 9px; font-size: 9px; color: var(--cp-text-muted); }
+
+.sfm-panel { position: absolute; right: 14px; top: 14px; width: 208px; padding: 13px 14px; background: var(--cp-panel-strong); border: 1px solid var(--cp-border); border-radius: 9px; backdrop-filter: blur(8px); box-shadow: 0 4px 14px rgb(0 0 0 / 0.1); }
+.sfm-panel h3 { font-size: 11px; margin: 0 0 10px; }
+.sfm-panel-keys { display: grid; gap: 6px; margin: 0 0 11px; padding: 0 0 11px; border-bottom: 1px solid var(--cp-border); }
+.sfm-panel-keys > div { display: flex; align-items: center; gap: 8px; --tone: var(--cp-text-muted); }
+.sfm-panel-keys .is-late { --tone: var(--cp-danger); }
+.sfm-panel-keys .is-ontime { --tone: var(--cp-success); }
+.sfm-panel-keys .is-scheduled { --tone: var(--cp-link); }
+.sfm-panel-keys .is-unknown { --tone: var(--cp-warning); }
+.sfm-panel-keys dt { display: flex; align-items: center; gap: 8px; flex: 1; font-size: 10px; color: var(--cp-text-muted); }
+.sfm-panel-keys dt i { display: block; width: 20px; height: 3px; border-radius: 2px; background: var(--tone); }
+.sfm-panel-keys dd { margin: 0; font: 14px Bahnschrift, 'Segoe UI', sans-serif; color: var(--tone); font-variant-numeric: tabular-nums; }
+.sfm-panel-notes { display: grid; gap: 7px; margin: 0; padding: 0; list-style: none; }
+.sfm-panel-notes li { display: flex; align-items: center; gap: 8px; font-size: 10px; color: var(--cp-text-muted); }
+.sfm-swatch { flex-shrink: 0; width: 20px; height: 12px; }
+.sfm-swatch.is-dashed { height: 0; border-top: 3px dashed var(--cp-text-muted); }
+.sfm-swatch.is-area { width: 12px; border-radius: 50%; background: var(--cp-link); opacity: 0.5; }
+.sfm-swatch.is-hollow { width: 12px; border-radius: 50%; border: 1.5px dashed var(--cp-text-muted); }
+.sfm-swatch.is-hub { width: 11px; height: 11px; border: 2px solid var(--cp-accent); transform: rotate(45deg); }
+
+.sfm-timeline { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--cp-border); }
+.sfm-timeline-heading { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.sfm-timeline-heading h3 { font-size: 12px; margin: 0; }
+.sfm-timeline-heading span { margin-left: auto; font-size: 10px; color: var(--cp-text-muted); font-variant-numeric: tabular-nums; }
+.sfm-track { display: grid; grid-template-columns: 128px minmax(0, 1fr) 66px; align-items: center; gap: 12px; width: 100%; padding: 7px 8px; border: 0; border-radius: 6px; text-align: left; --tone: var(--cp-text-muted); }
+.sfm-track.is-late { --tone: var(--cp-danger); }
+.sfm-track.is-ontime { --tone: var(--cp-success); }
+.sfm-track.is-scheduled { --tone: var(--cp-link); }
+.sfm-track.is-unknown { --tone: var(--cp-warning); }
+.sfm-track:hover { background: var(--cp-surface-soft); }
+.sfm-track.is-selected { background: var(--cp-accent-soft); }
+.sfm-track-id { font: 11px Bahnschrift, 'Segoe UI', sans-serif; color: var(--cp-text-muted); }
+.sfm-track-rail { position: relative; height: 18px; border-radius: 9px; background: var(--cp-surface-soft); box-shadow: inset 0 0 0 1px var(--cp-border); }
+.sfm-track-bar { position: absolute; top: 5px; height: 8px; min-width: 4px; border-radius: 4px; background: var(--tone); }
+.sfm-track-bar.is-open { background: repeating-linear-gradient(90deg, var(--tone) 0 5px, transparent 5px 10px); }
+.sfm-track-pin { position: absolute; top: 1px; width: 2px; height: 16px; background: var(--cp-text); opacity: 0.55; }
+.sfm-track-delay { font: 11px Bahnschrift, 'Segoe UI', sans-serif; color: var(--tone); text-align: right; font-variant-numeric: tabular-nums; }
+
+.sfm-empty { margin: 0; }
+.sfm-footer { font-size: 9px; line-height: 1.7; color: var(--cp-text-muted); margin-top: 14px; }
+.supply-flow-map .message.error { margin-top: 12px; }
+
+@container workspace (max-width: 760px) {
+  .sfm-canvas { height: 430px; }
+  .sfm-panel { width: 168px; right: 10px; top: 10px; padding: 10px 11px; }
+  .sfm-panel-notes { display: none; }
+  .sfm-track { grid-template-columns: 104px minmax(0, 1fr) 56px; gap: 8px; }
+  .sfm-tip { width: 190px; }
+}

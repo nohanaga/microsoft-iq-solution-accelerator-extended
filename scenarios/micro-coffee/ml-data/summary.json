@@ -1,0 +1,274 @@
+{
+  "packageId": "micro-coffee-ml-v1",
+  "version": "2026-09-13.1",
+  "seed": "maikuro-ml-2026-09-13",
+  "dataOrigin": "synthetic",
+  "generatedFor": "AutoML 学習と検証",
+  "parquet": true,
+  "datasets": {
+    "shipment-history": {
+      "rowCount": 500,
+      "files": {
+        "json": {
+          "path": "shipment-history.json",
+          "sha256": "7f366c3f19f7b8565f7f600b35bb8165f08fd77284f94c521c79fd90eb795e30"
+        },
+        "csv": {
+          "path": "shipment-history.csv",
+          "sha256": "f70830e96cc244fba5a909fcae3473eda7f14bbf9ef3636e1c941e5809e3a444"
+        },
+        "parquet": {
+          "path": "shipment-history.parquet",
+          "sha256": "4c7ade7db0db5d431264c1805436f09d4d1ba033e37288cf7dbf81566c6d1b16"
+        }
+      }
+    },
+    "supply-impact-history": {
+      "rowCount": 30,
+      "files": {
+        "json": {
+          "path": "supply-impact-history.json",
+          "sha256": "5ea6e96c9a1071b16dc23e1b49cb90a4de51b42ee492a06d7cc087cbd89ef7a0"
+        },
+        "csv": {
+          "path": "supply-impact-history.csv",
+          "sha256": "75404070bc94873705c9c065e6d4a6fe9d133efeffe8bc3beb59174ed5ed488a"
+        },
+        "parquet": {
+          "path": "supply-impact-history.parquet",
+          "sha256": "ea61e7ff6d54c83263595e616af9572643911a6999b1b87374dcb6d6f6a195fa"
+        }
+      }
+    },
+    "demand-daily": {
+      "rowCount": 52560,
+      "files": {
+        "sampleCsv": {
+          "path": "demand-daily-sample.csv",
+          "sha256": "a1ada1d82ddfafdb5f573c4b96cbb26ecf4dc94545df09300d91ba38b446e92e"
+        },
+        "parquet": {
+          "path": "demand-daily.parquet",
+          "sha256": "38c9b623d211b977a2934d4b29ea76b5f31f44e63a2919fb24884245c2269781"
+        }
+      }
+    },
+    "production-daily": {
+      "rowCount": 2190,
+      "files": {
+        "csv": {
+          "path": "production-daily.csv",
+          "sha256": "b1c5f18460417c356f0a101cff869ea9f483ef3fcb7bdc3bc42dbf3896fa1da7"
+        },
+        "parquet": {
+          "path": "production-daily.parquet",
+          "sha256": "63d1e35fbf3891b5bf78bfa1088256e73deec67d7c1725a7b2ebd14263001450"
+        }
+      }
+    },
+    "bean-ledger-daily": {
+      "rowCount": 2920,
+      "files": {
+        "csv": {
+          "path": "bean-ledger-daily.csv",
+          "sha256": "7f0a85ffe82cab60aab26a401b1eee24227ba59eda1df41928272822d6c0f67a"
+        },
+        "parquet": {
+          "path": "bean-ledger-daily.parquet",
+          "sha256": "55af67197411c4152a85559d712ea6754e32baf85c71ecdce8db5aa3de971936"
+        }
+      }
+    }
+  },
+  "statistics": {
+    "shipments": {
+      "count": 500,
+      "delayed": 120,
+      "delayRate": 0.24,
+      "delayRateBySupplier": {
+        "SUP-01": 0.1757,
+        "SUP-02": 0.3071,
+        "SUP-03": 0.1368,
+        "SUP-04": 0.3611,
+        "SUP-05": 0.2667
+      },
+      "delayRateByWeekday": {
+        "0": 0.2703,
+        "1": 0.2121,
+        "2": 0.2188,
+        "3": 0.3108,
+        "4": 0.3182,
+        "5": 0.1139,
+        "6": 0.2468
+      },
+      "meanDelayHours": 27.17
+    },
+    "shortages": {
+      "count": 30,
+      "shortageRateAmongDelayed": 0.25,
+      "totalAmountExTax": 70350.0
+    },
+    "demand": {
+      "rows": 52560,
+      "days": 730,
+      "series": 72,
+      "totalCups": 674917,
+      "cupsByStore": {
+        "STR-01": 98068,
+        "STR-02": 80786,
+        "STR-03": 89283,
+        "STR-04": 162324,
+        "STR-05": 122168,
+        "STR-06": 122288
+      },
+      "from": "2024-07-09",
+      "to": "2026-07-08"
+    },
+    "production": {
+      "rows": 2190,
+      "unitsByProduct": {
+        "DEV-BLEND": 27401,
+        "DEV-DRIP": 135396,
+        "DEV-LATTE": 141556
+      }
+    },
+    "beanLedger": {
+      "rows": 2920,
+      "materials": {
+        "ROASTED-BR": {
+          "min": 29910.0,
+          "max": 47270.0,
+          "final": 30000.0,
+          "consumption": 4155660.0
+        },
+        "ROASTED-CO": {
+          "min": 19910.0,
+          "max": 37270.0,
+          "final": 20000.0,
+          "consumption": 4155660.0
+        },
+        "ROASTED-ET": {
+          "min": 11818.0,
+          "max": 17237.0,
+          "final": 12000.0,
+          "consumption": 1218564.0
+        },
+        "ROASTED-GT": {
+          "min": 17626.0,
+          "max": 21456.0,
+          "final": 18000.0,
+          "consumption": 812376.0
+        }
+      }
+    }
+  },
+  "groundTruth": {
+    "shipments": {
+      "supplierBaseDelayRate": {
+        "SUP-01": 0.08,
+        "SUP-02": 0.22,
+        "SUP-03": 0.12,
+        "SUP-04": 0.3,
+        "SUP-05": 0.1
+      },
+      "weekdayUplift": {
+        "0": 0.05,
+        "4": 0.15
+      },
+      "holidayUplift": 0.1,
+      "rainThresholdMm": 10.0,
+      "rainUplift": 0.12,
+      "largeLoadUnits": 80,
+      "largeLoadUplift": 0.08,
+      "peakMonths": [
+        7,
+        8
+      ],
+      "peakUplift": 0.06,
+      "distanceUpliftPer100Km": 0.04,
+      "minRate": 0.01,
+      "maxRate": 0.95,
+      "delayHoursBase": 6.0,
+      "delayHoursScale": 20.0,
+      "delayHoursMax": 96.0
+    },
+    "shortage": {
+      "comment": "欠品は遅延時間が店舗の在庫余力を超えたときに、ロジスティック関数の確率で発生します。",
+      "storeCoverDays": {
+        "STR-01": 2.0,
+        "STR-02": 2.5,
+        "STR-03": 3.0,
+        "STR-04": 1.0,
+        "STR-05": 2.0,
+        "STR-06": 1.5
+      },
+      "slopeHours": 10.0,
+      "maxProbability": 0.85,
+      "linesPerShortageBase": 1.0,
+      "linesPerCupsPerDay": 0.012,
+      "quantityPerLineMean": 1.6
+    },
+    "demand": {
+      "weekdayFactor": {
+        "0": 0.95,
+        "1": 0.92,
+        "2": 0.95,
+        "3": 1.0,
+        "4": 1.15,
+        "5": 1.25,
+        "6": 1.05
+      },
+      "holidayFactor": 1.18,
+      "trendPerYear": 0.06,
+      "categorySeason": {
+        "comment": "amplitude は年周期の振幅、peakDayOfYear は最大となる通日です。",
+        "水出し珈琲": {
+          "amplitude": 0.38,
+          "peakDayOfYear": 212
+        },
+        "エスプレッソ": {
+          "amplitude": 0.22,
+          "peakDayOfYear": 20
+        },
+        "ドリップ珈琲": {
+          "amplitude": 0.18,
+          "peakDayOfYear": 15
+        },
+        "お茶": {
+          "amplitude": 0.12,
+          "peakDayOfYear": 300
+        },
+        "軽食": {
+          "amplitude": 0.08,
+          "peakDayOfYear": 330
+        },
+        "雑貨": {
+          "amplitude": 0.3,
+          "peakDayOfYear": 345
+        }
+      },
+      "productShare": {
+        "PRD-001": 0.13,
+        "PRD-002": 0.16,
+        "PRD-003": 0.07,
+        "PRD-004": 0.09,
+        "PRD-005": 0.11,
+        "PRD-006": 0.1,
+        "PRD-007": 0.12,
+        "PRD-008": 0.08,
+        "PRD-009": 0.04,
+        "PRD-010": 0.05,
+        "PRD-011": 0.04,
+        "PRD-012": 0.01
+      }
+    }
+  },
+  "reconciliation": {
+    "beanLedgerFinalMatchesCentralStock": {
+      "ROASTED-BR": 30000,
+      "ROASTED-CO": 20000,
+      "ROASTED-ET": 12000,
+      "ROASTED-GT": 18000
+    }
+  }
+}

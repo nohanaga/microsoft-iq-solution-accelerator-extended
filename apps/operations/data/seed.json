@@ -1,0 +1,143 @@
+{
+  "datasetId": "maikuro-jp-v1",
+  "version": "2026-09-10.1",
+  "asOf": "2026-07-08T18:00:00+09:00",
+  "timezone": "Asia/Tokyo",
+  "dataOrigin": "synthetic",
+  "products": [
+    {"id":"PRD-001","name":"舞黒 水出し珈琲","category":"水出し珈琲","serving":"350 mL・1 杯","priceExTax":500,"taxPercent":8,"supplierId":"SUP-02"},
+    {"id":"PRD-002","name":"バニラクリーム水出し珈琲","category":"水出し珈琲","serving":"350 mL・1 杯","priceExTax":600,"taxPercent":8,"supplierId":"SUP-02"},
+    {"id":"PRD-003","name":"泡仕立て水出し珈琲","category":"水出し珈琲","serving":"350 mL・1 杯","priceExTax":650,"taxPercent":8,"supplierId":"SUP-04"},
+    {"id":"PRD-004","name":"深煎りエスプレッソ","category":"エスプレッソ","serving":"60 mL・1 杯","priceExTax":350,"taxPercent":8,"supplierId":"SUP-03"},
+    {"id":"PRD-005","name":"キャラメルマキアート","category":"エスプレッソ","serving":"300 mL・1 杯","priceExTax":550,"taxPercent":8,"supplierId":"SUP-03"},
+    {"id":"PRD-006","name":"カプチーノ","category":"エスプレッソ","serving":"300 mL・1 杯","priceExTax":500,"taxPercent":8,"supplierId":"SUP-03"},
+    {"id":"PRD-007","name":"舞黒ブレンド珈琲","category":"ドリップ珈琲","serving":"300 mL・1 杯","priceExTax":400,"taxPercent":8,"supplierId":"SUP-01"},
+    {"id":"PRD-008","name":"本日のハンドドリップ珈琲","category":"ドリップ珈琲","serving":"300 mL・1 杯","priceExTax":550,"taxPercent":8,"supplierId":"SUP-01"},
+    {"id":"PRD-009","name":"和紅茶","category":"お茶","serving":"300 mL・1 杯","priceExTax":400,"taxPercent":8,"supplierId":"SUP-05"},
+    {"id":"PRD-010","name":"抹茶ラテ","category":"お茶","serving":"300 mL・1 杯","priceExTax":550,"taxPercent":8,"supplierId":"SUP-05"},
+    {"id":"PRD-011","name":"あんバタークロワッサン","category":"軽食","serving":"1 個","priceExTax":350,"taxPercent":8,"supplierId":"SUP-01"},
+    {"id":"PRD-012","name":"舞黒珈琲店 ステンレスタンブラー","category":"雑貨","serving":"350 mL・1 個","priceExTax":2000,"taxPercent":10,"supplierId":"SUP-01"}
+  ],
+  "stores": [
+    {"id":"STR-01","name":"吉祥寺店","city":"東京都武蔵野市","coldEquipment":true,"cupsPerDay":120},
+    {"id":"STR-02","name":"中目黒店","city":"東京都目黒区","coldEquipment":true,"cupsPerDay":100},
+    {"id":"STR-03","name":"浦和店","city":"埼玉県さいたま市浦和区","coldEquipment":null,"cupsPerDay":null},
+    {"id":"STR-04","name":"神田店","city":"東京都千代田区","coldEquipment":true,"cupsPerDay":200},
+    {"id":"STR-05","name":"大宮店","city":"埼玉県さいたま市大宮区","coldEquipment":true,"cupsPerDay":150},
+    {"id":"STR-06","name":"横浜みなとみらい店","city":"神奈川県横浜市西区","coldEquipment":true,"cupsPerDay":150}
+  ],
+  "suppliers": [
+    {"id":"SUP-01","name":"武蔵野珈琲・菓子商会","city":"東京都三鷹市"},
+    {"id":"SUP-02","name":"相模焙煎工房","city":"神奈川県相模原市"},
+    {"id":"SUP-03","name":"蔵前珈琲焙煎所","city":"東京都台東区"},
+    {"id":"SUP-04","name":"房総飲料工房","city":"千葉県市原市"},
+    {"id":"SUP-05","name":"駿河茶葉商会","city":"静岡県静岡市"}
+  ],
+  "materials": [
+    {"id":"MAT-01","name":"相模 水出し珈琲ベース","unit":"mL"},
+    {"id":"MAT-02","name":"武蔵野 香り保持珈琲ベース（候補）","unit":"mL"},
+    {"id":"MAT-03","name":"武蔵野 特選珈琲ベース（候補）","unit":"mL"},
+    {"id":"MAT-04","name":"クリーム","unit":"mL"},
+    {"id":"MAT-05","name":"バニラシロップ","unit":"mL"},
+    {"id":"MAT-06","name":"調製水","unit":"mL"},
+    {"id":"MAT-07","name":"カップ・蓋一式","unit":"each"}
+  ],
+  "offers": [
+    {"id":"OFF-01","materialId":"MAT-01","supplierId":"SUP-02","pricePer100Units":40,"validFrom":"2026-07-01","validUntil":"2026-07-31","qualification":"approved","sampleShipDate":null,"evidenceId":"DOC-SPEC"},
+    {"id":"OFF-02","materialId":"MAT-02","supplierId":"SUP-01","pricePer100Units":56,"validFrom":"2026-07-06","validUntil":"2026-07-20","qualification":"pending","sampleShipDate":null,"evidenceId":"DOC-MAT02"},
+    {"id":"OFF-03","materialId":"MAT-03","supplierId":"SUP-01","pricePer100Units":80,"validFrom":"2026-07-06","validUntil":"2026-07-20","qualification":"pending","sampleShipDate":null,"evidenceId":"DOC-MAT02"},
+    {"id":"OFF-04","materialId":"MAT-04","supplierId":"SUP-01","pricePer100Units":100,"validFrom":"2026-07-01","validUntil":"2026-07-31","qualification":"approved","sampleShipDate":null,"evidenceId":"DOC-SPEC"},
+    {"id":"OFF-05","materialId":"MAT-05","supplierId":"SUP-01","pricePer100Units":500,"validFrom":"2026-07-01","validUntil":"2026-07-31","qualification":"approved","sampleShipDate":null,"evidenceId":"DOC-SPEC"},
+    {"id":"OFF-06","materialId":"MAT-06","supplierId":"SUP-01","pricePer100Units":0,"validFrom":"2026-07-01","validUntil":"2026-07-31","qualification":"approved","sampleShipDate":null,"evidenceId":"DOC-SPEC"},
+    {"id":"OFF-07","materialId":"MAT-07","supplierId":"SUP-01","pricePer100Units":4000,"validFrom":"2026-07-01","validUntil":"2026-07-31","qualification":"approved","sampleShipDate":null,"evidenceId":"DOC-SPEC"}
+  ],
+  "concepts": [
+    {"id":"CON-A","name":"A 既存原料で甘さ調整","version":"1","projectId":"DEV-001","priceExTax":600,"taxPercent":8,"aromaScore":null,"description":"現行の原料でシロップを減らす基準案。相模焙煎工房への依存が残ります。"},
+    {"id":"CON-B","name":"B 別の供給候補で再検討","version":"1","projectId":"DEV-001","priceExTax":650,"taxPercent":8,"aromaScore":null,"description":"武蔵野の候補原料を使用。香りの評価、資格、サンプル納期は未確認です。"},
+    {"id":"CON-C","name":"C プレミアム案","version":"1","projectId":"DEV-001","priceExTax":750,"taxPercent":8,"aromaScore":null,"description":"補助候補。税込 810 円となり、今回の価格上限を超過します。"}
+  ],
+  "recipeSeeds": [
+    {"conceptId":"CON-A","components":[["MAT-01","OFF-01",250],["MAT-04","OFF-04",40],["MAT-05","OFF-05",8],["MAT-06","OFF-06",52],["MAT-07","OFF-07",1]]},
+    {"conceptId":"CON-B","components":[["MAT-02","OFF-02",250],["MAT-04","OFF-04",40],["MAT-05","OFF-05",8],["MAT-06","OFF-06",52],["MAT-07","OFF-07",1]]},
+    {"conceptId":"CON-C","components":[["MAT-03","OFF-03",250],["MAT-04","OFF-04",40],["MAT-05","OFF-05",20],["MAT-06","OFF-06",40],["MAT-07","OFF-07",1]]}
+  ],
+  "currentRecipes": [
+    {"id":"CUR-01","productId":"PRD-001","materialId":"MAT-01","quantity":300},
+    {"id":"CUR-02","productId":"PRD-001","materialId":"MAT-06","quantity":50},
+    {"id":"CUR-03","productId":"PRD-001","materialId":"MAT-07","quantity":1},
+    {"id":"CUR-04","productId":"PRD-002","materialId":"MAT-01","quantity":250},
+    {"id":"CUR-05","productId":"PRD-002","materialId":"MAT-04","quantity":40},
+    {"id":"CUR-06","productId":"PRD-002","materialId":"MAT-05","quantity":12},
+    {"id":"CUR-07","productId":"PRD-002","materialId":"MAT-06","quantity":48},
+    {"id":"CUR-08","productId":"PRD-002","materialId":"MAT-07","quantity":1}
+  ],
+  "inventorySeeds": [
+    {"storeId":"STR-04","rows":[["MAT-01",60000,10000],["MAT-02",0,0],["MAT-03",null,null],["MAT-04",20000,2000],["MAT-05",6000,1000],["MAT-06",50000,0],["MAT-07",800,100]]},
+    {"storeId":"STR-06","rows":[["MAT-01",40000,5000],["MAT-02",0,0],["MAT-03",null,null],["MAT-04",12000,1000],["MAT-05",4000,500],["MAT-06",30000,0],["MAT-07",500,50]]}
+  ],
+  "inbound": [
+    {"id":"IN-01","storeId":"STR-04","materialId":"MAT-01","quantity":30000,"expectedAt":"2026-07-15T09:00:00+09:00","confirmed":true},
+    {"id":"IN-02","storeId":"STR-06","materialId":"MAT-02","quantity":20000,"expectedAt":null,"confirmed":false}
+  ],
+  "reviewSeeds": [
+    ["STR-01","PRD-002",4,"甘さ控えめ","香りは好きです。甘さ控えめも選びたいです。","2026-05-12"],
+    ["STR-01","PRD-002",4,"甘さ控えめ","普段は無糖なので、香りを残して甘さを減らせるとうれしいです。","2026-06-02"],
+    ["STR-01","PRD-002",5,"香り","バニラの香りが気に入りました。","2026-06-16"],
+    ["STR-01","PRD-002",5,"現行支持","今の甘さがちょうどよく、変更しないでほしいです。","2026-06-24"],
+    ["STR-02","PRD-002",3,"甘さ控えめ","午後に飲むには少し甘いです。甘さ控えめ版を希望します。","2026-05-13"],
+    ["STR-02","PRD-002",4,"甘さ控えめ","香りはそのままで、シロップが少ない選択肢があると助かります。","2026-06-03"],
+    ["STR-02","PRD-002",5,"香り","ふたを開けたときの香りがよかったです。","2026-06-17"],
+    ["STR-02","PRD-002",4,"価格","今の価格ならまた購入したいです。","2026-06-25"],
+    ["STR-03","PRD-002",4,"甘さ控えめ","飲みやすいですが、甘さ控えめの商品も試したいです。","2026-05-14"],
+    ["STR-03","PRD-002",3,"甘さ控えめ","甘さより珈琲の香りを楽しみたいです。","2026-06-04"],
+    ["STR-03","PRD-002",5,"現行支持","甘いものが欲しい日に選んでいます。","2026-06-18"],
+    ["STR-03","PRD-002",4,"容量","今の量が休憩にちょうどよいです。","2026-06-26"],
+    ["STR-04","PRD-002",4,"甘さ控えめ","好きな香りなので、甘さが少ない別商品を希望します。","2026-05-15"],
+    ["STR-04","PRD-002",3,"甘さ控えめ","最後まで飲むと甘く感じます。控えめ版なら選びたいです。","2026-06-05"],
+    ["STR-04","PRD-002",5,"香り","珈琲とバニラの組み合わせがよかったです。","2026-06-19"],
+    ["STR-04","PRD-002",4,"現行支持","甘さを楽しみたいので現行品も残してほしいです。","2026-06-27"],
+    ["STR-05","PRD-002",4,"甘さ控えめ","定刻で受け取れました。味は甘さ控えめも欲しいです。","2026-05-16"],
+    ["STR-05","PRD-002",3,"甘さ控えめ","香りを弱くせず甘さだけ減らせませんか。","2026-06-06"],
+    ["STR-05","PRD-002",5,"香り","バニラの香りがしっかり感じられました。","2026-06-20"],
+    ["STR-05","PRD-002",4,"現行支持","現行の甘さが好みです。","2026-06-28"],
+    ["STR-06","PRD-002",3,"甘さ控えめ","飲み終わりが少し甘いので控えめ版を希望します。","2026-05-17"],
+    ["STR-06","PRD-002",4,"甘さ控えめ","香りが好きです。甘さを選べるとうれしいです。","2026-06-07"],
+    ["STR-06","PRD-002",5,"香り","休日の休憩にちょうどよい香りでした。","2026-06-21"],
+    ["STR-06","PRD-002",4,"価格","この価格なら定期的に注文したいです。","2026-06-29"],
+    ["STR-01","PRD-003",5,"口当たり","泡の口当たりがなめらかでした。","2026-06-22"],
+    ["STR-02","PRD-003",4,"香り","香りがよく、また注文したいです。","2026-06-22"],
+    ["STR-03","PRD-003",4,"容量","休憩時間にちょうどよい量でした。","2026-06-22"],
+    ["STR-04","PRD-003",5,"口当たり","泡が軽くて飲みやすいです。","2026-06-22"],
+    ["STR-05","PRD-003",4,"価格","時々楽しむ商品として選びます。","2026-06-22"],
+    ["STR-06","PRD-003",4,"香り","珈琲の香りが気に入りました。","2026-06-22"]
+  ],
+  "shipments": [
+    {"id":"SHP-0040","supplierId":"SUP-02","storeId":"STR-04","expectedAt":"2026-06-10T08:00:00+09:00","arrivedAt":"2026-06-12T08:00:00+09:00","status":"arrived","reason":"履歴便。配車調整で 2 日遅延。"},
+    {"id":"SHP-0042","supplierId":"SUP-02","storeId":"STR-06","expectedAt":"2026-06-10T09:00:00+09:00","arrivedAt":"2026-06-12T09:00:00+09:00","status":"arrived","reason":"履歴便。配車調整で 2 日遅延。"},
+    {"id":"SHP-JP-0703-04","supplierId":"SUP-02","storeId":"STR-04","expectedAt":"2026-07-03T08:00:00+09:00","arrivedAt":"2026-07-05T08:00:00+09:00","status":"arrived","reason":"配車調整。7 月 3 日の予約明細で欠品を確認。"},
+    {"id":"SHP-JP-0703-06","supplierId":"SUP-02","storeId":"STR-06","expectedAt":"2026-07-03T09:00:00+09:00","arrivedAt":"2026-07-05T09:00:00+09:00","status":"arrived","reason":"配車調整。7 月 4 日の予約明細で欠品を確認。"},
+    {"id":"SHP-JP-0703-05","supplierId":"SUP-02","storeId":"STR-05","expectedAt":"2026-07-03T08:00:00+09:00","arrivedAt":"2026-07-03T08:00:00+09:00","status":"arrived","reason":"比較便。定刻到着。"}
+  ],
+  "evidence": [
+    {"id":"DOC-SPEC","kind":"foundry","title":"現行品・配合原価の合成仕様","version":"1.0","effectiveAt":"2026-07-01T00:00:00+09:00","path":"knowledge/internal/product-spec.md","quote":"現行 PRD-002 は甘さ変更に非対応。配合案 A/B/C は未販売の検討案です。","projectId":"DEV-001","sourceUrl":null,"dataOrigin":"synthetic"},
+    {"id":"DOC-RULES","kind":"foundry","title":"商品設計・調達・品質基準","version":"2.0","effectiveAt":"2026-07-01T00:00:00+09:00","path":"knowledge/internal/design-rules.md","quote":"持ち帰り税込価格は 756 円以内。香り評価 4.0/5 以上、供給資格と期間内の価格条件の確認が必要です。","projectId":"DEV-001","sourceUrl":null,"dataOrigin":"synthetic"},
+    {"id":"DOC-MAT02","kind":"foundry","title":"武蔵野 候補原料仕様・参考価格","version":"0.2","effectiveAt":"2026-07-06T09:00:00+09:00","path":"knowledge/internal/candidate-material.md","quote":"MAT-02 は 100 mL 当たり税抜 56 円の検討用参考価格。供給資格、官能評価、サンプル出荷日は未確定です。","projectId":"DEV-001","sourceUrl":null,"dataOrigin":"synthetic"},
+    {"id":"WORK-0618","kind":"work","title":"6 月 18 日 商品開発会議","version":"1.0","effectiveAt":"2026-06-18T14:00:00+09:00","path":"knowledge/work/2026-06-18-meeting.md","quote":"旧案は香り評価が基準に届かず保留。需要そのものを否定した決定ではありません。","projectId":"DEV-001","sourceUrl":null,"dataOrigin":"synthetic"},
+    {"id":"WORK-0706","kind":"work","title":"7 月 6 日 候補原料紹介メール","version":"1.0","effectiveAt":"2026-07-06T10:00:00+09:00","path":"knowledge/work/2026-07-06-material-email.md","quote":"SUP-01 の MAT-02、仕様書 0.2 版を共有します。採用・量産供給を確約するものではありません。","projectId":"DEV-001","sourceUrl":null,"dataOrigin":"synthetic"},
+    {"id":"WORK-0707-M","kind":"work","title":"7 月 7 日 商品開発定例","version":"1.0","effectiveAt":"2026-07-07T10:00:00+09:00","path":"knowledge/work/2026-07-07-meeting.md","quote":"今回も持ち帰り税込価格は 756 円以内。候補原料の香り評価は未実施です。","projectId":"DEV-001","sourceUrl":null,"dataOrigin":"synthetic"},
+    {"id":"WORK-0707-E","kind":"work","title":"7 月 7 日 試作原料のサンプル納期","version":"1.0","effectiveAt":"2026-07-07T16:00:00+09:00","path":"knowledge/work/2026-07-07-sample-email.md","quote":"候補原料の資料は共有済みですが、サンプル出荷日は調整中です。","projectId":"DEV-001","sourceUrl":null,"dataOrigin":"synthetic"}
+  ],
+  "rules": [
+    {"id":"RULE-PRICE","name":"税込価格上限","kind":"price","threshold":756,"evidenceId":"DOC-RULES"},
+    {"id":"RULE-AROMA","name":"香りの官能評価","kind":"aroma","threshold":4,"evidenceId":"DOC-RULES"},
+    {"id":"RULE-SUPPLY","name":"原料別の供給資格","kind":"qualification","threshold":null,"evidenceId":"DOC-RULES"},
+    {"id":"RULE-QUOTE","name":"参考価格・見積の有効期間","kind":"quote","threshold":null,"evidenceId":"DOC-RULES"},
+    {"id":"RULE-STORE","name":"冷蔵設備・追加製造枠","kind":"equipment","threshold":null,"evidenceId":"DOC-RULES"}
+  ],
+  "decisionReasons": [
+    {"id":"WHY-01","projectId":"DEV-001","reason":"香りの評価不足","pastEvidenceId":"WORK-0618","currentEvidenceId":"WORK-0707-M","change":"新しい候補原料でも官能評価は未実施です。","status":"unresolved"},
+    {"id":"WHY-02","projectId":"DEV-001","reason":"代替原料の候補不足","pastEvidenceId":"WORK-0618","currentEvidenceId":"WORK-0706","change":"MAT-02 と仕様書 0.2 版が紹介されました。供給承認ではありません。","status":"changed"},
+    {"id":"WHY-03","projectId":"DEV-001","reason":"サンプルの日程未確定","pastEvidenceId":"WORK-0618","currentEvidenceId":"WORK-0707-E","change":"出荷日は調整中のため、試作開始日は確約できません。","status":"unresolved"},
+    {"id":"WHY-04","projectId":"DEV-001","reason":"量産時の廃棄率","pastEvidenceId":"WORK-0618","currentEvidenceId":null,"change":"現在の裏付け資料がありません。計算上の歩留まり 100% と実測値を混同しません。","status":"unknown"}
+  ]
+}

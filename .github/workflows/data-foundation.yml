@@ -1,0 +1,117 @@
+name: Micro Coffee data foundation
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Resource name suffix (use a new value for a new deployment)
+        required: true
+        default: demo-jp
+        type: string
+      include_ontology:
+        description: Also create generation 1 Ontologies and GraphModels
+        default: false
+        type: boolean
+      include_predictions:
+        description: Include the original three gold prediction snapshots
+        default: true
+        type: boolean
+      apply:
+        description: Request deployment after environment approval
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+concurrency:
+  group: micro-coffee-data-${{ inputs.environment }}
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      plan_path: ${{ steps.plan.outputs.plan_path }}
+      plan_hash: ${{ steps.plan.outputs.plan_hash }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install data tooling
+        run: python -m pip install -r scripts/requirements.txt
+      - name: Prepare pinned sources without cloud access
+        id: prepare
+        env:
+          INCLUDE_PREDICTIONS: ${{ inputs.include_predictions }}
+        run: |
+          extra=()
+          if [[ "$INCLUDE_PREDICTIONS" == "true" ]]; then extra+=(--include-predictions); fi
+          python scripts/deploy.py prepare --reference-data scenarios/micro-coffee/reference-data/world-bank-coffee/202001-202512-9fdcfa8a2aed9a1b "${extra[@]}"
+      - name: Create approval plan
+        id: plan
+        env:
+          PACKAGE_PATH: ${{ steps.prepare.outputs.package_path }}
+          SCENARIO_ENV: ${{ inputs.environment }}
+          TENANT_ID: ${{ vars.FABRIC_TENANT_ID }}
+          WORKSPACE_ID: ${{ vars.FABRIC_WORKSPACE_ID }}
+          INCLUDE_ONTOLOGY: ${{ inputs.include_ontology }}
+        run: |
+          extra=()
+          if [[ "$INCLUDE_ONTOLOGY" != "true" ]]; then extra+=(--without-ontology); fi
+          python scripts/deploy.py plan --package "$PACKAGE_PATH" --environment "$SCENARIO_ENV" --tenant-id "$TENANT_ID" --workspace-id "$WORKSPACE_ID" "${extra[@]}"
+      - name: Publish plan for review
+        env:
+          PLAN_PATH: ${{ steps.plan.outputs.plan_path }}
+        run: |
+          printf '## Approval plan\n```json\n' >> "$GITHUB_STEP_SUMMARY"
+          cat "$PLAN_PATH" >> "$GITHUB_STEP_SUMMARY"
+          printf '\n```\n' >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: data-foundation-plan-${{ github.run_id }}
+          path: artifacts/
+          retention-days: 7
+          if-no-files-found: error
+
+  deploy:
+    if: ${{ inputs.apply }}
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    environment: fabric-data-foundation
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: data-foundation-plan-${{ github.run_id }}
+          path: artifacts/
+      - name: Install data tooling
+        run: python -m pip install -r scripts/requirements.txt
+      - name: Sign in with federated identity
+        uses: azure/login@v2
+        with:
+          client-id: ${{ vars.FABRIC_CLIENT_ID }}
+          tenant-id: ${{ vars.FABRIC_TENANT_ID }}
+          allow-no-subscriptions: true
+      - name: Apply the reviewed plan
+        env:
+          PLAN_PATH: ${{ needs.plan.outputs.plan_path }}
+          PLAN_HASH: ${{ needs.plan.outputs.plan_hash }}
+        run: python scripts/deploy.py apply --plan "$PLAN_PATH" --approve-plan "$PLAN_HASH" --confirm-synthetic
+      - name: Preserve deployment state for local recovery
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: data-foundation-state-${{ github.run_id }}-${{ github.run_attempt }}
+          path: artifacts/deployments/
+          retention-days: 7
+          if-no-files-found: warn

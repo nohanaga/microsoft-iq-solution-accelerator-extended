@@ -1,0 +1,14 @@
+{
+  "name": "microsoft-iq-solution-accelerator-extended",
+  "version": "0.1.0",
+  "private": true,
+  "engines": { "node": ">=22.12.0" },
+  "scripts": {
+    "setup:apps": "npm --prefix apps/storefront ci && npm --prefix apps/operations ci",
+    "dev:storefront": "npm --prefix apps/storefront run dev",
+    "dev:operations": "npm --prefix apps/operations run dev",
+    "build:apps": "npm --prefix apps/storefront run build && npm --prefix apps/operations run build",
+    "prepare:commerce": "npm --prefix apps/storefront run data:prepare",
+    "deploy:operations": "npm --prefix apps/operations run deploy"
+  }
+}

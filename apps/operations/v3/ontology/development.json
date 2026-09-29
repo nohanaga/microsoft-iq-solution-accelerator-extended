@@ -1,0 +1,86 @@
+{
+  "format": "micro-coffee-ontology-v1",
+  "modelId": "development",
+  "version": "2026-09-11.1",
+  "datasetId": "maikuro-development-v3",
+  "dataFile": "../data/development.json",
+  "source": "v3/data/development.json",
+  "description": "飲料と袋売りブレンドの追加製造試算。焙煎済み豆、質量比率、固定日時の拠点別在庫と確定計画の確保を扱う。",
+  "tables": [
+    { "id": "products", "entityType": "DevelopmentProduct", "label": "商品", "key": "id", "displayColumn": "name", "description": "販売 SKU とは別の開発商品仕様。豆の使用量は杯または袋の 1 単位当たり。", "properties": [
+      { "name": "products_id", "sourceColumn": "id", "valueType": "String", "nullable": false },
+      { "name": "products_name", "sourceColumn": "name", "valueType": "String", "nullable": false },
+      { "name": "products_category", "sourceColumn": "category", "valueType": "String", "nullable": false },
+      { "name": "products_unit", "sourceColumn": "unit", "valueType": "String", "nullable": false },
+      { "name": "products_gramsPerUnit", "sourceColumn": "gramsPerUnit", "valueType": "Double", "nullable": false, "unit": "g/unit" }
+    ] },
+    { "id": "recipes", "entityType": "BlendRecipe", "label": "配合案", "key": "id", "displayColumn": "name", "description": "一つの開発商品に属する登録配合または画面上の下書き。", "properties": [
+      { "name": "recipes_id", "sourceColumn": "id", "valueType": "String", "nullable": false },
+      { "name": "recipes_productId", "sourceColumn": "productId", "valueType": "String", "nullable": false },
+      { "name": "recipes_name", "sourceColumn": "name", "valueType": "String", "nullable": false },
+      { "name": "recipes_status", "sourceColumn": "status", "valueType": "String", "nullable": false }
+    ] },
+    { "id": "recipeLines", "entityType": "BlendRecipeLine", "label": "配合明細", "key": "id", "displayColumn": "materialId", "description": "配合と焙煎豆の組に対する質量比率。配合ごとの比率の合計は 100%。", "properties": [
+      { "name": "recipeLines_id", "sourceColumn": "id", "valueType": "String", "nullable": false },
+      { "name": "recipeLines_recipeId", "sourceColumn": "recipeId", "valueType": "String", "nullable": false },
+      { "name": "recipeLines_materialId", "sourceColumn": "materialId", "valueType": "String", "nullable": false },
+      { "name": "recipeLines_percent", "sourceColumn": "percent", "valueType": "Double", "nullable": false, "unit": "%" }
+    ] },
+    { "id": "materials", "entityType": "RoastedBean", "label": "焙煎豆", "key": "id", "displayColumn": "name", "description": "焙煎済み豆の規格。個々のロットや生豆ではない。単一調達先の税抜参考価格を使用。", "properties": [
+      { "name": "materials_id", "sourceColumn": "id", "valueType": "String", "nullable": false },
+      { "name": "materials_name", "sourceColumn": "name", "valueType": "String", "nullable": false },
+      { "name": "materials_originId", "sourceColumn": "originId", "valueType": "String", "nullable": false },
+      { "name": "materials_supplierId", "sourceColumn": "supplierId", "valueType": "String", "nullable": false },
+      { "name": "materials_specification", "sourceColumn": "specification", "valueType": "String", "nullable": false },
+      { "name": "materials_pricePerKg", "sourceColumn": "pricePerKg", "valueType": "Double", "nullable": false, "unit": "JPY/kg", "description": "税抜。牛乳・包材・加工費を含まない。" }
+    ] },
+    { "id": "origins", "entityType": "BeanOrigin", "label": "産地", "key": "id", "displayColumn": "name", "description": "国単位の産地と広域地域。農園・ロットの追跡情報ではない。", "properties": [
+      { "name": "origins_id", "sourceColumn": "id", "valueType": "String", "nullable": false },
+      { "name": "origins_name", "sourceColumn": "name", "valueType": "String", "nullable": false },
+      { "name": "origins_region", "sourceColumn": "region", "valueType": "String", "nullable": false }
+    ] },
+    { "id": "stocks", "entityType": "BeanStock", "label": "在庫", "key": "id", "displayColumn": "materialId", "description": "データセットの asOf 時点の焙煎豆・拠点別残高。null は不明。異なる日時の残高を合算しない。", "properties": [
+      { "name": "stocks_id", "sourceColumn": "id", "valueType": "String", "nullable": false },
+      { "name": "stocks_materialId", "sourceColumn": "materialId", "valueType": "String", "nullable": false },
+      { "name": "stocks_facilityId", "sourceColumn": "facilityId", "valueType": "String", "nullable": false },
+      { "name": "stocks_grams", "sourceColumn": "grams", "valueType": "Double", "nullable": true, "unit": "g" }
+    ] },
+    { "id": "suppliers", "entityType": "DevelopmentSupplier", "label": "供給会社", "key": "id", "displayColumn": "name", "description": "焙煎豆の調達先。供給モデルの Supplier と自動的には統合しない。", "properties": [
+      { "name": "suppliers_id", "sourceColumn": "id", "valueType": "String", "nullable": false },
+      { "name": "suppliers_name", "sourceColumn": "name", "valueType": "String", "nullable": false },
+      { "name": "suppliers_city", "sourceColumn": "city", "valueType": "String", "nullable": false }
+    ] },
+    { "id": "facilities", "entityType": "DevelopmentFacility", "label": "製造拠点", "key": "id", "displayColumn": "name", "description": "豆を保管して追加製造する中央拠点。販売店舗とは区別。", "properties": [
+      { "name": "facilities_id", "sourceColumn": "id", "valueType": "String", "nullable": false },
+      { "name": "facilities_name", "sourceColumn": "name", "valueType": "String", "nullable": false }
+    ] },
+    { "id": "plans", "entityType": "ProductionPlan", "label": "製造計画", "key": "id", "displayColumn": "id", "description": "商品・配合・拠点・数量を持つ計画。原本の confirmed と試算の draft を区別。", "properties": [
+      { "name": "plans_id", "sourceColumn": "id", "valueType": "String", "nullable": false },
+      { "name": "plans_productId", "sourceColumn": "productId", "valueType": "String", "nullable": false },
+      { "name": "plans_recipeId", "sourceColumn": "recipeId", "valueType": "String", "nullable": false },
+      { "name": "plans_facilityId", "sourceColumn": "facilityId", "valueType": "String", "nullable": false },
+      { "name": "plans_units", "sourceColumn": "units", "valueType": "BigInt", "nullable": false, "unit": "product.unit" },
+      { "name": "plans_status", "sourceColumn": "status", "valueType": "String", "nullable": false }
+    ] },
+    { "id": "reservations", "entityType": "BeanReservation", "label": "確保数量", "key": "id", "displayColumn": "materialId", "description": "計画に対して確保する焙煎豆の数量。同一拠点の確定計画のみ在庫から控除する。", "properties": [
+      { "name": "reservations_id", "sourceColumn": "id", "valueType": "String", "nullable": false },
+      { "name": "reservations_planId", "sourceColumn": "planId", "valueType": "String", "nullable": false },
+      { "name": "reservations_materialId", "sourceColumn": "materialId", "valueType": "String", "nullable": false },
+      { "name": "reservations_grams", "sourceColumn": "grams", "valueType": "Double", "nullable": false, "unit": "g" }
+    ] }
+  ],
+  "relations": [
+    { "id": "recipes-productId", "name": "対象商品", "source": "recipes", "target": "products", "mappingTable": "recipes", "sourceColumn": "id", "targetColumn": "productId" },
+    { "id": "recipeLines-recipeId", "name": "配合案", "source": "recipeLines", "target": "recipes", "mappingTable": "recipeLines", "sourceColumn": "id", "targetColumn": "recipeId" },
+    { "id": "recipeLines-materialId", "name": "使用する豆", "source": "recipeLines", "target": "materials", "mappingTable": "recipeLines", "sourceColumn": "id", "targetColumn": "materialId" },
+    { "id": "materials-originId", "name": "産地", "source": "materials", "target": "origins", "mappingTable": "materials", "sourceColumn": "id", "targetColumn": "originId" },
+    { "id": "materials-supplierId", "name": "調達先", "source": "materials", "target": "suppliers", "mappingTable": "materials", "sourceColumn": "id", "targetColumn": "supplierId" },
+    { "id": "stocks-materialId", "name": "保管する豆", "source": "stocks", "target": "materials", "mappingTable": "stocks", "sourceColumn": "id", "targetColumn": "materialId" },
+    { "id": "stocks-facilityId", "name": "保管拠点", "source": "stocks", "target": "facilities", "mappingTable": "stocks", "sourceColumn": "id", "targetColumn": "facilityId" },
+    { "id": "plans-productId", "name": "製造商品", "source": "plans", "target": "products", "mappingTable": "plans", "sourceColumn": "id", "targetColumn": "productId" },
+    { "id": "plans-recipeId", "name": "製造配合", "source": "plans", "target": "recipes", "mappingTable": "plans", "sourceColumn": "id", "targetColumn": "recipeId" },
+    { "id": "plans-facilityId", "name": "製造拠点", "source": "plans", "target": "facilities", "mappingTable": "plans", "sourceColumn": "id", "targetColumn": "facilityId" },
+    { "id": "reservations-planId", "name": "確保先計画", "source": "reservations", "target": "plans", "mappingTable": "reservations", "sourceColumn": "id", "targetColumn": "planId" },
+    { "id": "reservations-materialId", "name": "確保する豆", "source": "reservations", "target": "materials", "mappingTable": "reservations", "sourceColumn": "id", "targetColumn": "materialId" }
+  ]
+}

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>舞黒珈琲店 | 商品開発ワークスペース</title>
+  <script>
+    (() => {
+      const themes = new Set(['light', 'dark', 'cyber', 'contrast']);
+      const requested = new URLSearchParams(window.location.search).get('scoutTheme');
+      let stored = null;
+      try { stored = localStorage.getItem('micro-coffee-theme'); } catch {}
+      const theme = themes.has(requested) ? requested : themes.has(stored) ? stored : 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>

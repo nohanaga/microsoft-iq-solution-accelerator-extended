@@ -1,0 +1,55 @@
+{
+  "asOf": "2026-07-08T18:00:00+09:00",
+  "version": "2026-09-10.blend-1",
+  "blendProjects": [{ "id": "DEV-002", "name": "オリジナルブレンド", "facilityId": "ROAST-01" }],
+  "roastingFacilities": [{ "id": "ROAST-01", "name": "中央焙煎拠点", "dailyCapacityGrams": 150000 }],
+  "greenBeans": [
+    { "id": "GREEN-BR", "name": "ブラジル生豆", "origin": "ブラジル" },
+    { "id": "GREEN-CO", "name": "コロンビア生豆", "origin": "コロンビア" },
+    { "id": "GREEN-ET", "name": "エチオピア生豆", "origin": "エチオピア" }
+  ],
+  "beanImporters": [{ "id": "IMP-01", "name": "共同輸入元 A" }, { "id": "IMP-02", "name": "独立輸入元 B" }],
+  "beanOffers": [
+    { "id": "BO-BR", "beanId": "GREEN-BR", "supplierId": "SUP-01", "importerId": "IMP-01", "costPerKgYen": 1200, "roastYieldPercent": 80, "qualification": "approved", "leadDays": 5, "validFrom": "2026-07-01", "validUntil": "2026-07-31" },
+    { "id": "BO-CO", "beanId": "GREEN-CO", "supplierId": "SUP-02", "importerId": "IMP-01", "costPerKgYen": 1800, "roastYieldPercent": 84, "qualification": "approved", "leadDays": 10, "validFrom": "2026-07-01", "validUntil": "2026-07-31" },
+    { "id": "BO-ET", "beanId": "GREEN-ET", "supplierId": "SUP-03", "importerId": "IMP-02", "costPerKgYen": 2500, "roastYieldPercent": 80, "qualification": "approved", "leadDays": null, "validFrom": "2026-07-01", "validUntil": "2026-07-31" },
+    { "id": "BO-CO-ALT", "beanId": "GREEN-CO", "supplierId": "SUP-03", "importerId": "IMP-02", "costPerKgYen": 2100, "roastYieldPercent": 84, "qualification": "pending", "leadDays": 4, "validFrom": "2026-07-01", "validUntil": "2026-07-20" }
+  ],
+  "beanStocks": [
+    { "id": "BST-BR", "facilityId": "ROAST-01", "beanId": "GREEN-BR", "onHandGrams": 60000, "asOf": "2026-07-08T18:00:00+09:00" },
+    { "id": "BST-CO", "facilityId": "ROAST-01", "beanId": "GREEN-CO", "onHandGrams": 50000, "asOf": "2026-07-08T18:00:00+09:00" },
+    { "id": "BST-ET", "facilityId": "ROAST-01", "beanId": "GREEN-ET", "onHandGrams": null, "asOf": "2026-07-08T18:00:00+09:00" }
+  ],
+  "beanInbounds": [
+    { "id": "BIN-CO", "facilityId": "ROAST-01", "beanId": "GREEN-CO", "incomingGrams": 10000, "arrivalDate": "2026-07-13", "confirmed": true },
+    { "id": "BIN-ET", "facilityId": "ROAST-01", "beanId": "GREEN-ET", "incomingGrams": 20000, "arrivalDate": null, "confirmed": false }
+  ],
+  "beanProducts": [
+    { "id": "BEAN-001", "name": "舞黒 深煎りブレンド" },
+    { "id": "BEAN-002", "name": "舞黒 中煎りブレンド" }
+  ],
+  "beanAllocations": [
+    { "id": "ALLOC-01", "facilityId": "ROAST-01", "beanId": "GREEN-BR", "beanProductId": "BEAN-001", "allocatedGrams": 20000 },
+    { "id": "ALLOC-02", "facilityId": "ROAST-01", "beanId": "GREEN-BR", "beanProductId": "BEAN-002", "allocatedGrams": 10000 },
+    { "id": "ALLOC-03", "facilityId": "ROAST-01", "beanId": "GREEN-CO", "beanProductId": "BEAN-002", "allocatedGrams": 25000 },
+    { "id": "ALLOC-04", "facilityId": "ROAST-01", "beanId": "GREEN-ET", "beanProductId": "BEAN-001", "allocatedGrams": 5000 }
+  ],
+  "blendDrafts": [
+    { "id": "BLEND-A", "projectId": "DEV-002", "name": "配合案 A", "bagGrams": 200, "unitPriceYen": 1400, "packCostYen": 35, "productionDate": "2026-07-14" },
+    { "id": "BLEND-B", "projectId": "DEV-002", "name": "配合案 B", "bagGrams": 200, "unitPriceYen": 1400, "packCostYen": 35, "productionDate": "2026-07-14" }
+  ],
+  "blendComponents": [
+    { "id": "BC-A-BR", "draftId": "BLEND-A", "offerId": "BO-BR", "sharePercent": 50 },
+    { "id": "BC-A-CO", "draftId": "BLEND-A", "offerId": "BO-CO", "sharePercent": 30 },
+    { "id": "BC-A-ET", "draftId": "BLEND-A", "offerId": "BO-ET", "sharePercent": 20 },
+    { "id": "BC-B-BR", "draftId": "BLEND-B", "offerId": "BO-BR", "sharePercent": 30 },
+    { "id": "BC-B-CO", "draftId": "BLEND-B", "offerId": "BO-CO", "sharePercent": 50 },
+    { "id": "BC-B-ET", "draftId": "BLEND-B", "offerId": "BO-ET", "sharePercent": 20 }
+  ],
+  "blendDestinations": [
+    { "id": "BD-A-04", "draftId": "BLEND-A", "storeId": "STR-04", "bags": 300 },
+    { "id": "BD-A-06", "draftId": "BLEND-A", "storeId": "STR-06", "bags": 200 },
+    { "id": "BD-B-04", "draftId": "BLEND-B", "storeId": "STR-04", "bags": 300 },
+    { "id": "BD-B-06", "draftId": "BLEND-B", "storeId": "STR-06", "bags": 200 }
+  ]
+}

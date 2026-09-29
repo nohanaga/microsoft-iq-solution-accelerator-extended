@@ -1,0 +1,25 @@
+{
+  "datasetId": "maikuro-jp-v1",
+  "eventId": "EVT-REVIEW-0708",
+  "businessAt": "2026-07-08T12:00:00+09:00",
+  "review": {
+    "id": "REV-DEMO-0708",
+    "lineId": "LINE-DEMO-0702",
+    "customerId": "CUS-DEMO",
+    "revision": 1,
+    "rating": 4,
+    "text": "香りを残して甘さ控えめの商品も選べるとうれしいです。",
+    "publishedAt": "2026-07-08T12:00:00+09:00",
+    "analyzedAt": "2026-07-08T12:05:00+09:00",
+    "status": "published"
+  },
+  "topics": [
+    {
+      "id": "TOP-DEMO-0708",
+      "reviewId": "REV-DEMO-0708",
+      "revision": 1,
+      "topic": "甘さ控えめ",
+      "classifierVersion": "synthetic-author-v1"
+    }
+  ]
+}

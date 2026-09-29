@@ -1,0 +1,283 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "micro-coffee",
+  "dataOrigin": "synthetic",
+  "originEvidence": "workshops/Rayfin/micro-coffee-demo2/v3/manifest.json#/dataOrigin",
+  "releaseStatus": "rights-review-required",
+  "sourceRepositoryLicense": "docs/provenance/source-repository-LICENSE.txt",
+  "records": [
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/data/operations.json",
+      "sourceSha256": "a23f8f9dad18a192d511b9b24c2c7d3c70d27578b787c196fd91c88ab45740e7",
+      "target": "scenarios/micro-coffee/data/operations.json",
+      "targetSha256": "a23f8f9dad18a192d511b9b24c2c7d3c70d27578b787c196fd91c88ab45740e7",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/data/development.json",
+      "sourceSha256": "ed70b5ef1003d18f7b664d460b7cd618269566700524f5ef4ad3ab059cb7e385",
+      "target": "scenarios/micro-coffee/data/development.json",
+      "targetSha256": "ed70b5ef1003d18f7b664d460b7cd618269566700524f5ef4ad3ab059cb7e385",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/data/voice-sources.json",
+      "sourceSha256": "415a264029c8024156fbf179bb64edc111e49a00099d2c2fd4527fb514b35712",
+      "target": "scenarios/micro-coffee/data/voice-sources.json",
+      "targetSha256": "415a264029c8024156fbf179bb64edc111e49a00099d2c2fd4527fb514b35712",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/data/ec-chat-history.json",
+      "sourceSha256": "75f2aa618851dfde19ab975f0cbb787e2787bc259e28f6f14ed8d390518d454d",
+      "target": "scenarios/micro-coffee/data/ec-chat-history.json",
+      "targetSha256": "75f2aa618851dfde19ab975f0cbb787e2787bc259e28f6f14ed8d390518d454d",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/data/voice-sentiments.json",
+      "sourceSha256": "ee0dd526bf867c7efa258ab47ab6a452274bf9e41125c95a25f13da10fd99a72",
+      "target": "scenarios/micro-coffee/data/voice-sentiments.json",
+      "targetSha256": "ee0dd526bf867c7efa258ab47ab6a452274bf9e41125c95a25f13da10fd99a72",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/data/voice-spike-demo.json",
+      "sourceSha256": "8445502f9820cf24287f8b917edb4fe3fe55bf859a3a2de521c8373673a17474",
+      "target": "scenarios/micro-coffee/data/voice-spike-demo.json",
+      "targetSha256": "8445502f9820cf24287f8b917edb4fe3fe55bf859a3a2de521c8373673a17474",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/data/events/review-published.json",
+      "sourceSha256": "b839d8f5d6bb44e5d295cebf83849033c1b12be1f9f88379f3b15c4807f7231e",
+      "target": "scenarios/micro-coffee/data/events/review-published.json",
+      "targetSha256": "b839d8f5d6bb44e5d295cebf83849033c1b12be1f9f88379f3b15c4807f7231e",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/data/allocation.json",
+      "sourceSha256": "2be3ef43b34037f9caec392f9a8cf4be0b189d2825e5876364a3d9456ce245a3",
+      "target": "scenarios/micro-coffee/data/allocation.json",
+      "targetSha256": "2be3ef43b34037f9caec392f9a8cf4be0b189d2825e5876364a3d9456ce245a3",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/data/geo.json",
+      "sourceSha256": "190113fb06d2045ddd04aa7d8165d472b7afa56335e0e8bb7431f24d0f1ab9a7",
+      "target": "scenarios/micro-coffee/data/geo.json",
+      "targetSha256": "190113fb06d2045ddd04aa7d8165d472b7afa56335e0e8bb7431f24d0f1ab9a7",
+      "transformed": false
+    },
+    {
+      "source": "micro-coffee-ec-demo/data/catalogue.json",
+      "sourceSha256": "94ff3ecb9771f47db20a1f89dcd9db795f07da3ad01684c37930ed30243324df",
+      "target": "scenarios/micro-coffee/data/catalogue.json",
+      "targetSha256": "94ff3ecb9771f47db20a1f89dcd9db795f07da3ad01684c37930ed30243324df",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/ontology/development.json",
+      "sourceSha256": "29581289ef715b2b3abac5e18101a67ec2f15568f2cd899bdb6641375185a254",
+      "target": "scenarios/micro-coffee/ontology/development.json",
+      "targetSha256": "29581289ef715b2b3abac5e18101a67ec2f15568f2cd899bdb6641375185a254",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/ontology/supply.json",
+      "sourceSha256": "3f89227c81978961c8a153c1bc486045a6aa08188be468f39a0fa6959edcbd64",
+      "target": "scenarios/micro-coffee/ontology/supply.json",
+      "targetSha256": "3f89227c81978961c8a153c1bc486045a6aa08188be468f39a0fa6959edcbd64",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/live/tables.json",
+      "sourceSha256": "555bc424808b07bcff737666ce43d935289b3683bc8261b5a304ff876a7a9d7d",
+      "target": "scenarios/micro-coffee/table-schemas.json",
+      "targetSha256": "8977388bfddd61a713238d5a0beb46d9af470f788ce6abc12a32c597fb11d7a9",
+      "transformed": true
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/data-copilot/data/foundry-iq/FQ-001-cost-policy-v1.md",
+      "sourceSha256": "49ea40fcbee3ea13a927b6c7dfb5c779aa955d329223274ea30862a6649583c0",
+      "target": "scenarios/micro-coffee/knowledge/foundry-iq/FQ-001-cost-policy-v1.md",
+      "targetSha256": "49ea40fcbee3ea13a927b6c7dfb5c779aa955d329223274ea30862a6649583c0",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/data-copilot/data/foundry-iq/FQ-002-cost-policy-v2.md",
+      "sourceSha256": "fe408ded900ce0d00c679b909f9badd517fa8d7bec87345afae4207cea73faa7",
+      "target": "scenarios/micro-coffee/knowledge/foundry-iq/FQ-002-cost-policy-v2.md",
+      "targetSha256": "fe408ded900ce0d00c679b909f9badd517fa8d7bec87345afae4207cea73faa7",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/data-copilot/data/foundry-iq/FQ-003-reproposal-manual.md",
+      "sourceSha256": "7053515fb84b05156f48f1a5e0c7afc5431c9b781cee62a30b1ceb5aba6f4d0b",
+      "target": "scenarios/micro-coffee/knowledge/foundry-iq/FQ-003-reproposal-manual.md",
+      "targetSha256": "7053515fb84b05156f48f1a5e0c7afc5431c9b781cee62a30b1ceb5aba6f4d0b",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/data-copilot/data/work-iq/WQ-001-blend-rejection.md",
+      "sourceSha256": "afcd570176106cf5de1d1acd92f8a10aa9da13e8253ccc014dac0218b3b0304f",
+      "target": "scenarios/micro-coffee/knowledge/work-iq/WQ-001-blend-rejection.md",
+      "targetSha256": "afcd570176106cf5de1d1acd92f8a10aa9da13e8253ccc014dac0218b3b0304f",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/data-copilot/data/work-iq/WQ-002-blend-reconsideration.md",
+      "sourceSha256": "dce305977ce7e9e0b91f43a1956ee262930a44e3c0f758ab2201ad1965a6cd78",
+      "target": "scenarios/micro-coffee/knowledge/work-iq/WQ-002-blend-reconsideration.md",
+      "targetSha256": "dce305977ce7e9e0b91f43a1956ee262930a44e3c0f758ab2201ad1965a6cd78",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/data-copilot/data/work-iq/WQ-003-other-product.md",
+      "sourceSha256": "c205d0738bed511719392d1d9e3f306a78c1560fd7d919df64c4c3cc2d35da92",
+      "target": "scenarios/micro-coffee/knowledge/work-iq/WQ-003-other-product.md",
+      "targetSha256": "c205d0738bed511719392d1d9e3f306a78c1560fd7d919df64c4c3cc2d35da92",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/data-copilot/agent-instructions.txt",
+      "sourceSha256": "6b37fd6be3d1e7fe867d0b8ee99d30fd800daf38407cd673161b09bd943a2af4",
+      "target": "scenarios/micro-coffee/prompts/agent-instructions.txt",
+      "targetSha256": "6b37fd6be3d1e7fe867d0b8ee99d30fd800daf38407cd673161b09bd943a2af4",
+      "transformed": false
+    },
+    {
+      "source": "micro-coffee-ec-demo/postgres/001-schema.sql",
+      "sourceSha256": "e402613c12e82712a73da8f7107794689ef20934deb23672d961651f7b6ce7d5",
+      "target": "apps/storefront/postgres/001-schema.sql",
+      "targetSha256": "e402613c12e82712a73da8f7107794689ef20934deb23672d961651f7b6ce7d5",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/ontology/prepare_fabric.py",
+      "sourceSha256": "abae072730d9d71dc739e849d2096f25d4be4ecf2c5aa2e9818222be24ae5d83",
+      "target": "scripts/accelerator/ontology.py",
+      "targetSha256": "547861a2c1533c44b61283f3338cc1947aaf330c3aa6d60a9552c33f5c2e457a",
+      "transformed": true
+    },
+    {
+      "source": ".github/skills/fabric-ontology-deploy/assets/deploy_workshop_to_fabric.py",
+      "sourceSha256": "c8a1ec6ea9da0a3d6e38cfdad01f4ae378d8721d2d69d4fe783f3b62e4621ed0",
+      "target": "scripts/accelerator/graph_definition.py",
+      "targetSha256": "830f09ad8bafb4e1496062c047c241a06a0622523e789914210e3d9ab6ddbad6",
+      "transformed": true
+    },
+    {
+      "source": "LICENSE",
+      "sourceSha256": "7df20dcdf9197e9945c14858d41c60f11b52b93e5b69e2b63416b874d598d322",
+      "target": "docs/provenance/source-repository-LICENSE.txt",
+      "targetSha256": "7df20dcdf9197e9945c14858d41c60f11b52b93e5b69e2b63416b874d598d322",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/data/predictions.json",
+      "target": "scenarios/micro-coffee/data/predictions.json",
+      "sourceSha256": "4d40b1c4664701617244884cb7594dc959136b79f304fc7e2c4d8ec405796004",
+      "targetSha256": "4d40b1c4664701617244884cb7594dc959136b79f304fc7e2c4d8ec405796004",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/rti/DatabaseSchema.kql",
+      "target": "infra/fabric/rti/DatabaseSchema.kql",
+      "sourceSha256": "17f10451d4c1a1e784cc12221b0678624f854876350eb52074fa3b2e010cefa0",
+      "targetSha256": "17f10451d4c1a1e784cc12221b0678624f854876350eb52074fa3b2e010cefa0",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/ml/data/bean-ledger-daily.csv",
+      "target": "scenarios/micro-coffee/ml-data/bean-ledger-daily.csv",
+      "sourceSha256": "7f0a85ffe82cab60aab26a401b1eee24227ba59eda1df41928272822d6c0f67a",
+      "targetSha256": "7f0a85ffe82cab60aab26a401b1eee24227ba59eda1df41928272822d6c0f67a",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/ml/data/bean-ledger-daily.parquet",
+      "target": "scenarios/micro-coffee/ml-data/bean-ledger-daily.parquet",
+      "sourceSha256": "55af67197411c4152a85559d712ea6754e32baf85c71ecdce8db5aa3de971936",
+      "targetSha256": "55af67197411c4152a85559d712ea6754e32baf85c71ecdce8db5aa3de971936",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/ml/data/demand-daily-sample.csv",
+      "target": "scenarios/micro-coffee/ml-data/demand-daily-sample.csv",
+      "sourceSha256": "a1ada1d82ddfafdb5f573c4b96cbb26ecf4dc94545df09300d91ba38b446e92e",
+      "targetSha256": "a1ada1d82ddfafdb5f573c4b96cbb26ecf4dc94545df09300d91ba38b446e92e",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/ml/data/demand-daily.parquet",
+      "target": "scenarios/micro-coffee/ml-data/demand-daily.parquet",
+      "sourceSha256": "38c9b623d211b977a2934d4b29ea76b5f31f44e63a2919fb24884245c2269781",
+      "targetSha256": "38c9b623d211b977a2934d4b29ea76b5f31f44e63a2919fb24884245c2269781",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/ml/data/production-daily.csv",
+      "target": "scenarios/micro-coffee/ml-data/production-daily.csv",
+      "sourceSha256": "b1c5f18460417c356f0a101cff869ea9f483ef3fcb7bdc3bc42dbf3896fa1da7",
+      "targetSha256": "b1c5f18460417c356f0a101cff869ea9f483ef3fcb7bdc3bc42dbf3896fa1da7",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/ml/data/production-daily.parquet",
+      "target": "scenarios/micro-coffee/ml-data/production-daily.parquet",
+      "sourceSha256": "63d1e35fbf3891b5bf78bfa1088256e73deec67d7c1725a7b2ebd14263001450",
+      "targetSha256": "63d1e35fbf3891b5bf78bfa1088256e73deec67d7c1725a7b2ebd14263001450",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/ml/data/shipment-history.csv",
+      "target": "scenarios/micro-coffee/ml-data/shipment-history.csv",
+      "sourceSha256": "f70830e96cc244fba5a909fcae3473eda7f14bbf9ef3636e1c941e5809e3a444",
+      "targetSha256": "f70830e96cc244fba5a909fcae3473eda7f14bbf9ef3636e1c941e5809e3a444",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/ml/data/shipment-history.json",
+      "target": "scenarios/micro-coffee/ml-data/shipment-history.json",
+      "sourceSha256": "7f366c3f19f7b8565f7f600b35bb8165f08fd77284f94c521c79fd90eb795e30",
+      "targetSha256": "7f366c3f19f7b8565f7f600b35bb8165f08fd77284f94c521c79fd90eb795e30",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/ml/data/shipment-history.parquet",
+      "target": "scenarios/micro-coffee/ml-data/shipment-history.parquet",
+      "sourceSha256": "4c7ade7db0db5d431264c1805436f09d4d1ba033e37288cf7dbf81566c6d1b16",
+      "targetSha256": "4c7ade7db0db5d431264c1805436f09d4d1ba033e37288cf7dbf81566c6d1b16",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/ml/data/summary.json",
+      "target": "scenarios/micro-coffee/ml-data/summary.json",
+      "sourceSha256": "1efd6bc71b7ff9c5a8f0cf8c1ca06f2bef758b297ac493cf98a8e7db5b78a40e",
+      "targetSha256": "1efd6bc71b7ff9c5a8f0cf8c1ca06f2bef758b297ac493cf98a8e7db5b78a40e",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/ml/data/supply-impact-history.csv",
+      "target": "scenarios/micro-coffee/ml-data/supply-impact-history.csv",
+      "sourceSha256": "75404070bc94873705c9c065e6d4a6fe9d133efeffe8bc3beb59174ed5ed488a",
+      "targetSha256": "75404070bc94873705c9c065e6d4a6fe9d133efeffe8bc3beb59174ed5ed488a",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/ml/data/supply-impact-history.json",
+      "target": "scenarios/micro-coffee/ml-data/supply-impact-history.json",
+      "sourceSha256": "5ea6e96c9a1071b16dc23e1b49cb90a4de51b42ee492a06d7cc087cbd89ef7a0",
+      "targetSha256": "5ea6e96c9a1071b16dc23e1b49cb90a4de51b42ee492a06d7cc087cbd89ef7a0",
+      "transformed": false
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/ml/data/supply-impact-history.parquet",
+      "target": "scenarios/micro-coffee/ml-data/supply-impact-history.parquet",
+      "sourceSha256": "ea61e7ff6d54c83263595e616af9572643911a6999b1b87374dcb6d6f6a195fa",
+      "targetSha256": "ea61e7ff6d54c83263595e616af9572643911a6999b1b87374dcb6d6f6a195fa",
+      "transformed": false
+    }
+  ]
+}

@@ -1,0 +1,1128 @@
+{
+  "schemaVersion": 1,
+  "scope": "initial application source import, before portability edits",
+  "records": [
+    {
+      "source": "micro-coffee-ec-demo/agent/instructions.md",
+      "target": "apps/storefront/agent/instructions.md",
+      "sourceSha256": "2862738a77fe9911537cc55ffaa00f18db60f1e4b97fcd15b6bdd8fa0b573cfe",
+      "importedSha256": "2862738a77fe9911537cc55ffaa00f18db60f1e4b97fcd15b6bdd8fa0b573cfe"
+    },
+    {
+      "source": "micro-coffee-ec-demo/agent/requirements.txt",
+      "target": "apps/storefront/agent/requirements.txt",
+      "sourceSha256": "6cb107efb2d4ed7dc476fbd2d29ca47a80e0135a3e55d8d88b2b1ba46222a47c",
+      "importedSha256": "6cb107efb2d4ed7dc476fbd2d29ca47a80e0135a3e55d8d88b2b1ba46222a47c"
+    },
+    {
+      "source": "micro-coffee-ec-demo/agent/worker.py",
+      "target": "apps/storefront/agent/worker.py",
+      "sourceSha256": "a0fbed23a77be63451edf47a47fcd8b7aeeef3bc95c90e219e6a20e945ee4e77",
+      "importedSha256": "a0fbed23a77be63451edf47a47fcd8b7aeeef3bc95c90e219e6a20e945ee4e77"
+    },
+    {
+      "source": "micro-coffee-ec-demo/data/catalogue.json",
+      "target": "apps/storefront/data/catalogue.json",
+      "sourceSha256": "94ff3ecb9771f47db20a1f89dcd9db795f07da3ad01684c37930ed30243324df",
+      "importedSha256": "94ff3ecb9771f47db20a1f89dcd9db795f07da3ad01684c37930ed30243324df"
+    },
+    {
+      "source": "micro-coffee-ec-demo/index.html",
+      "target": "apps/storefront/index.html",
+      "sourceSha256": "9e7a616da581bf3dbbed646b6e1a7bb5f0ef28ecc1efffe4f3fd77d190ee8cc4",
+      "importedSha256": "9e7a616da581bf3dbbed646b6e1a7bb5f0ef28ecc1efffe4f3fd77d190ee8cc4"
+    },
+    {
+      "source": "micro-coffee-ec-demo/package.json",
+      "target": "apps/storefront/package.json",
+      "sourceSha256": "2f416d6b31bf669cd67857483656bcf7229c3721c457ab0ec29af530e54fb18a",
+      "importedSha256": "fd7ca3ecc4432e8fc338fc6c02e4e8b6d79ebcb9498096e603f54ed24581f562"
+    },
+    {
+      "source": "micro-coffee-ec-demo/postgres/001-schema.sql",
+      "target": "apps/storefront/postgres/001-schema.sql",
+      "sourceSha256": "e402613c12e82712a73da8f7107794689ef20934deb23672d961651f7b6ce7d5",
+      "importedSha256": "e402613c12e82712a73da8f7107794689ef20934deb23672d961651f7b6ce7d5"
+    },
+    {
+      "source": "micro-coffee-ec-demo/postgres/002-seed.sql",
+      "target": "apps/storefront/postgres/002-seed.sql",
+      "sourceSha256": "10b6b0f77d63c41490792e5e9fd76ba848094ce997eeef118e786e2377ab51a4",
+      "importedSha256": "10b6b0f77d63c41490792e5e9fd76ba848094ce997eeef118e786e2377ab51a4"
+    },
+    {
+      "source": "micro-coffee-ec-demo/postgres/deployment.json",
+      "target": "apps/storefront/postgres/deployment.json",
+      "sourceSha256": "e7a556620fbf648017f7f70713843663ff59b602beef78faeda634d10ec97979",
+      "importedSha256": "e7a556620fbf648017f7f70713843663ff59b602beef78faeda634d10ec97979"
+    },
+    {
+      "source": "micro-coffee-ec-demo/postgres/README.md",
+      "target": "apps/storefront/postgres/README.md",
+      "sourceSha256": "b75eefc9ee1e03d961d2f674cd8dd6e447fe77a20bd854dac77c08913260ab86",
+      "importedSha256": "b75eefc9ee1e03d961d2f674cd8dd6e447fe77a20bd854dac77c08913260ab86"
+    },
+    {
+      "source": "micro-coffee-ec-demo/postgres/requirements.txt",
+      "target": "apps/storefront/postgres/requirements.txt",
+      "sourceSha256": "e3a6acde7cbe80d521b16a1c7bf8d0d25cc71e0e23e0b0374e7d0a879522ca10",
+      "importedSha256": "e3a6acde7cbe80d521b16a1c7bf8d0d25cc71e0e23e0b0374e7d0a879522ca10"
+    },
+    {
+      "source": "micro-coffee-ec-demo/postgres/seed-azure.py",
+      "target": "apps/storefront/postgres/seed-azure.py",
+      "sourceSha256": "2fa1b7ec3cb0e1b69b8a57254d7e8e6fa4247d20e719beffb6e89ddeee20d7f1",
+      "importedSha256": "2fa1b7ec3cb0e1b69b8a57254d7e8e6fa4247d20e719beffb6e89ddeee20d7f1"
+    },
+    {
+      "source": "micro-coffee-ec-demo/public/favicon.svg",
+      "target": "apps/storefront/public/favicon.svg",
+      "sourceSha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+      "importedSha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66"
+    },
+    {
+      "source": "micro-coffee-ec-demo/public/icons.svg",
+      "target": "apps/storefront/public/icons.svg",
+      "sourceSha256": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+      "importedSha256": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a"
+    },
+    {
+      "source": "micro-coffee-ec-demo/scripts/prepare-commerce.ts",
+      "target": "apps/storefront/scripts/prepare-commerce.ts",
+      "sourceSha256": "fc427411362f40ae12d03c3d753ff15cff0ecdba290828ad6d5efcc9e218e9a0",
+      "importedSha256": "fc427411362f40ae12d03c3d753ff15cff0ecdba290828ad6d5efcc9e218e9a0"
+    },
+    {
+      "source": "micro-coffee-ec-demo/server/agent.ts",
+      "target": "apps/storefront/server/agent.ts",
+      "sourceSha256": "0f146c8ccc106b8c9cb76ed0e83f779991a6be780d1c81b53f814789a1fff64e",
+      "importedSha256": "0f146c8ccc106b8c9cb76ed0e83f779991a6be780d1c81b53f814789a1fff64e"
+    },
+    {
+      "source": "micro-coffee-ec-demo/server/catalogue.ts",
+      "target": "apps/storefront/server/catalogue.ts",
+      "sourceSha256": "1f44ec5b02b2bf48e0fb8cc468dbcbefed0d46f97fb470ac0dee4fbfd61345d6",
+      "importedSha256": "1f44ec5b02b2bf48e0fb8cc468dbcbefed0d46f97fb470ac0dee4fbfd61345d6"
+    },
+    {
+      "source": "micro-coffee-ec-demo/server/config.ts",
+      "target": "apps/storefront/server/config.ts",
+      "sourceSha256": "38534ac3632c3727d59cd34800709ee0ffba5a6c506698858df5c1626a66c610",
+      "importedSha256": "38534ac3632c3727d59cd34800709ee0ffba5a6c506698858df5c1626a66c610"
+    },
+    {
+      "source": "micro-coffee-ec-demo/server/index.ts",
+      "target": "apps/storefront/server/index.ts",
+      "sourceSha256": "cf2277f9e6bd9c5410de21c5ed3eaa1f9029eb489b6cca14d50089511d00e2a6",
+      "importedSha256": "cf2277f9e6bd9c5410de21c5ed3eaa1f9029eb489b6cca14d50089511d00e2a6"
+    },
+    {
+      "source": "micro-coffee-ec-demo/server/jev.ts",
+      "target": "apps/storefront/server/jev.ts",
+      "sourceSha256": "2d3bc90ff070292a9f3b1c4c9e9affcf9d2cce213ff15c4819705c81fae18bc1",
+      "importedSha256": "2d3bc90ff070292a9f3b1c4c9e9affcf9d2cce213ff15c4819705c81fae18bc1"
+    },
+    {
+      "source": "micro-coffee-ec-demo/server/liveVoice.ts",
+      "target": "apps/storefront/server/liveVoice.ts",
+      "sourceSha256": "69989dfca75392e1cdb5c7c20d4119d0f043c5fe1c01e329e0dc255dddf460ff",
+      "importedSha256": "69989dfca75392e1cdb5c7c20d4119d0f043c5fe1c01e329e0dc255dddf460ff"
+    },
+    {
+      "source": "micro-coffee-ec-demo/server/orders.ts",
+      "target": "apps/storefront/server/orders.ts",
+      "sourceSha256": "2e446746199397a7d11f68542ffd58f8524a9cd34b3648af9b0e650eb9de4719",
+      "importedSha256": "2e446746199397a7d11f68542ffd58f8524a9cd34b3648af9b0e650eb9de4719"
+    },
+    {
+      "source": "micro-coffee-ec-demo/server/realtime.ts",
+      "target": "apps/storefront/server/realtime.ts",
+      "sourceSha256": "8326815d3ea76e1d9715873d6f8060d6d14faea4cbe32d03523ca17b736d098a",
+      "importedSha256": "8326815d3ea76e1d9715873d6f8060d6d14faea4cbe32d03523ca17b736d098a"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/assets/hero.png",
+      "target": "apps/storefront/src/assets/hero.png",
+      "sourceSha256": "881ffbcaafc212e49addad08846a5b82761355fa20624253af3477ba33262c5c",
+      "importedSha256": "881ffbcaafc212e49addad08846a5b82761355fa20624253af3477ba33262c5c"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/assets/react.svg",
+      "target": "apps/storefront/src/assets/react.svg",
+      "sourceSha256": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5",
+      "importedSha256": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/assets/vite.svg",
+      "target": "apps/storefront/src/assets/vite.svg",
+      "sourceSha256": "5be21acd42eb7b896e517f4e0f0f11eb5c5d9e54fbbcebe9453f033008fcca6f",
+      "importedSha256": "5be21acd42eb7b896e517f4e0f0f11eb5c5d9e54fbbcebe9453f033008fcca6f"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/components/BaristaPanel.tsx",
+      "target": "apps/storefront/src/components/BaristaPanel.tsx",
+      "sourceSha256": "824ed9f3f87a13a028cb38fe5fb9d39af74106055c056cc228e392885d82c488",
+      "importedSha256": "824ed9f3f87a13a028cb38fe5fb9d39af74106055c056cc228e392885d82c488"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/components/CatalogueWorkspace.tsx",
+      "target": "apps/storefront/src/components/CatalogueWorkspace.tsx",
+      "sourceSha256": "2bde2f3b6dc8f75b53411576046f0bca8f227cf6db92665a087a187dc85ea773",
+      "importedSha256": "2bde2f3b6dc8f75b53411576046f0bca8f227cf6db92665a087a187dc85ea773"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/components/ChatTracePanel.tsx",
+      "target": "apps/storefront/src/components/ChatTracePanel.tsx",
+      "sourceSha256": "0e47e3a2301f58b806235e4bf70f7376b482426103df51904fdb2c00e8e51206",
+      "importedSha256": "0e47e3a2301f58b806235e4bf70f7376b482426103df51904fdb2c00e8e51206"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/components/DataSettings.tsx",
+      "target": "apps/storefront/src/components/DataSettings.tsx",
+      "sourceSha256": "0186a324c8d97f8a1f6b67a4e1f5a9df447096fc1e1530daa8684f9f8dde53f7",
+      "importedSha256": "0186a324c8d97f8a1f6b67a4e1f5a9df447096fc1e1530daa8684f9f8dde53f7"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/components/FaqPage.tsx",
+      "target": "apps/storefront/src/components/FaqPage.tsx",
+      "sourceSha256": "2fad82ff166fd61851c810fb01fba960ca964afffb4eff6757245d74e8ce58d1",
+      "importedSha256": "2fad82ff166fd61851c810fb01fba960ca964afffb4eff6757245d74e8ce58d1"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/components/IconSprite.tsx",
+      "target": "apps/storefront/src/components/IconSprite.tsx",
+      "sourceSha256": "6b20debe1d5f7bdaecf78c1c2c0665f017de8f565aabcb3450f78fab7aa251c2",
+      "importedSha256": "6b20debe1d5f7bdaecf78c1c2c0665f017de8f565aabcb3450f78fab7aa251c2"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/components/ShopDialogs.tsx",
+      "target": "apps/storefront/src/components/ShopDialogs.tsx",
+      "sourceSha256": "cbe136507abf3553d9db44304f31cef31743f0e6af7895096be98b021671a1da",
+      "importedSha256": "cbe136507abf3553d9db44304f31cef31743f0e6af7895096be98b021671a1da"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/components/ShopIntro.tsx",
+      "target": "apps/storefront/src/components/ShopIntro.tsx",
+      "sourceSha256": "99b3beed917259328f854e19298ce3ccf9686d3e33a49886ece8629773ea1b95",
+      "importedSha256": "99b3beed917259328f854e19298ce3ccf9686d3e33a49886ece8629773ea1b95"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/components/ShopLayout.tsx",
+      "target": "apps/storefront/src/components/ShopLayout.tsx",
+      "sourceSha256": "8384d3106ed64e2efb62479740f0122d72f8e12bb0d6a05841499e08623ea153",
+      "importedSha256": "8384d3106ed64e2efb62479740f0122d72f8e12bb0d6a05841499e08623ea153"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/components/SiteFooter.tsx",
+      "target": "apps/storefront/src/components/SiteFooter.tsx",
+      "sourceSha256": "196ed4827f516ea177f00dbad471eea0db09e07abd25cf7dfc7c744b3d4ba894",
+      "importedSha256": "196ed4827f516ea177f00dbad471eea0db09e07abd25cf7dfc7c744b3d4ba894"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/components/SiteHeader.tsx",
+      "target": "apps/storefront/src/components/SiteHeader.tsx",
+      "sourceSha256": "060b71e5c312c8ab9badc947dfed59d60f2c6ee279c4c8e6321cc9f3e719f65c",
+      "importedSha256": "060b71e5c312c8ab9badc947dfed59d60f2c6ee279c4c8e6321cc9f3e719f65c"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/data/barista.ts",
+      "target": "apps/storefront/src/data/barista.ts",
+      "sourceSha256": "d67d7e63745f161f794a9881a4a49c77722ae1e4cb053a43af37f768b63b9adb",
+      "importedSha256": "d67d7e63745f161f794a9881a4a49c77722ae1e4cb053a43af37f768b63b9adb"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/data/catalogue.ts",
+      "target": "apps/storefront/src/data/catalogue.ts",
+      "sourceSha256": "703cd3b78a03994a96ebae9aaa89cb3862eeb67eb3929b9419ad334daf62a696",
+      "importedSha256": "703cd3b78a03994a96ebae9aaa89cb3862eeb67eb3929b9419ad334daf62a696"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/data/demoPrompts.ts",
+      "target": "apps/storefront/src/data/demoPrompts.ts",
+      "sourceSha256": "faefbcaf333b3236024c1cda8e36a66983afd20cb3b34ae28d660e93a027b074",
+      "importedSha256": "faefbcaf333b3236024c1cda8e36a66983afd20cb3b34ae28d660e93a027b074"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/data/products.ts",
+      "target": "apps/storefront/src/data/products.ts",
+      "sourceSha256": "bbc578a57c17d0afa3b811b597d92af2facf87924c1f0f8bb56dbab3aef0face",
+      "importedSha256": "bbc578a57c17d0afa3b811b597d92af2facf87924c1f0f8bb56dbab3aef0face"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/main.tsx",
+      "target": "apps/storefront/src/main.tsx",
+      "sourceSha256": "5d0cb8d7f794583832ded4e79abf79f1422780f2628a73d6e7a76728171a5fea",
+      "importedSha256": "5d0cb8d7f794583832ded4e79abf79f1422780f2628a73d6e7a76728171a5fea"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/runtime/chatContent.ts",
+      "target": "apps/storefront/src/runtime/chatContent.ts",
+      "sourceSha256": "7d0d7749ccd1ac088eb3a2dd5b183dd37d8d21dcba7f976090206062a45b553c",
+      "importedSha256": "7d0d7749ccd1ac088eb3a2dd5b183dd37d8d21dcba7f976090206062a45b553c"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/runtime/harnessClient.ts",
+      "target": "apps/storefront/src/runtime/harnessClient.ts",
+      "sourceSha256": "42a506bafbb3e2e7996c5cc659bb4c616345d3455c166e51ec04a1ea47c7983b",
+      "importedSha256": "42a506bafbb3e2e7996c5cc659bb4c616345d3455c166e51ec04a1ea47c7983b"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/runtime/lifecycle.ts",
+      "target": "apps/storefront/src/runtime/lifecycle.ts",
+      "sourceSha256": "6f66e6064733dadef6f2b420da5e82be0effed0d7bb7010b40857cfe1b2415c5",
+      "importedSha256": "6f66e6064733dadef6f2b420da5e82be0effed0d7bb7010b40857cfe1b2415c5"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/runtime/liveVoiceClient.ts",
+      "target": "apps/storefront/src/runtime/liveVoiceClient.ts",
+      "sourceSha256": "3486ee3127f4857597f8d1b037e7c62a1c473874404147040eeece810ee8d03d",
+      "importedSha256": "3486ee3127f4857597f8d1b037e7c62a1c473874404147040eeece810ee8d03d"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/runtime/shopController.d.ts",
+      "target": "apps/storefront/src/runtime/shopController.d.ts",
+      "sourceSha256": "8d1480564f8bdb229612bc6667f1f0b12dabb96cb8d98514952d9be43e75b01e",
+      "importedSha256": "8d1480564f8bdb229612bc6667f1f0b12dabb96cb8d98514952d9be43e75b01e"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/runtime/shopController.js",
+      "target": "apps/storefront/src/runtime/shopController.js",
+      "sourceSha256": "dd887b4604e143ae227f165ee792b987f6a43be258795df215f627b0e0c73eb2",
+      "importedSha256": "dd887b4604e143ae227f165ee792b987f6a43be258795df215f627b0e0c73eb2"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/ShopApp.tsx",
+      "target": "apps/storefront/src/ShopApp.tsx",
+      "sourceSha256": "d2c2475e7a1f776d7ea9d3ab552a2fab01dcb45562e135b9609c39650837545b",
+      "importedSha256": "d2c2475e7a1f776d7ea9d3ab552a2fab01dcb45562e135b9609c39650837545b"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/styles/shop.css",
+      "target": "apps/storefront/src/styles/shop.css",
+      "sourceSha256": "3c390ea77bed33cbc80119f66f832167e9200d4f76792fafb86ceefd0b0ec41c",
+      "importedSha256": "3c390ea77bed33cbc80119f66f832167e9200d4f76792fafb86ceefd0b0ec41c"
+    },
+    {
+      "source": "micro-coffee-ec-demo/src/types/shop.ts",
+      "target": "apps/storefront/src/types/shop.ts",
+      "sourceSha256": "b8597f5526aeda8bb511b30b2d0722e12f527e710045aa1b95d6be00316e81d6",
+      "importedSha256": "b8597f5526aeda8bb511b30b2d0722e12f527e710045aa1b95d6be00316e81d6"
+    },
+    {
+      "source": "micro-coffee-ec-demo/tsconfig.app.json",
+      "target": "apps/storefront/tsconfig.app.json",
+      "sourceSha256": "4dc97124248a91f63b1ec75d6fd27fa73f054f084eadea26cb6d00b859d1a369",
+      "importedSha256": "4dc97124248a91f63b1ec75d6fd27fa73f054f084eadea26cb6d00b859d1a369"
+    },
+    {
+      "source": "micro-coffee-ec-demo/tsconfig.json",
+      "target": "apps/storefront/tsconfig.json",
+      "sourceSha256": "770b4140bbb581e2dfd9ea9946ffc9c75a1d86ba7d2db5f77c83e37cbdf9d808",
+      "importedSha256": "770b4140bbb581e2dfd9ea9946ffc9c75a1d86ba7d2db5f77c83e37cbdf9d808"
+    },
+    {
+      "source": "micro-coffee-ec-demo/tsconfig.node.json",
+      "target": "apps/storefront/tsconfig.node.json",
+      "sourceSha256": "d366cc0827139db39c61815f22491bbfda56c654354a42ad7795143d314e45e8",
+      "importedSha256": "d366cc0827139db39c61815f22491bbfda56c654354a42ad7795143d314e45e8"
+    },
+    {
+      "source": "micro-coffee-ec-demo/tsconfig.server.json",
+      "target": "apps/storefront/tsconfig.server.json",
+      "sourceSha256": "fb6172ba1e094b2fdc7d84367e4c3b02b6e24dd1ccee60c1df0f72a31d0a30dc",
+      "importedSha256": "fb6172ba1e094b2fdc7d84367e4c3b02b6e24dd1ccee60c1df0f72a31d0a30dc"
+    },
+    {
+      "source": "micro-coffee-ec-demo/vite.config.ts",
+      "target": "apps/storefront/vite.config.ts",
+      "sourceSha256": "e1eefd0ed1639c88d1213884ef760516884db9e168190e223fee6b063ad3e088",
+      "importedSha256": "e1eefd0ed1639c88d1213884ef760516884db9e168190e223fee6b063ad3e088"
+    },
+    {
+      "source": "micro-coffee-ec-demo/package-lock.json",
+      "target": "apps/storefront/package-lock.json",
+      "sourceSha256": "531f9c3f8855d5e66703d9b0073983f515fe8a0b85bf5a5c8b2dd0d395c0dd17",
+      "importedSha256": "4e8c90901e9182b03ec44c252fdff0af9b92d7d38b57cb1607ee7921a1b62b0e"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/auth.html",
+      "target": "apps/operations/auth.html",
+      "sourceSha256": "b22eed2635c59eeba8d81451dfb01e6941efe28713ca11a0f77e5c43a326d470",
+      "importedSha256": "b22eed2635c59eeba8d81451dfb01e6941efe28713ca11a0f77e5c43a326d470"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/data/blend-dataset.json",
+      "target": "apps/operations/data/blend-dataset.json",
+      "sourceSha256": "aa3d849bfd27b969fb24d0b4fbc726e956219e3f3a7277f32021ad0e0ce9b402",
+      "importedSha256": "aa3d849bfd27b969fb24d0b4fbc726e956219e3f3a7277f32021ad0e0ce9b402"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/data/blend-seed.json",
+      "target": "apps/operations/data/blend-seed.json",
+      "sourceSha256": "6e02d2faa597df4464a14cea2a8aedd00209dac3eaed1ce23fa0ef1d5d2c7b20",
+      "importedSha256": "6e02d2faa597df4464a14cea2a8aedd00209dac3eaed1ce23fa0ef1d5d2c7b20"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/data/dataset.json",
+      "target": "apps/operations/data/dataset.json",
+      "sourceSha256": "91e75a2fcdba8e3bfa9839faed54ae674305c8cac93ce4e403fc83da8d6b545f",
+      "importedSha256": "91e75a2fcdba8e3bfa9839faed54ae674305c8cac93ce4e403fc83da8d6b545f"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/data/development-workbench.json",
+      "target": "apps/operations/data/development-workbench.json",
+      "sourceSha256": "4b0731a3fedf6f1441895f26640b5c4154a2398d4e99fc165298996e1bf0f4f2",
+      "importedSha256": "4b0731a3fedf6f1441895f26640b5c4154a2398d4e99fc165298996e1bf0f4f2"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/data/ec-chat-history.json",
+      "target": "apps/operations/data/ec-chat-history.json",
+      "sourceSha256": "e617126bf6d1188a383c9ca4b60da315dfa6e1a04b0fc544de86f6c3502c5eb4",
+      "importedSha256": "e617126bf6d1188a383c9ca4b60da315dfa6e1a04b0fc544de86f6c3502c5eb4"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/data/events/review-published.json",
+      "target": "apps/operations/data/events/review-published.json",
+      "sourceSha256": "b839d8f5d6bb44e5d295cebf83849033c1b12be1f9f88379f3b15c4807f7231e",
+      "importedSha256": "b839d8f5d6bb44e5d295cebf83849033c1b12be1f9f88379f3b15c4807f7231e"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/data/manifest.json",
+      "target": "apps/operations/data/manifest.json",
+      "sourceSha256": "efd38ea6491748bd4ef78a1a0f156817e90305c1ba96d3933a6251a31d05998b",
+      "importedSha256": "efd38ea6491748bd4ef78a1a0f156817e90305c1ba96d3933a6251a31d05998b"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/data/README.md",
+      "target": "apps/operations/data/README.md",
+      "sourceSha256": "daf0c7cf6e81fe100ea690edb41fb894a4757e308a054da6abea6300ee4f763c",
+      "importedSha256": "daf0c7cf6e81fe100ea690edb41fb894a4757e308a054da6abea6300ee4f763c"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/data/scenario-defaults.json",
+      "target": "apps/operations/data/scenario-defaults.json",
+      "sourceSha256": "e512f88abf924b10b4efb2e52257f6f51d92c22e46353bf99a166998b93ccf7a",
+      "importedSha256": "e512f88abf924b10b4efb2e52257f6f51d92c22e46353bf99a166998b93ccf7a"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/data/seed.json",
+      "target": "apps/operations/data/seed.json",
+      "sourceSha256": "f78d808480d53cb42184849c22fa9684cf1b129722351df2830868712cb4be2d",
+      "importedSha256": "f78d808480d53cb42184849c22fa9684cf1b129722351df2830868712cb4be2d"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/data/voice-sentiments.json",
+      "target": "apps/operations/data/voice-sentiments.json",
+      "sourceSha256": "8babda80d79243926c6679442a0351563ca242bfcd3d3dadbf4eb9b4678d0d7e",
+      "importedSha256": "8babda80d79243926c6679442a0351563ca242bfcd3d3dadbf4eb9b4678d0d7e"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/data/voice-sources.json",
+      "target": "apps/operations/data/voice-sources.json",
+      "sourceSha256": "f64e5d775d92c9c48846bbce1012e5f90e6a6a47b54f3e4c5d5b73fbce18d0f3",
+      "importedSha256": "f64e5d775d92c9c48846bbce1012e5f90e6a6a47b54f3e4c5d5b73fbce18d0f3"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/data/voice-spike-demo.json",
+      "target": "apps/operations/data/voice-spike-demo.json",
+      "sourceSha256": "2640d5786d36801bfdfe2edc5b21c212f6fb2f9081de32cb0de49f8cf0839acb",
+      "importedSha256": "2640d5786d36801bfdfe2edc5b21c212f6fb2f9081de32cb0de49f8cf0839acb"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/index.html",
+      "target": "apps/operations/index.html",
+      "sourceSha256": "c6a9dbe5e7cbba1f1647edf674b43555ff86acb927e300a582e324c9430eeeec",
+      "importedSha256": "c6a9dbe5e7cbba1f1647edf674b43555ff86acb927e300a582e324c9430eeeec"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/package.json",
+      "target": "apps/operations/package.json",
+      "sourceSha256": "8868def491f06d22da0c9663b1e44bfa9522a9dcbe3e4a8b49b60822aa738dde",
+      "importedSha256": "f09b6d3fba985cf59f83bc983451d23e5e9b7237ae8581ee18b1cb6dacfefac7"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/popup-relay.html",
+      "target": "apps/operations/popup-relay.html",
+      "sourceSha256": "4dae8f59724a34bea05344786a7d8b4c9f505fe60b37de8f12ac5867ba54a7b8",
+      "importedSha256": "4dae8f59724a34bea05344786a7d8b4c9f505fe60b37de8f12ac5867ba54a7b8"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/rayfin/data/schema.ts",
+      "target": "apps/operations/rayfin/data/schema.ts",
+      "sourceSha256": "0b8e4ce16aff5304faedcd80b4790565c9e418a72f3aec363ea2cd642494db9e",
+      "importedSha256": "0b8e4ce16aff5304faedcd80b4790565c9e418a72f3aec363ea2cd642494db9e"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/rayfin/data/Workspace.ts",
+      "target": "apps/operations/rayfin/data/Workspace.ts",
+      "sourceSha256": "1168576f5d33384d54a193732eb5ceecf9d5733777e63f46d990e35df0b3ac92",
+      "importedSha256": "1168576f5d33384d54a193732eb5ceecf9d5733777e63f46d990e35df0b3ac92"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/rayfin/functions/deploymetadata.json",
+      "target": "apps/operations/rayfin/functions/deploymetadata.json",
+      "sourceSha256": "aa0de1cef0d4d2ce851a978ec0343f96ca7f23a449f4d7938cd5221765e037a3",
+      "importedSha256": "aa0de1cef0d4d2ce851a978ec0343f96ca7f23a449f4d7938cd5221765e037a3"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/rayfin/functions/host.json",
+      "target": "apps/operations/rayfin/functions/host.json",
+      "sourceSha256": "ff80c65f0eb793475e7bfbcde68da73a0457c0e3ef3575e547b0102e8625b123",
+      "importedSha256": "ff80c65f0eb793475e7bfbcde68da73a0457c0e3ef3575e547b0102e8625b123"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/rayfin/functions/package.json",
+      "target": "apps/operations/rayfin/functions/package.json",
+      "sourceSha256": "820a61b5e0b4787a716a20d6727fa57d882025960b592e253348ce4149011e59",
+      "importedSha256": "820a61b5e0b4787a716a20d6727fa57d882025960b592e253348ce4149011e59"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/rayfin/functions/src/function_app.ts",
+      "target": "apps/operations/rayfin/functions/src/function_app.ts",
+      "sourceSha256": "8fe28327332f3361c98340ca8a2a69627ee0c1aa70f0aee124ba00828440c7a1",
+      "importedSha256": "8fe28327332f3361c98340ca8a2a69627ee0c1aa70f0aee124ba00828440c7a1"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/rayfin/functions/src/types.ts",
+      "target": "apps/operations/rayfin/functions/src/types.ts",
+      "sourceSha256": "d89115d7c0b037935a3a3a7c42b113ceae49adaa459766c2a342a343b84eeebe",
+      "importedSha256": "d89115d7c0b037935a3a3a7c42b113ceae49adaa459766c2a342a343b84eeebe"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/rayfin/functions/tsconfig.json",
+      "target": "apps/operations/rayfin/functions/tsconfig.json",
+      "sourceSha256": "4fc1b6921b10a24fa09b8eac8533e12e294d13ef12ef1b94564ee396497b1cd7",
+      "importedSha256": "4fc1b6921b10a24fa09b8eac8533e12e294d13ef12ef1b94564ee396497b1cd7"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/rayfin/rayfin.yml",
+      "target": "apps/operations/rayfin/rayfin.yml",
+      "sourceSha256": "3f769cd442c1117711c4b2200dc10aaeea4e4bca71a4b0e447ffe4b0254bddbc",
+      "importedSha256": "3f769cd442c1117711c4b2200dc10aaeea4e4bca71a4b0e447ffe4b0254bddbc"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/rayfin/tsconfig.json",
+      "target": "apps/operations/rayfin/tsconfig.json",
+      "sourceSha256": "20dc3fcee90a0ac9ecfd2e7f44b7c2de014c341cf575381ede41acfa1225ccd2",
+      "importedSha256": "20dc3fcee90a0ac9ecfd2e7f44b7c2de014c341cf575381ede41acfa1225ccd2"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/scripts/export-data.mjs",
+      "target": "apps/operations/scripts/export-data.mjs",
+      "sourceSha256": "ef936dc73607a60fe9f0e97651e27e3ae5a9bd2e9957d06d4ab2eb5b963b8378",
+      "importedSha256": "ef936dc73607a60fe9f0e97651e27e3ae5a9bd2e9957d06d4ab2eb5b963b8378"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/adapter.ts",
+      "target": "apps/operations/src/adapter.ts",
+      "sourceSha256": "eba83b5661c7709c0aa0c8507091ee6bb11e971521b1e0f58991f5dad49afefe",
+      "importedSha256": "eba83b5661c7709c0aa0c8507091ee6bb11e971521b1e0f58991f5dad49afefe"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/analytics-data.ts",
+      "target": "apps/operations/src/analytics-data.ts",
+      "sourceSha256": "947142fd6d70555a61b0bc7e128a9b157a0f42306b41a61ec1945e442af60cff",
+      "importedSha256": "947142fd6d70555a61b0bc7e128a9b157a0f42306b41a61ec1945e442af60cff"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/analytics.ts",
+      "target": "apps/operations/src/analytics.ts",
+      "sourceSha256": "f00b9cb0b0e40e7e03264e79da27068c2a6da3e1db8157c94ea2386b7b05c3c2",
+      "importedSha256": "f00b9cb0b0e40e7e03264e79da27068c2a6da3e1db8157c94ea2386b7b05c3c2"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/App.tsx",
+      "target": "apps/operations/src/App.tsx",
+      "sourceSha256": "c506f04e14c7327ed05d1a8f81c0856ae48d2808007f633fd6e2df97200e18d6",
+      "importedSha256": "c506f04e14c7327ed05d1a8f81c0856ae48d2808007f633fd6e2df97200e18d6"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/bean-impact.ts",
+      "target": "apps/operations/src/bean-impact.ts",
+      "sourceSha256": "c08bd7207eac07e025562abbe4c2eeb34c3bc481dd345873e0ccc3e98dad61e5",
+      "importedSha256": "c08bd7207eac07e025562abbe4c2eeb34c3bc481dd345873e0ccc3e98dad61e5"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/BeanImpactFlow.tsx",
+      "target": "apps/operations/src/BeanImpactFlow.tsx",
+      "sourceSha256": "eb68b4bd3f0c062630ff1cf6145d733d98724ea9c96e5f2c38d2828e09789a8e",
+      "importedSha256": "eb68b4bd3f0c062630ff1cf6145d733d98724ea9c96e5f2c38d2828e09789a8e"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/blend-workbench-model.ts",
+      "target": "apps/operations/src/blend-workbench-model.ts",
+      "sourceSha256": "9102813c83d9c9b3a3eaf50ae464d8ccf003db98ee7ff64403613a3e61043ec5",
+      "importedSha256": "9102813c83d9c9b3a3eaf50ae464d8ccf003db98ee7ff64403613a3e61043ec5"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/blend.ts",
+      "target": "apps/operations/src/blend.ts",
+      "sourceSha256": "e8f7cb405767c0a9e98da2d5b378ac0e4749a27524e7b235a8ea495131741e5b",
+      "importedSha256": "e8f7cb405767c0a9e98da2d5b378ac0e4749a27524e7b235a8ea495131741e5b"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/BlendDevelopment.tsx",
+      "target": "apps/operations/src/BlendDevelopment.tsx",
+      "sourceSha256": "a7db096d21df3cec7732eff08d80636689c495a682018efb0c9345be2b4f400d",
+      "importedSha256": "a7db096d21df3cec7732eff08d80636689c495a682018efb0c9345be2b4f400d"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/BlendGuide.tsx",
+      "target": "apps/operations/src/BlendGuide.tsx",
+      "sourceSha256": "f9eb2cc4ecc45ebd0be8bfccc2870ee5e26caaedc17fba0e42b5feda1d6613f9",
+      "importedSha256": "f9eb2cc4ecc45ebd0be8bfccc2870ee5e26caaedc17fba0e42b5feda1d6613f9"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/copilot-config.ts",
+      "target": "apps/operations/src/copilot-config.ts",
+      "sourceSha256": "4fe1b09b714f5b6960c259cef2e77cbae7a3d2590919b285104948a44a1920c2",
+      "importedSha256": "4fe1b09b714f5b6960c259cef2e77cbae7a3d2590919b285104948a44a1920c2"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/copilot-focus.ts",
+      "target": "apps/operations/src/copilot-focus.ts",
+      "sourceSha256": "0363576a28df8b309100ec1f76bdd7375a7abf693d29d068e97657a37e8348f8",
+      "importedSha256": "0363576a28df8b309100ec1f76bdd7375a7abf693d29d068e97657a37e8348f8"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/copilot-ui-command.ts",
+      "target": "apps/operations/src/copilot-ui-command.ts",
+      "sourceSha256": "91805f1d729f345498073998997da339608480212c542c63e0852fcdaa98e2cf",
+      "importedSha256": "91805f1d729f345498073998997da339608480212c542c63e0852fcdaa98e2cf"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/copilot.ts",
+      "target": "apps/operations/src/copilot.ts",
+      "sourceSha256": "3954eacc86199caf2e47bbec57e408669f0c5752cee81f6c693683d47c9ad067",
+      "importedSha256": "3954eacc86199caf2e47bbec57e408669f0c5752cee81f6c693683d47c9ad067"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/CustomerVoices.tsx",
+      "target": "apps/operations/src/CustomerVoices.tsx",
+      "sourceSha256": "e1e356ce20e8e5dec699c13115b3cdaebf8dae2af2ee72044742eb6420a078c7",
+      "importedSha256": "e1e356ce20e8e5dec699c13115b3cdaebf8dae2af2ee72044742eb6420a078c7"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/DashboardSkeleton.tsx",
+      "target": "apps/operations/src/DashboardSkeleton.tsx",
+      "sourceSha256": "f5a85f575cd8e5c06e796488faa0509a7748418737ae034554d4cda3b2bdd371",
+      "importedSha256": "f5a85f575cd8e5c06e796488faa0509a7748418737ae034554d4cda3b2bdd371"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/DataCopilot.tsx",
+      "target": "apps/operations/src/DataCopilot.tsx",
+      "sourceSha256": "77798618a87da8bb360e04b6543302d789280c8aa0e9110c56bb0044c1d28f3d",
+      "importedSha256": "77798618a87da8bb360e04b6543302d789280c8aa0e9110c56bb0044c1d28f3d"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/demo-scenarios.ts",
+      "target": "apps/operations/src/demo-scenarios.ts",
+      "sourceSha256": "ed05db820161367f5ecfd1783d3ce11d5f762ce4901b33a01dfbe040f19b9d0f",
+      "importedSha256": "ed05db820161367f5ecfd1783d3ce11d5f762ce4901b33a01dfbe040f19b9d0f"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/DemoPlayer.tsx",
+      "target": "apps/operations/src/DemoPlayer.tsx",
+      "sourceSha256": "47d9d580818846f898f3939bbf9ddea79569f524ac7d39dcba2a010accf570e3",
+      "importedSha256": "47d9d580818846f898f3939bbf9ddea79569f524ac7d39dcba2a010accf570e3"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/development-dashboard.css",
+      "target": "apps/operations/src/development-dashboard.css",
+      "sourceSha256": "82cc7b1b6ca347ef6110829470b21b0752735ddf04f1fc7ea24c4034078c9869",
+      "importedSha256": "82cc7b1b6ca347ef6110829470b21b0752735ddf04f1fc7ea24c4034078c9869"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/DevelopmentDashboard.tsx",
+      "target": "apps/operations/src/DevelopmentDashboard.tsx",
+      "sourceSha256": "08f59fc484a8500db8f6b6c3103b6137c020906306697342f1becaf47fc501e3",
+      "importedSha256": "08f59fc484a8500db8f6b6c3103b6137c020906306697342f1becaf47fc501e3"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/domain.ts",
+      "target": "apps/operations/src/domain.ts",
+      "sourceSha256": "8b7e2bff311cee7fc88bacef58b3c5cb78d40a0fb9114482674a3348f85dee28",
+      "importedSha256": "8b7e2bff311cee7fc88bacef58b3c5cb78d40a0fb9114482674a3348f85dee28"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/fabric-client.ts",
+      "target": "apps/operations/src/fabric-client.ts",
+      "sourceSha256": "d2808a37e1f88480686c52a5609b4e013eb8a30917fe10811a77acbdb19e4242",
+      "importedSha256": "d2808a37e1f88480686c52a5609b4e013eb8a30917fe10811a77acbdb19e4242"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/fabric-graph-auth.ts",
+      "target": "apps/operations/src/fabric-graph-auth.ts",
+      "sourceSha256": "1fe4ab74c29964a4c663aba3af1344b1feb7ffa230b73761b3c84e7c5270e82f",
+      "importedSha256": "1fe4ab74c29964a4c663aba3af1344b1feb7ffa230b73761b3c84e7c5270e82f"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/fabric-graph-cache.ts",
+      "target": "apps/operations/src/fabric-graph-cache.ts",
+      "sourceSha256": "75466215b3433c0bf9b1a6379a8aa49ce1110a1ae9ed1c0ef7a8332cbb2777f0",
+      "importedSha256": "75466215b3433c0bf9b1a6379a8aa49ce1110a1ae9ed1c0ef7a8332cbb2777f0"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/fabric-graph-client.ts",
+      "target": "apps/operations/src/fabric-graph-client.ts",
+      "sourceSha256": "828685dab20611d4aa79618c4c061be98b604da2f99320b8ccb12adca7f82a33",
+      "importedSha256": "828685dab20611d4aa79618c4c061be98b604da2f99320b8ccb12adca7f82a33"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/fabric-impact.ts",
+      "target": "apps/operations/src/fabric-impact.ts",
+      "sourceSha256": "9ed207776e3943ae411c407bef6576a72a2f8b059131e07a3bdbc46db1422689",
+      "importedSha256": "9ed207776e3943ae411c407bef6576a72a2f8b059131e07a3bdbc46db1422689"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/fabric.generated.ts",
+      "target": "apps/operations/src/fabric.generated.ts",
+      "sourceSha256": "a67eb1eb05da989134ec16ca6d361983fea107ccf2d1b12e5202f51443a99178",
+      "importedSha256": "a67eb1eb05da989134ec16ca6d361983fea107ccf2d1b12e5202f51443a99178"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/graph-activity.ts",
+      "target": "apps/operations/src/graph-activity.ts",
+      "sourceSha256": "05f60fbf1ca80361fc616b04684c7320f5ce8fb5b4faca6454da9a48c7b7c988",
+      "importedSha256": "05f60fbf1ca80361fc616b04684c7320f5ce8fb5b4faca6454da9a48c7b7c988"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/graph-auth-popup-relay.ts",
+      "target": "apps/operations/src/graph-auth-popup-relay.ts",
+      "sourceSha256": "b979f120cf501a7596cf617482012702a8f83731431d6d58ed0397004c750e4d",
+      "importedSha256": "b979f120cf501a7596cf617482012702a8f83731431d6d58ed0397004c750e4d"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/graph-auth-redirect.ts",
+      "target": "apps/operations/src/graph-auth-redirect.ts",
+      "sourceSha256": "aa35c78fce021bcc5f8afaf8372ed61755c4e9cb8366771ca9ed5a942f1f319c",
+      "importedSha256": "aa35c78fce021bcc5f8afaf8372ed61755c4e9cb8366771ca9ed5a942f1f319c"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/graph-cache-status.css",
+      "target": "apps/operations/src/graph-cache-status.css",
+      "sourceSha256": "7e6b4b9ec1f66db9cfd6fdc3910d7e8d36702c00d1fac143ba3f3dfdbca13a27",
+      "importedSha256": "7e6b4b9ec1f66db9cfd6fdc3910d7e8d36702c00d1fac143ba3f3dfdbca13a27"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/graph-snapshot-repository.ts",
+      "target": "apps/operations/src/graph-snapshot-repository.ts",
+      "sourceSha256": "e70d864245518ee251586fee62b565dcd6788ff8a6b8919272c60a72be8d0a19",
+      "importedSha256": "e70d864245518ee251586fee62b565dcd6788ff8a6b8919272c60a72be8d0a19"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/GraphCacheStatus.tsx",
+      "target": "apps/operations/src/GraphCacheStatus.tsx",
+      "sourceSha256": "6e0181368ad0c50cb13830426b46d7576afc59e65ba34f585447090ed0a50eba",
+      "importedSha256": "6e0181368ad0c50cb13830426b46d7576afc59e65ba34f585447090ed0a50eba"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/ImpactGraph.tsx",
+      "target": "apps/operations/src/ImpactGraph.tsx",
+      "sourceSha256": "ace1d3f068be9f9ed5e15adb5b42987d2f6b7a9a60cdbc3713ff19dc5e9582e4",
+      "importedSha256": "ace1d3f068be9f9ed5e15adb5b42987d2f6b7a9a60cdbc3713ff19dc5e9582e4"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/json-view.tsx",
+      "target": "apps/operations/src/json-view.tsx",
+      "sourceSha256": "9bd1f11fd5a29bbf79adbd7771711c8503a1e560745ddace5bbe1d61996cf410",
+      "importedSha256": "9bd1f11fd5a29bbf79adbd7771711c8503a1e560745ddace5bbe1d61996cf410"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/main.tsx",
+      "target": "apps/operations/src/main.tsx",
+      "sourceSha256": "cf6b7b0fbcb5be38dafbd7d6130e07bbd9966799dbb31d28cc205dd3ddb5ec4a",
+      "importedSha256": "cf6b7b0fbcb5be38dafbd7d6130e07bbd9966799dbb31d28cc205dd3ddb5ec4a"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/markdown.tsx",
+      "target": "apps/operations/src/markdown.tsx",
+      "sourceSha256": "411c359ab4f6198876cdc48a67bb69410678b5cecee1589278332101bc612900",
+      "importedSha256": "411c359ab4f6198876cdc48a67bb69410678b5cecee1589278332101bc612900"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/material-outlook.css",
+      "target": "apps/operations/src/material-outlook.css",
+      "sourceSha256": "74f1f73ca14a114e6ffff0e6c1c7aa285c56036c8fde3f170ce912fce0d7bd78",
+      "importedSha256": "74f1f73ca14a114e6ffff0e6c1c7aa285c56036c8fde3f170ce912fce0d7bd78"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/material-outlook.ts",
+      "target": "apps/operations/src/material-outlook.ts",
+      "sourceSha256": "1eea59df88cf39e54e90b0e3fba460e3d3485fbb77261c61dae4fbf91d678c6a",
+      "importedSha256": "1eea59df88cf39e54e90b0e3fba460e3d3485fbb77261c61dae4fbf91d678c6a"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/MaterialOutlook.tsx",
+      "target": "apps/operations/src/MaterialOutlook.tsx",
+      "sourceSha256": "7fb71b8c37cb91b595cb21d9651959726e16fea491e3e4706aad86cc2866bff9",
+      "importedSha256": "7fb71b8c37cb91b595cb21d9651959726e16fea491e3e4706aad86cc2866bff9"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/ml-predictions.css",
+      "target": "apps/operations/src/ml-predictions.css",
+      "sourceSha256": "7179fb8c1a66845e8cc27300bbf3217d251d0887d97af72a3cd1bfd5a3dd4459",
+      "importedSha256": "7179fb8c1a66845e8cc27300bbf3217d251d0887d97af72a3cd1bfd5a3dd4459"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/MlPredictions.tsx",
+      "target": "apps/operations/src/MlPredictions.tsx",
+      "sourceSha256": "8bbe9f742bbb798f03aaa8d8dd2aeda57544ecfbaf8a40a9a882e13269d3891c",
+      "importedSha256": "8bbe9f742bbb798f03aaa8d8dd2aeda57544ecfbaf8a40a9a882e13269d3891c"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/ontology-explorer.css",
+      "target": "apps/operations/src/ontology-explorer.css",
+      "sourceSha256": "a1de7b7e75f05652a14728203965a5ecfcea6721884ba5bf93b3435ba2b463bf",
+      "importedSha256": "a1de7b7e75f05652a14728203965a5ecfcea6721884ba5bf93b3435ba2b463bf"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/ontology-records.ts",
+      "target": "apps/operations/src/ontology-records.ts",
+      "sourceSha256": "9e0759f06a46f123240f9b305ba5b684db53d458089a3dacbfcea2ea600429ae",
+      "importedSha256": "9e0759f06a46f123240f9b305ba5b684db53d458089a3dacbfcea2ea600429ae"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/OntologyExplorer.tsx",
+      "target": "apps/operations/src/OntologyExplorer.tsx",
+      "sourceSha256": "dcb7d423ab7104874b0f1074c13885e1bf6796a766b5539ddfd02707581a2122",
+      "importedSha256": "dcb7d423ab7104874b0f1074c13885e1bf6796a766b5539ddfd02707581a2122"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/predictions.ts",
+      "target": "apps/operations/src/predictions.ts",
+      "sourceSha256": "be3453bd1dcf0b2b74f0545fb8782eed2fe987a5596b87ca4bf8b024d1802e5e",
+      "importedSha256": "be3453bd1dcf0b2b74f0545fb8782eed2fe987a5596b87ca4bf8b024d1802e5e"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/production-analysis.ts",
+      "target": "apps/operations/src/production-analysis.ts",
+      "sourceSha256": "01593cb45cbcb21b4d951a330ac0a35947b063a29ed14c2081f02f51d6dc0d13",
+      "importedSha256": "01593cb45cbcb21b4d951a330ac0a35947b063a29ed14c2081f02f51d6dc0d13"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/rayfin-client.ts",
+      "target": "apps/operations/src/rayfin-client.ts",
+      "sourceSha256": "d26ca5dcae9dad71d93da69f7c6dc9f3bd4848979dcdcd626a2b09fa952beaa3",
+      "importedSha256": "d26ca5dcae9dad71d93da69f7c6dc9f3bd4848979dcdcd626a2b09fa952beaa3"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/rti-client.ts",
+      "target": "apps/operations/src/rti-client.ts",
+      "sourceSha256": "c2243e06a701538d685e3ea486f165134102f4dd729c1b2455ce660eb382207b",
+      "importedSha256": "c2243e06a701538d685e3ea486f165134102f4dd729c1b2455ce660eb382207b"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/sentiment.ts",
+      "target": "apps/operations/src/sentiment.ts",
+      "sourceSha256": "600fb875e2b40d4680df7051aad2b9ae96ab6da6ad71cc3e13fb3821d7077d2b",
+      "importedSha256": "600fb875e2b40d4680df7051aad2b9ae96ab6da6ad71cc3e13fb3821d7077d2b"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/shared-development-model.ts",
+      "target": "apps/operations/src/shared-development-model.ts",
+      "sourceSha256": "4db85e4260a081001e312096e5f3b0276aa65c5d486646d571f07c25230cfb72",
+      "importedSha256": "4db85e4260a081001e312096e5f3b0276aa65c5d486646d571f07c25230cfb72"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/shared-development.css",
+      "target": "apps/operations/src/shared-development.css",
+      "sourceSha256": "843640c3fc2baa9e03f429790a752512a51e0fe19618a58e324e1759a32ba1da",
+      "importedSha256": "843640c3fc2baa9e03f429790a752512a51e0fe19618a58e324e1759a32ba1da"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/SharedDevelopment.tsx",
+      "target": "apps/operations/src/SharedDevelopment.tsx",
+      "sourceSha256": "1087fe8c597baf9818fc0afdcc3cf229a90a8a0ed62311b5e5790d09a8942f46",
+      "importedSha256": "1087fe8c597baf9818fc0afdcc3cf229a90a8a0ed62311b5e5790d09a8942f46"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/social-voice-demo.ts",
+      "target": "apps/operations/src/social-voice-demo.ts",
+      "sourceSha256": "37583847fb36e82c84ece1a84b3eba5e5f7df06bee8b0594f2ba21082e9cd358",
+      "importedSha256": "37583847fb36e82c84ece1a84b3eba5e5f7df06bee8b0594f2ba21082e9cd358"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/SocialVoiceLive.tsx",
+      "target": "apps/operations/src/SocialVoiceLive.tsx",
+      "sourceSha256": "f66a55dde33473379b79c92738a30b2988542289ff12bb6f8061dfab30b27a3f",
+      "importedSha256": "f66a55dde33473379b79c92738a30b2988542289ff12bb6f8061dfab30b27a3f"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/styles.css",
+      "target": "apps/operations/src/styles.css",
+      "sourceSha256": "2a4f845513e4735857a5569da7f1a04d5975506208f9030d92a92c1c96bea89a",
+      "importedSha256": "2a4f845513e4735857a5569da7f1a04d5975506208f9030d92a92c1c96bea89a"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/supply-dashboard.css",
+      "target": "apps/operations/src/supply-dashboard.css",
+      "sourceSha256": "252cff524b778f2e693dd95825f1bcbc76e325aa64bec94a31fff07c5e6a402b",
+      "importedSha256": "252cff524b778f2e693dd95825f1bcbc76e325aa64bec94a31fff07c5e6a402b"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/supply-flow-map.css",
+      "target": "apps/operations/src/supply-flow-map.css",
+      "sourceSha256": "e42a2983481721ed499971f7030fd85250846fe0a9a4acca5f1248b9e8e73955",
+      "importedSha256": "e42a2983481721ed499971f7030fd85250846fe0a9a4acca5f1248b9e8e73955"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/supply-geo.ts",
+      "target": "apps/operations/src/supply-geo.ts",
+      "sourceSha256": "e14b3739c8665985706fb4242b1419f87008bd4974b08899595d2eaeee788137",
+      "importedSha256": "e14b3739c8665985706fb4242b1419f87008bd4974b08899595d2eaeee788137"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/supply-model.ts",
+      "target": "apps/operations/src/supply-model.ts",
+      "sourceSha256": "f38cc3c5c021acb26778efaf3c24afab784fb688614704f6644d63c66723bb31",
+      "importedSha256": "f38cc3c5c021acb26778efaf3c24afab784fb688614704f6644d63c66723bb31"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/supply-response-model.ts",
+      "target": "apps/operations/src/supply-response-model.ts",
+      "sourceSha256": "4fd51f16b9524dff3c19d799f6bbea6c0f995c2e53ae28dca2b3d37e9abaaec0",
+      "importedSha256": "4fd51f16b9524dff3c19d799f6bbea6c0f995c2e53ae28dca2b3d37e9abaaec0"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/supply.css",
+      "target": "apps/operations/src/supply.css",
+      "sourceSha256": "03b85c470a21912cf496d0c26f245ec91f1f57cbf08bbb0dd357b987f93bc657",
+      "importedSha256": "03b85c470a21912cf496d0c26f245ec91f1f57cbf08bbb0dd357b987f93bc657"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/Supply.tsx",
+      "target": "apps/operations/src/Supply.tsx",
+      "sourceSha256": "db48986575cd7ead29047a7f1b98875ef44f6da13c95df7f848a5df9384fe6a9",
+      "importedSha256": "db48986575cd7ead29047a7f1b98875ef44f6da13c95df7f848a5df9384fe6a9"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/SupplyAllocation.tsx",
+      "target": "apps/operations/src/SupplyAllocation.tsx",
+      "sourceSha256": "272e96e1819787ce2b63af7f93ee944ec465bac631ddfde12893f38836ad5f70",
+      "importedSha256": "272e96e1819787ce2b63af7f93ee944ec465bac631ddfde12893f38836ad5f70"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/SupplyDashboard.tsx",
+      "target": "apps/operations/src/SupplyDashboard.tsx",
+      "sourceSha256": "06d05ed47873bfe59071ed07a4ef058391b5879d191a06faabda795b802c7885",
+      "importedSha256": "06d05ed47873bfe59071ed07a4ef058391b5879d191a06faabda795b802c7885"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/SupplyDecisionHistory.tsx",
+      "target": "apps/operations/src/SupplyDecisionHistory.tsx",
+      "sourceSha256": "bfb96271a1bc76ea502904d77dbe74844061cb361800ae796fe212bf54493a54",
+      "importedSha256": "bfb96271a1bc76ea502904d77dbe74844061cb361800ae796fe212bf54493a54"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/SupplyFlowMap.tsx",
+      "target": "apps/operations/src/SupplyFlowMap.tsx",
+      "sourceSha256": "f7614e6450b5913d6e6114032d687ae4176818e438df2b214628eb175cf58060",
+      "importedSha256": "f7614e6450b5913d6e6114032d687ae4176818e438df2b214628eb175cf58060"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/SupplyGraph.tsx",
+      "target": "apps/operations/src/SupplyGraph.tsx",
+      "sourceSha256": "25922e6bb2b559d7d1b658f2e94a60ec912fc045caf7468ef03e5a9dcb6ef17c",
+      "importedSha256": "25922e6bb2b559d7d1b658f2e94a60ec912fc045caf7468ef03e5a9dcb6ef17c"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/SupplyImpactGraph.tsx",
+      "target": "apps/operations/src/SupplyImpactGraph.tsx",
+      "sourceSha256": "faa5957f97a4977eebe477fba9f99ada915449c1813c1b2c46b4c01a9797a890",
+      "importedSha256": "faa5957f97a4977eebe477fba9f99ada915449c1813c1b2c46b4c01a9797a890"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/SupplyResponse.tsx",
+      "target": "apps/operations/src/SupplyResponse.tsx",
+      "sourceSha256": "505a111a3fab08d4460c27e2b02b3d61dbb1d0ccf3ee7a3267225da6fa68f7bf",
+      "importedSha256": "505a111a3fab08d4460c27e2b02b3d61dbb1d0ccf3ee7a3267225da6fa68f7bf"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/ThemePicker.tsx",
+      "target": "apps/operations/src/ThemePicker.tsx",
+      "sourceSha256": "6ba7df8de5048cd11a871a26e7ce0235cdf1a20e253a90e98980c8c076b5aa12",
+      "importedSha256": "6ba7df8de5048cd11a871a26e7ce0235cdf1a20e253a90e98980c8c076b5aa12"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/voice.ts",
+      "target": "apps/operations/src/voice.ts",
+      "sourceSha256": "917b2a005469b4fa11e56b7edf865ba0f82a79b440204ae31a9b584c765216c6",
+      "importedSha256": "917b2a005469b4fa11e56b7edf865ba0f82a79b440204ae31a9b584c765216c6"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/VoiceAlertPanel.tsx",
+      "target": "apps/operations/src/VoiceAlertPanel.tsx",
+      "sourceSha256": "2e0dd39c6d39e653b6bef7037dd33b59478012814c753eedd05a77c33237ea91",
+      "importedSha256": "2e0dd39c6d39e653b6bef7037dd33b59478012814c753eedd05a77c33237ea91"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/VoiceDecisionCards.tsx",
+      "target": "apps/operations/src/VoiceDecisionCards.tsx",
+      "sourceSha256": "6673400769eae0d5cbe1e4eacf1c4c48e363e29fef85a5c72efffe29f96b69b7",
+      "importedSha256": "6673400769eae0d5cbe1e4eacf1c4c48e363e29fef85a5c72efffe29f96b69b7"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/voiceDecisions.ts",
+      "target": "apps/operations/src/voiceDecisions.ts",
+      "sourceSha256": "c73579645a14fb6a61c4a7228823a56bc2c4aaf50ee7d1c4528275edce4846c0",
+      "importedSha256": "c73579645a14fb6a61c4a7228823a56bc2c4aaf50ee7d1c4528275edce4846c0"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/VoiceSentimentChart.tsx",
+      "target": "apps/operations/src/VoiceSentimentChart.tsx",
+      "sourceSha256": "d717da72ba5f7c81dbe81e9881b9d00e4c7929b9dce1e871c19a52c3893185f6",
+      "importedSha256": "d717da72ba5f7c81dbe81e9881b9d00e4c7929b9dce1e871c19a52c3893185f6"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/VoiceTimeline.tsx",
+      "target": "apps/operations/src/VoiceTimeline.tsx",
+      "sourceSha256": "1f43e6bee5de253642db36a1b3fc9e8fc546ddd9a713f705d5949fec3d0c3381",
+      "importedSha256": "1f43e6bee5de253642db36a1b3fc9e8fc546ddd9a713f705d5949fec3d0c3381"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/VoiceWordCloud.tsx",
+      "target": "apps/operations/src/VoiceWordCloud.tsx",
+      "sourceSha256": "c8b29ce8d57cce72ef81d50f0669587905cb38281e4d2efd22990c0e7d23d311",
+      "importedSha256": "c8b29ce8d57cce72ef81d50f0669587905cb38281e4d2efd22990c0e7d23d311"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/workspace-assembly.ts",
+      "target": "apps/operations/src/workspace-assembly.ts",
+      "sourceSha256": "3aeb80f0c169b91d0fe217fc4865ef0fe66c20ca365d1bc7e2c66ca4d947ac67",
+      "importedSha256": "3aeb80f0c169b91d0fe217fc4865ef0fe66c20ca365d1bc7e2c66ca4d947ac67"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/workspace-context.ts",
+      "target": "apps/operations/src/workspace-context.ts",
+      "sourceSha256": "b66fcc323aead07110f51c36bb6975ed92cc8557613675f49ad39fc443805412",
+      "importedSha256": "b66fcc323aead07110f51c36bb6975ed92cc8557613675f49ad39fc443805412"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/workspace-mode.css",
+      "target": "apps/operations/src/workspace-mode.css",
+      "sourceSha256": "773a92d06a829b953ca26da350f03184419e2e010edcad765e41c5b718662e82",
+      "importedSha256": "773a92d06a829b953ca26da350f03184419e2e010edcad765e41c5b718662e82"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/workspace-repository.ts",
+      "target": "apps/operations/src/workspace-repository.ts",
+      "sourceSha256": "597989fc3f6b99fbbf5a75ebf6e1115716723c4f5ff50ef91d7165c20c554228",
+      "importedSha256": "597989fc3f6b99fbbf5a75ebf6e1115716723c4f5ff50ef91d7165c20c554228"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/workspace-schema.ts",
+      "target": "apps/operations/src/workspace-schema.ts",
+      "sourceSha256": "9a4d2d5015f1862757644592870db44acd19652346ba5d7f8d9917aa9607bb1c",
+      "importedSha256": "9a4d2d5015f1862757644592870db44acd19652346ba5d7f8d9917aa9607bb1c"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/WorkspaceLoading.tsx",
+      "target": "apps/operations/src/WorkspaceLoading.tsx",
+      "sourceSha256": "2de6943a53078fd054e8670ba22b296514557e623af17c86b0c1fe790a5d1667",
+      "importedSha256": "2de6943a53078fd054e8670ba22b296514557e623af17c86b0c1fe790a5d1667"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/src/WorkspaceRoot.tsx",
+      "target": "apps/operations/src/WorkspaceRoot.tsx",
+      "sourceSha256": "a78897b094e1e4d3d6d88e22d4b5d0218fd44fbbe30ad61b189aa425e7fe4ef0",
+      "importedSha256": "a78897b094e1e4d3d6d88e22d4b5d0218fd44fbbe30ad61b189aa425e7fe4ef0"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/tsconfig.json",
+      "target": "apps/operations/tsconfig.json",
+      "sourceSha256": "b964a17d8579cfa585982fae19c1c6225c33bd583d3e6a7b1009d490f1d1de04",
+      "importedSha256": "b964a17d8579cfa585982fae19c1c6225c33bd583d3e6a7b1009d490f1d1de04"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/data/allocation.json",
+      "target": "apps/operations/v3/data/allocation.json",
+      "sourceSha256": "2be3ef43b34037f9caec392f9a8cf4be0b189d2825e5876364a3d9456ce245a3",
+      "importedSha256": "2be3ef43b34037f9caec392f9a8cf4be0b189d2825e5876364a3d9456ce245a3"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/data/development.json",
+      "target": "apps/operations/v3/data/development.json",
+      "sourceSha256": "ed70b5ef1003d18f7b664d460b7cd618269566700524f5ef4ad3ab059cb7e385",
+      "importedSha256": "ed70b5ef1003d18f7b664d460b7cd618269566700524f5ef4ad3ab059cb7e385"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/data/ec-chat-history.json",
+      "target": "apps/operations/v3/data/ec-chat-history.json",
+      "sourceSha256": "75f2aa618851dfde19ab975f0cbb787e2787bc259e28f6f14ed8d390518d454d",
+      "importedSha256": "75f2aa618851dfde19ab975f0cbb787e2787bc259e28f6f14ed8d390518d454d"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/data/events/review-published.json",
+      "target": "apps/operations/v3/data/events/review-published.json",
+      "sourceSha256": "b839d8f5d6bb44e5d295cebf83849033c1b12be1f9f88379f3b15c4807f7231e",
+      "importedSha256": "b839d8f5d6bb44e5d295cebf83849033c1b12be1f9f88379f3b15c4807f7231e"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/data/geo.json",
+      "target": "apps/operations/v3/data/geo.json",
+      "sourceSha256": "190113fb06d2045ddd04aa7d8165d472b7afa56335e0e8bb7431f24d0f1ab9a7",
+      "importedSha256": "190113fb06d2045ddd04aa7d8165d472b7afa56335e0e8bb7431f24d0f1ab9a7"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/data/operations.json",
+      "target": "apps/operations/v3/data/operations.json",
+      "sourceSha256": "a23f8f9dad18a192d511b9b24c2c7d3c70d27578b787c196fd91c88ab45740e7",
+      "importedSha256": "a23f8f9dad18a192d511b9b24c2c7d3c70d27578b787c196fd91c88ab45740e7"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/data/predictions.json",
+      "target": "apps/operations/v3/data/predictions.json",
+      "sourceSha256": "4d40b1c4664701617244884cb7594dc959136b79f304fc7e2c4d8ec405796004",
+      "importedSha256": "4d40b1c4664701617244884cb7594dc959136b79f304fc7e2c4d8ec405796004"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/data/voice-sentiments.json",
+      "target": "apps/operations/v3/data/voice-sentiments.json",
+      "sourceSha256": "ee0dd526bf867c7efa258ab47ab6a452274bf9e41125c95a25f13da10fd99a72",
+      "importedSha256": "ee0dd526bf867c7efa258ab47ab6a452274bf9e41125c95a25f13da10fd99a72"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/data/voice-sources.json",
+      "target": "apps/operations/v3/data/voice-sources.json",
+      "sourceSha256": "415a264029c8024156fbf179bb64edc111e49a00099d2c2fd4527fb514b35712",
+      "importedSha256": "415a264029c8024156fbf179bb64edc111e49a00099d2c2fd4527fb514b35712"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/data/voice-spike-demo.json",
+      "target": "apps/operations/v3/data/voice-spike-demo.json",
+      "sourceSha256": "8445502f9820cf24287f8b917edb4fe3fe55bf859a3a2de521c8373673a17474",
+      "importedSha256": "8445502f9820cf24287f8b917edb4fe3fe55bf859a3a2de521c8373673a17474"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/ontology/development.json",
+      "target": "apps/operations/v3/ontology/development.json",
+      "sourceSha256": "29581289ef715b2b3abac5e18101a67ec2f15568f2cd899bdb6641375185a254",
+      "importedSha256": "29581289ef715b2b3abac5e18101a67ec2f15568f2cd899bdb6641375185a254"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/ontology/model.ts",
+      "target": "apps/operations/v3/ontology/model.ts",
+      "sourceSha256": "ef45729a618f9cd0ede8d2bcdf8451e02edfbff6bfcc4a3fbe52d1c54b00db2d",
+      "importedSha256": "ef45729a618f9cd0ede8d2bcdf8451e02edfbff6bfcc4a3fbe52d1c54b00db2d"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/v3/ontology/supply.json",
+      "target": "apps/operations/v3/ontology/supply.json",
+      "sourceSha256": "3f89227c81978961c8a153c1bc486045a6aa08188be468f39a0fa6959edcbd64",
+      "importedSha256": "3f89227c81978961c8a153c1bc486045a6aa08188be468f39a0fa6959edcbd64"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/vite.config.ts",
+      "target": "apps/operations/vite.config.ts",
+      "sourceSha256": "99e96f3d94c4ffbe0b0c1a05f56a2b84f7bd51b5353ad24f22829095e27f679d",
+      "importedSha256": "99e96f3d94c4ffbe0b0c1a05f56a2b84f7bd51b5353ad24f22829095e27f679d"
+    },
+    {
+      "source": "workshops/Rayfin/micro-coffee-demo2/package-lock.json",
+      "target": "apps/operations/package-lock.json",
+      "sourceSha256": "182e5634a955aa56adc5f55f10124895d5af0495908dcc4d7210d318127f4c2a",
+      "importedSha256": "5b4d20b06f60774ae95930c4ed9820b246f8c2fb917b20f67f93b01de91a33b7"
+    }
+  ]
+}

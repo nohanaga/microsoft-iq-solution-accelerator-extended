@@ -1,0 +1,142 @@
+.development-dashboard { min-width: 0; }
+.dd-heading { display: flex; justify-content: space-between; align-items: center; gap: 14px; margin-bottom: 18px; }
+.dd-actions { display: flex; gap: 6px; }
+.dd-actions button { font-size: 11px; padding: 7px 10px; }
+.dd-navigation { display: flex; align-items: stretch; border-bottom: 1px solid var(--cp-border); margin-bottom: 24px; gap: 16px; }
+.dd-navigation a { display: flex; align-items: center; gap: 9px; text-decoration: none; color: var(--cp-text-muted); padding: 12px 8px; border-bottom: 3px solid transparent; }
+.dd-navigation a[aria-current] { color: var(--cp-accent); border-color: var(--cp-accent); }
+.dd-navigation > span { font-size: 10px; color: var(--cp-text-muted); margin-left: auto; align-self: center; }
+.dd-workbench { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 28px; }
+.dd-controls { min-width: 0; padding-right: 24px; border-right: 1px solid var(--cp-border); }
+.dd-product { display: grid; grid-template-columns: 62px minmax(0, 1fr); gap: 12px; align-items: start; margin-bottom: 24px; }
+.dd-product img { width: 62px; height: 72px; object-fit: cover; border-radius: 5px; }
+.dd-product label { display: grid; gap: 5px; font-size: 10px; color: var(--cp-text-muted); }
+.dd-product select { font-size: 11px; min-height: 32px; width: 100%; }
+.dd-product small { font-size: 9px; }
+.dd-controls-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px; }
+.dd-controls-heading h2, .dd-stock h2 { display: flex; gap: 7px; align-items: center; font-size: 13px; }
+.dd-controls-heading > span { font: 20px Bahnschrift, 'Segoe UI', sans-serif; }
+.dd-presets { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; }
+.dd-presets button { display: flex; flex-direction: column; align-items: start; justify-content: start; gap: 4px; min-width: 0; padding: 9px 7px; font-size: 11px; }
+.dd-presets button > span { font-size: 9px; text-align: left; line-height: 1.8; overflow-wrap: anywhere; }
+.dd-presets button[aria-pressed="true"] { border-color: var(--cp-accent); background: var(--cp-accent-soft); }
+.dd-composition { display: flex; height: 10px; gap: 2px; border-radius: 3px; overflow: hidden; margin: 16px 0 4px; background: var(--cp-surface-soft); }
+.dd-composition > span { transition: width .2s; min-width: 0; }
+.dd-component { padding: 13px 0; border-bottom: 1px solid var(--cp-border); }
+.dd-component-heading { display: flex; gap: 7px; align-items: center; }
+.dd-component-heading i, .dd-record-link i { width: 8px; height: 8px; border-radius: 2px; display: inline-block; flex-shrink: 0; }
+.dd-component-heading strong { font-size: 12px; }
+.dd-component-heading button { margin-left: auto; min-height: 26px; width: 26px; padding: 4px; border: 0; }
+.dd-origin { display: flex; gap: 5px; align-items: center; font-size: 9px; color: var(--cp-text-muted); flex-wrap: wrap; }
+.dd-origin > span { margin-left: auto; }
+.dd-ratio-control { display: flex; align-items: center; gap: 9px; margin-top: 10px; }
+.dd-ratio-control input[type="range"] { padding: 0; min-height: 24px; width: 100%; flex: 1; accent-color: var(--cp-accent); }
+.dd-ratio-control input[type="number"] { width: 60px; min-height: 32px; font: 15px Bahnschrift, 'Segoe UI', sans-serif; padding: 5px; text-align: right; }
+.dd-ratio-control > span { font-size: 10px; color: var(--cp-text-muted); }
+.dd-add-bean { display: flex; gap: 6px; margin-top: 15px; }
+.dd-add-bean select { min-width: 0; width: 100%; font-size: 11px; }
+.dd-add-bean button { width: 38px; flex-shrink: 0; padding: 7px; }
+.dd-production { display: grid; grid-template-columns: 95px minmax(0, 1fr); gap: 14px; padding-top: 20px; margin-top: 20px; border-top: 1px solid var(--cp-border); }
+.dd-production label { display: grid; gap: 6px; font-size: 10px; }
+.dd-production label > div { display: flex; align-items: center; gap: 5px; }
+.dd-production input { width: 72px; padding: 6px; }
+.dd-production select { padding: 6px; width: 100%; font-size: 10px; }
+.dd-catalog-link { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-top: 18px; font-size: 9px; color: var(--cp-text-muted); }
+.dd-catalog-link button { min-height: 28px; font-size: 10px; padding: 3px 0; border: 0; color: var(--cp-link); }
+.dd-analysis { min-width: 0; }
+.dd-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-bottom: 1px solid var(--cp-border); padding-bottom: 16px; margin-bottom: 16px; }
+.dd-metrics > div { padding: 0 16px; border-right: 1px solid var(--cp-border); min-width: 0; }
+.dd-metrics > div:first-child { padding-left: 0; }
+.dd-metrics > div:last-child { border: 0; }
+.dd-metrics span { display: block; font-size: 10px; color: var(--cp-text-muted); }
+.dd-metrics strong { display: block; font: 33px/1.7 Bahnschrift, 'Segoe UI', sans-serif; overflow-wrap: anywhere; }
+.dd-metrics small { font: 11px "Yu Gothic UI", Meiryo, sans-serif; margin-left: 5px; color: var(--cp-text-muted); }
+.dd-metrics > div:nth-child(2) strong { color: var(--cp-accent); }
+.dd-outcome { display: flex; align-items: center; gap: 10px; border-left: 3px solid var(--cp-success); background: color-mix(in srgb, var(--cp-success) 5%, var(--cp-surface)); padding: 12px 14px; margin-bottom: 14px; }
+.dd-outcome > svg { color: var(--cp-success); flex-shrink: 0; }
+.dd-outcome > div { display: flex; flex-wrap: wrap; align-items: baseline; gap: 5px 14px; }
+.dd-outcome strong { font-size: 12px; }
+.dd-outcome span { font-size: 10px; color: var(--cp-text-muted); }
+.dd-outcome.is-risk { border-color: var(--cp-danger); background: color-mix(in srgb, var(--cp-danger) 5%, var(--cp-surface)); }
+.dd-outcome.is-risk > svg, .dd-error-text { color: var(--cp-danger); }
+.dd-outcome.is-unknown { border-color: var(--cp-warning); background: var(--cp-surface-soft); }
+.dd-outcome.is-unknown > svg { color: var(--cp-warning); }
+.dd-graph-options { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 10px; font-size: 10px; color: var(--cp-text-muted); }
+.dd-graph-options label { display: flex; align-items: center; gap: 6px; font-size: 10px; }
+.dd-impact { border: 1px solid var(--cp-border); border-top: 3px solid var(--cp-accent); padding: 16px 18px 14px; margin: 18px 0 24px; }
+.dd-impact.is-expanded { position: fixed; inset: 12px; z-index: 60; margin: 0; overflow: auto; background: var(--cp-surface); box-shadow: 0 18px 60px rgb(0 0 0 / .32); }
+.dd-impact-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.dd-impact-heading h2 { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+.dd-impact-tools { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
+.dd-impact-tools [role="group"] { display: flex; align-items: center; gap: 4px; }
+.dd-impact-depth { margin-right: 4px; }
+.dd-impact-depth > span { font-size: 9px; color: var(--cp-text-muted); margin-right: 2px; }
+.dd-impact-depth button { min-height: 26px; width: 26px; padding: 0; font: 12px Bahnschrift, 'Segoe UI', sans-serif; }
+.dd-impact-layout button { display: inline-flex; align-items: center; gap: 4px; min-height: 26px; padding: 3px 8px; font-size: 10px; }
+.dd-impact-tools button[aria-pressed="true"] { border-color: var(--cp-accent); background: var(--cp-accent-soft); color: var(--cp-accent); }
+.dd-impact-divider { width: 1px; height: 20px; background: var(--cp-border); margin: 0 3px; }
+.dd-impact-tools > button { min-height: 28px; min-width: 28px; padding: 5px; }
+.dd-impact-zoom { min-width: 44px; text-align: center; font: 12px Bahnschrift, 'Segoe UI', sans-serif; color: var(--cp-text-muted); }
+.dd-impact-lead { font-size: 12px; line-height: 2; margin: 10px 0 0; overflow-wrap: anywhere; }
+.dd-impact-lead strong { color: var(--cp-accent); }
+.dd-impact-state { margin: 8px 0 0; padding: 8px 11px; font-size: 11px; background: var(--cp-surface-soft); border-left: 3px solid var(--cp-border-strong); }
+.dd-impact-state.is-error { border-left-color: var(--cp-danger); color: var(--cp-danger); }
+.dd-impact-signin { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; padding: 6px 11px; font-size: 11px; }
+.dd-impact-loading { position: absolute; inset: auto auto 44px 12px; margin: 0; padding: 4px 9px; font-size: 10px; background: var(--cp-surface); border: 1px solid var(--cp-border-strong); }
+.dd-impact-counts { display: flex; flex-wrap: wrap; gap: 1px; list-style: none; padding: 0; margin: 12px 0; background: var(--cp-border); border: 1px solid var(--cp-border); }
+.dd-impact-counts li { flex: 1 1 96px; display: grid; gap: 2px; padding: 8px 10px; background: var(--cp-surface); }
+.dd-impact-counts span { font-size: 9px; color: var(--cp-text-muted); }
+.dd-impact-counts strong { font: 21px/1.3 Bahnschrift, 'Segoe UI', sans-serif; }
+.dd-impact-visual { position: relative; }
+.dd-impact-canvas { height: 560px; border: 1px solid var(--cp-border); background: var(--cp-surface-soft); }
+.dd-impact-visual[data-layout="rings"] .dd-impact-canvas { height: 680px; }
+.dd-impact.is-expanded .dd-impact-canvas { height: min(calc(100vh - 260px), 900px); }
+.dd-impact-tip { position: absolute; transform: translate(-50%, calc(-100% - 12px)); display: grid; gap: 3px; max-width: 250px; padding: 9px 11px; background: var(--cp-surface); border: 1px solid var(--cp-border-strong); box-shadow: 0 8px 24px rgb(0 0 0 / .22); pointer-events: none; z-index: 3; }
+.dd-impact-tip strong { font-size: 12px; }
+.dd-impact-tip span { font-size: 9px; color: var(--cp-text-muted); }
+.dd-impact-tip em { font-style: normal; font-size: 10px; overflow-wrap: anywhere; }
+.dd-impact-tip code { font-size: 9px; color: var(--cp-text-muted); overflow-wrap: anywhere; }
+.dd-impact-hint { display: flex; align-items: center; gap: 5px; margin: 6px 0 0; font-size: 9px; color: var(--cp-text-muted); }
+.dd-impact-suppliers { margin-top: 14px; }
+.dd-impact-suppliers h3 { font-size: 12px; margin-bottom: 8px; }
+.dd-impact-suppliers ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+.dd-impact-suppliers li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; padding: 9px 11px; background: var(--cp-surface-soft); border-left: 3px solid var(--cp-warning); }
+.dd-impact-suppliers li > button { display: flex; align-items: baseline; gap: 8px; border: 0; padding: 0; min-height: 22px; background: none; }
+.dd-impact-suppliers li strong { font-size: 12px; color: var(--cp-link); }
+.dd-impact-suppliers li span { font-size: 9px; color: var(--cp-text-muted); }
+.dd-impact-supply { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-left: auto; }
+.dd-impact-supply em { font-size: 10px; font-style: normal; color: var(--cp-text-muted); }
+.dd-impact-suppliers p { font-size: 11px; color: var(--cp-text-muted); }
+.dd-impact-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin-top: 14px; font-size: 9px; color: var(--cp-text-muted); }
+.dd-impact-swatch { width: 11px; height: 11px; border-radius: 2px; border: 2px solid var(--cp-border-strong); }
+.dd-impact-swatch.is-start { border-color: var(--cp-accent); background: var(--cp-accent-soft); }
+.dd-impact-swatch.is-risk { border-color: var(--cp-danger); }
+.dd-impact-swatch.is-supplier { border-color: var(--cp-warning); }
+.dd-impact-swatch.is-product { border-color: var(--cp-success); }
+.dd-impact-swatch.is-supply { border-color: var(--cp-link); border-radius: 2px 6px 2px 6px; }
+.dd-impact-arrow { display: inline-flex; align-items: center; margin-left: 6px; color: var(--cp-text-muted); }
+.dd-impact-arrow.is-derived { width: 18px; height: 0; border-top: 1px dashed var(--cp-text-muted); margin-right: 2px; }
+.dd-impact-changes { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 12px 0 8px; }
+.dd-impact-changes li { display: flex; align-items: baseline; gap: 7px; padding: 5px 9px; border: 1px solid var(--cp-border); font-size: 10px; }
+.dd-impact-changes li > span { font-size: 9px; color: var(--cp-text-muted); }
+.dd-impact-changes li > em { font-style: normal; font-family: Bahnschrift, 'Segoe UI', sans-serif; }
+.dd-impact-changes li[data-kind="added"] { border-color: var(--cp-accent); background: var(--cp-accent-soft); }
+.dd-impact-changes li[data-kind="added"] > span { color: var(--cp-accent); }
+.dd-impact-changes li[data-kind="removed"] { border-color: var(--cp-danger); }
+.dd-impact-changes li[data-kind="kept"] { color: var(--cp-text-muted); }
+.dd-impact-records { font-size: 10px; color: var(--cp-text-muted); }
+.dd-impact-records summary { cursor: pointer; min-height: 26px; padding: 4px 0; }
+.dd-impact-records table { min-width: 560px; }
+.dd-impact-records th, .dd-impact-records td { font-size: 11px; padding: 8px 9px; vertical-align: top; }
+.dd-impact-records small { display: block; font-size: 9px; color: var(--cp-text-muted); }
+.dd-stock { margin-top: 24px; }
+.dd-stock .section-heading > span { font-size: 10px; }
+.dd-stock table { min-width: 620px; }
+.dd-stock th, .dd-stock td { font-size: 11px; padding: 11px 9px; }
+.dd-record-link { min-height: 26px; padding: 2px 0; border: 0; color: var(--cp-link); font-size: 11px; }
+.dd-footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-top: 26px; padding-top: 14px; border-top: 1px solid var(--cp-border); font-size: 10px; color: var(--cp-text-muted); }
+.dd-footer a { color: var(--cp-text-muted); }
+@container workspace (max-width: 1000px) { .dd-workbench { grid-template-columns: 260px minmax(0, 1fr); gap: 20px; } .dd-controls { padding-right: 18px; } .dd-metrics strong { font-size: 27px; } .dd-metrics span { font-size: 9px; } .dd-navigation > span { display: none; } }
+@container workspace (max-width: 760px) { .dd-workbench { grid-template-columns: minmax(0, 1fr); } .dd-controls { padding-right: 0; border-right: 0; padding-bottom: 22px; border-bottom: 1px solid var(--cp-border); } .dd-components { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 22px; } .dd-presets button > span { font-size: 10px; } }
+@container workspace (max-width: 450px) { .dd-components { display: block; } .dd-actions button { padding: 6px; min-width: 32px; } .dd-actions button span { display: none; } .dd-metrics > div { padding-inline: 9px; } .dd-metrics strong { font-size: 25px; } .dd-navigation a { font-size: 12px; padding-inline: 4px; } .dd-ratio-control input[type="number"] { width: 70px; } .dd-impact { padding-inline: 12px; } .dd-impact-canvas { height: 380px; } .dd-impact-supply { margin-left: 0; } }
+@media (prefers-reduced-motion: reduce) { .dd-composition > span { transition: none; } }

@@ -1,0 +1,373 @@
+{
+  "datasetId": "maikuro-jp-v1",
+  "version": "2026-09-10.chats-1",
+  "asOf": "2026-07-08T18:00:00+09:00",
+  "dataOrigin": "synthetic",
+  "conversations": [
+    {
+      "id": "CHAT-001",
+      "storeId": "STR-01",
+      "channel": "text",
+      "status": "included",
+      "analyzedAt": "2026-06-04T18:00:00+09:00",
+      "messages": [
+        {
+          "id": "CHAT-001-U1",
+          "role": "customer",
+          "text": "バニラクリーム水出しは、甘さ控えめも選べますか？",
+          "sentAt": "2026-06-04T12:00:00+09:00",
+          "productId": "PRD-002",
+          "topics": [
+            "甘さ控えめ"
+          ]
+        },
+        {
+          "id": "CHAT-001-A1",
+          "role": "assistant",
+          "text": "甘さの変更可否は確認できません。商品情報ではバニラとクリームを使っています。",
+          "sentAt": "2026-06-04T12:00:05+09:00",
+          "productId": "PRD-002",
+          "topics": []
+        },
+        {
+          "id": "CHAT-001-U2",
+          "role": "customer",
+          "text": "香りは好きなので、バニラの香りを残したままシロップを減らせると嬉しいです。",
+          "sentAt": "2026-06-04T12:01:00+09:00",
+          "productId": "PRD-002",
+          "topics": [
+            "甘さ控えめ",
+            "香り"
+          ]
+        },
+        {
+          "id": "CHAT-001-A2",
+          "role": "assistant",
+          "text": "香りを残して甘さを抑えたい、というご希望ですね。変更のお約束はできません。",
+          "sentAt": "2026-06-04T12:01:05+09:00",
+          "productId": "PRD-002",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "id": "CHAT-002",
+      "storeId": "STR-02",
+      "channel": "text",
+      "status": "included",
+      "analyzedAt": "2026-06-10T18:00:00+09:00",
+      "messages": [
+        {
+          "id": "CHAT-002-U1",
+          "role": "customer",
+          "text": "バニラクリーム水出しを午後に飲みたいです。甘さ控えめの選択肢はありますか？",
+          "sentAt": "2026-06-10T12:00:00+09:00",
+          "productId": "PRD-002",
+          "topics": [
+            "甘さ控えめ"
+          ]
+        },
+        {
+          "id": "CHAT-002-A1",
+          "role": "assistant",
+          "text": "現行商品の情報だけでは甘さの変更を確認できません。比較する商品は画面から選べます。",
+          "sentAt": "2026-06-10T12:00:05+09:00",
+          "productId": "PRD-002",
+          "topics": []
+        },
+        {
+          "id": "CHAT-002-U2",
+          "role": "customer",
+          "text": "大きいと飲みきれないので、小さいサイズがあると選びやすいです。",
+          "sentAt": "2026-06-10T12:01:00+09:00",
+          "productId": "PRD-002",
+          "topics": [
+            "サイズ"
+          ]
+        },
+        {
+          "id": "CHAT-002-A2",
+          "role": "assistant",
+          "text": "小さいサイズをご希望ですね。このデモの商品一覧にサイズ違いはありません。",
+          "sentAt": "2026-06-10T12:01:05+09:00",
+          "productId": "PRD-002",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "id": "CHAT-003",
+      "storeId": "STR-03",
+      "channel": "voice",
+      "status": "included",
+      "analyzedAt": "2026-06-17T18:00:00+09:00",
+      "messages": [
+        {
+          "id": "CHAT-003-U1",
+          "role": "customer",
+          "text": "前のバニラクリーム水出しは甘さが強く感じました。甘さ控えめだとまた飲みたいです。",
+          "sentAt": "2026-06-17T12:00:00+09:00",
+          "productId": "PRD-002",
+          "topics": [
+            "甘さ控えめ"
+          ]
+        },
+        {
+          "id": "CHAT-003-A1",
+          "role": "assistant",
+          "text": "前回は甘さが強く感じられたのですね。会話だけでは購入記録や商品の変更可否は確認できません。",
+          "sentAt": "2026-06-17T12:00:05+09:00",
+          "productId": "PRD-002",
+          "topics": []
+        },
+        {
+          "id": "CHAT-003-U2",
+          "role": "customer",
+          "text": "クリームの口当たりは好きです。後味だけ軽くなると良いと思います。",
+          "sentAt": "2026-06-17T12:01:00+09:00",
+          "productId": "PRD-002",
+          "topics": [
+            "口当たり",
+            "後味"
+          ]
+        },
+        {
+          "id": "CHAT-003-A2",
+          "role": "assistant",
+          "text": "クリームの口当たりを保ち、軽い後味をご希望ですね。",
+          "sentAt": "2026-06-17T12:01:05+09:00",
+          "productId": "PRD-002",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "id": "CHAT-004",
+      "storeId": "STR-04",
+      "channel": "text",
+      "status": "included",
+      "analyzedAt": "2026-07-02T18:00:00+09:00",
+      "messages": [
+        {
+          "id": "CHAT-004-U1",
+          "role": "customer",
+          "text": "バニラクリーム水出しを神田で受け取りたいです。甘さ控えめも選べると嬉しいです。",
+          "sentAt": "2026-07-02T12:00:00+09:00",
+          "productId": "PRD-002",
+          "topics": [
+            "甘さ控えめ",
+            "受取"
+          ]
+        },
+        {
+          "id": "CHAT-004-A1",
+          "role": "assistant",
+          "text": "受取予定店は神田店ですね。在庫や甘さの変更を確約するものではありません。",
+          "sentAt": "2026-07-02T12:00:05+09:00",
+          "productId": "PRD-002",
+          "topics": []
+        },
+        {
+          "id": "CHAT-004-U2",
+          "role": "customer",
+          "text": "仕事の休憩なので、予約した時刻に待ち時間なく受取できると助かります。",
+          "sentAt": "2026-07-02T12:01:00+09:00",
+          "productId": "PRD-002",
+          "topics": [
+            "待ち時間",
+            "受取"
+          ]
+        },
+        {
+          "id": "CHAT-004-A2",
+          "role": "assistant",
+          "text": "実際の受取時間は確認できません。表示時刻はデモの仮設定です。",
+          "sentAt": "2026-07-02T12:01:05+09:00",
+          "productId": "PRD-002",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "id": "CHAT-005",
+      "storeId": "STR-05",
+      "channel": "text",
+      "status": "included",
+      "analyzedAt": "2026-07-04T18:00:00+09:00",
+      "messages": [
+        {
+          "id": "CHAT-005-U1",
+          "role": "customer",
+          "text": "バニラクリーム水出しの価格は気になります。甘さ控えめでも今と同じ価格が良いです。",
+          "sentAt": "2026-07-04T12:00:00+09:00",
+          "productId": "PRD-002",
+          "topics": [
+            "甘さ控えめ",
+            "価格"
+          ]
+        },
+        {
+          "id": "CHAT-005-A1",
+          "role": "assistant",
+          "text": "現行価格は税込648円です。甘さを変えた新商品の価格は決まっていません。",
+          "sentAt": "2026-07-04T12:00:05+09:00",
+          "productId": "PRD-002",
+          "topics": []
+        },
+        {
+          "id": "CHAT-005-U2",
+          "role": "customer",
+          "text": "持ち帰りで薄くなるのが気になるので、氷の量を選べると助かります。",
+          "sentAt": "2026-07-04T12:01:00+09:00",
+          "productId": "PRD-002",
+          "topics": [
+            "氷の量"
+          ]
+        },
+        {
+          "id": "CHAT-005-A2",
+          "role": "assistant",
+          "text": "氷の量の変更可否は確認できません。",
+          "sentAt": "2026-07-04T12:01:05+09:00",
+          "productId": "PRD-002",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "id": "CHAT-006",
+      "storeId": "STR-06",
+      "channel": "voice",
+      "status": "included",
+      "analyzedAt": "2026-07-06T18:00:00+09:00",
+      "messages": [
+        {
+          "id": "CHAT-006-U1",
+          "role": "customer",
+          "text": "バニラクリーム水出しは今の甘さが好きです。甘さ控えめに一本化しないでほしいです。",
+          "sentAt": "2026-07-06T12:00:00+09:00",
+          "productId": "PRD-002",
+          "topics": [
+            "現行支持"
+          ]
+        },
+        {
+          "id": "CHAT-006-A1",
+          "role": "assistant",
+          "text": "今の味も残してほしい、というご希望ですね。商品の変更は決定していません。",
+          "sentAt": "2026-07-06T12:00:05+09:00",
+          "productId": "PRD-002",
+          "topics": []
+        },
+        {
+          "id": "CHAT-006-U2",
+          "role": "customer",
+          "text": "香りとクリームのバランスは変えず、気分で甘さを選びたいです。",
+          "sentAt": "2026-07-06T12:01:00+09:00",
+          "productId": "PRD-002",
+          "topics": [
+            "甘さ控えめ",
+            "香り"
+          ]
+        },
+        {
+          "id": "CHAT-006-A2",
+          "role": "assistant",
+          "text": "香りとクリームを保った選択肢をご希望ですね。",
+          "sentAt": "2026-07-06T12:01:05+09:00",
+          "productId": "PRD-002",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "id": "CHAT-007",
+      "storeId": null,
+      "channel": "text",
+      "status": "included",
+      "analyzedAt": "2026-07-07T18:00:00+09:00",
+      "messages": [
+        {
+          "id": "CHAT-007-U1",
+          "role": "customer",
+          "text": "まだ商品も受取店も決めていません。冷たい飲み物を探しています。",
+          "sentAt": "2026-07-07T12:00:00+09:00",
+          "productId": null,
+          "topics": []
+        },
+        {
+          "id": "CHAT-007-A1",
+          "role": "assistant",
+          "text": "バニラクリーム水出しも候補です。飲み物とタンブラーを比較画面で確認できます。",
+          "sentAt": "2026-07-07T12:00:05+09:00",
+          "productId": "PRD-002",
+          "topics": []
+        },
+        {
+          "id": "CHAT-007-U2",
+          "role": "customer",
+          "text": "そのバニラクリーム水出しで、甘さ控えめも選べますか？",
+          "sentAt": "2026-07-07T12:01:00+09:00",
+          "productId": "PRD-002",
+          "topics": [
+            "甘さ控えめ"
+          ]
+        },
+        {
+          "id": "CHAT-007-A2",
+          "role": "assistant",
+          "text": "甘さの変更可否は確認できません。",
+          "sentAt": "2026-07-07T12:01:05+09:00",
+          "productId": "PRD-002",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "id": "CHAT-008",
+      "storeId": "STR-06",
+      "channel": "text",
+      "status": "included",
+      "analyzedAt": "2026-07-08T17:00:00+09:00",
+      "messages": [
+        {
+          "id": "CHAT-008-U1",
+          "role": "customer",
+          "text": "泡仕立て水出しの口当たりは、なめらかですか？",
+          "sentAt": "2026-07-08T12:00:00+09:00",
+          "productId": "PRD-003",
+          "topics": [
+            "口当たり"
+          ]
+        },
+        {
+          "id": "CHAT-008-A1",
+          "role": "assistant",
+          "text": "デモの商品説明では、きめ細かな泡の口当たりとされています。実際の味を保証するものではありません。",
+          "sentAt": "2026-07-08T12:00:05+09:00",
+          "productId": "PRD-003",
+          "topics": []
+        },
+        {
+          "id": "CHAT-008-U2",
+          "role": "customer",
+          "text": "苦味より香りを楽しみたいので、水出しの後味も気になります。",
+          "sentAt": "2026-07-08T12:01:00+09:00",
+          "productId": "PRD-003",
+          "topics": [
+            "香り",
+            "後味"
+          ]
+        },
+        {
+          "id": "CHAT-008-A2",
+          "role": "assistant",
+          "text": "香りと後味が気になるのですね。商品説明を比べてご検討ください。",
+          "sentAt": "2026-07-08T12:01:05+09:00",
+          "productId": "PRD-003",
+          "topics": []
+        }
+      ]
+    }
+  ]
+}

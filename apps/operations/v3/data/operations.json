@@ -1,0 +1,1563 @@
+{
+  "datasetId": "maikuro-jp-v1",
+  "version": "2026-09-10.1",
+  "asOf": "2026-07-08T18:00:00+09:00",
+  "timezone": "Asia/Tokyo",
+  "dataOrigin": "synthetic",
+  "products": [
+    {
+      "id": "PRD-001",
+      "name": "舞黒 水出し珈琲",
+      "category": "水出し珈琲",
+      "serving": "350 mL・1 杯",
+      "priceExTax": 500,
+      "taxPercent": 8,
+      "supplierId": "SUP-02"
+    },
+    {
+      "id": "PRD-002",
+      "name": "バニラクリーム水出し珈琲",
+      "category": "水出し珈琲",
+      "serving": "350 mL・1 杯",
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "supplierId": "SUP-02"
+    },
+    {
+      "id": "PRD-003",
+      "name": "泡仕立て水出し珈琲",
+      "category": "水出し珈琲",
+      "serving": "350 mL・1 杯",
+      "priceExTax": 650,
+      "taxPercent": 8,
+      "supplierId": "SUP-04"
+    },
+    {
+      "id": "PRD-004",
+      "name": "深煎りエスプレッソ",
+      "category": "エスプレッソ",
+      "serving": "60 mL・1 杯",
+      "priceExTax": 350,
+      "taxPercent": 8,
+      "supplierId": "SUP-03"
+    },
+    {
+      "id": "PRD-005",
+      "name": "キャラメルマキアート",
+      "category": "エスプレッソ",
+      "serving": "300 mL・1 杯",
+      "priceExTax": 550,
+      "taxPercent": 8,
+      "supplierId": "SUP-03"
+    },
+    {
+      "id": "PRD-006",
+      "name": "カプチーノ",
+      "category": "エスプレッソ",
+      "serving": "300 mL・1 杯",
+      "priceExTax": 500,
+      "taxPercent": 8,
+      "supplierId": "SUP-03"
+    },
+    {
+      "id": "PRD-007",
+      "name": "舞黒ブレンド珈琲",
+      "category": "ドリップ珈琲",
+      "serving": "300 mL・1 杯",
+      "priceExTax": 400,
+      "taxPercent": 8,
+      "supplierId": "SUP-01"
+    },
+    {
+      "id": "PRD-008",
+      "name": "本日のハンドドリップ珈琲",
+      "category": "ドリップ珈琲",
+      "serving": "300 mL・1 杯",
+      "priceExTax": 550,
+      "taxPercent": 8,
+      "supplierId": "SUP-01"
+    },
+    {
+      "id": "PRD-009",
+      "name": "和紅茶",
+      "category": "お茶",
+      "serving": "300 mL・1 杯",
+      "priceExTax": 400,
+      "taxPercent": 8,
+      "supplierId": "SUP-05"
+    },
+    {
+      "id": "PRD-010",
+      "name": "抹茶ラテ",
+      "category": "お茶",
+      "serving": "300 mL・1 杯",
+      "priceExTax": 550,
+      "taxPercent": 8,
+      "supplierId": "SUP-05"
+    },
+    {
+      "id": "PRD-011",
+      "name": "あんバタークロワッサン",
+      "category": "軽食",
+      "serving": "1 個",
+      "priceExTax": 350,
+      "taxPercent": 8,
+      "supplierId": "SUP-01"
+    },
+    {
+      "id": "PRD-012",
+      "name": "舞黒珈琲店 ステンレスタンブラー",
+      "category": "雑貨",
+      "serving": "350 mL・1 個",
+      "priceExTax": 2000,
+      "taxPercent": 10,
+      "supplierId": "SUP-01"
+    }
+  ],
+  "stores": [
+    {
+      "id": "STR-01",
+      "name": "吉祥寺店",
+      "city": "東京都武蔵野市",
+      "coldEquipment": true,
+      "cupsPerDay": 120
+    },
+    {
+      "id": "STR-02",
+      "name": "中目黒店",
+      "city": "東京都目黒区",
+      "coldEquipment": true,
+      "cupsPerDay": 100
+    },
+    {
+      "id": "STR-03",
+      "name": "浦和店",
+      "city": "埼玉県さいたま市浦和区",
+      "coldEquipment": null,
+      "cupsPerDay": null
+    },
+    {
+      "id": "STR-04",
+      "name": "神田店",
+      "city": "東京都千代田区",
+      "coldEquipment": true,
+      "cupsPerDay": 200
+    },
+    {
+      "id": "STR-05",
+      "name": "大宮店",
+      "city": "埼玉県さいたま市大宮区",
+      "coldEquipment": true,
+      "cupsPerDay": 150
+    },
+    {
+      "id": "STR-06",
+      "name": "横浜みなとみらい店",
+      "city": "神奈川県横浜市西区",
+      "coldEquipment": true,
+      "cupsPerDay": 150
+    }
+  ],
+  "suppliers": [
+    {
+      "id": "SUP-01",
+      "name": "武蔵野珈琲・菓子商会",
+      "city": "東京都三鷹市"
+    },
+    {
+      "id": "SUP-02",
+      "name": "相模焙煎工房",
+      "city": "神奈川県相模原市"
+    },
+    {
+      "id": "SUP-03",
+      "name": "蔵前珈琲焙煎所",
+      "city": "東京都台東区"
+    },
+    {
+      "id": "SUP-04",
+      "name": "房総飲料工房",
+      "city": "千葉県市原市"
+    },
+    {
+      "id": "SUP-05",
+      "name": "駿河茶葉商会",
+      "city": "静岡県静岡市"
+    }
+  ],
+  "customers": [
+    {
+      "id": "CUS-001",
+      "displayName": "珈琲好き001",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-002",
+      "displayName": "珈琲好き002",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-003",
+      "displayName": "珈琲好き003",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-004",
+      "displayName": "珈琲好き004",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-005",
+      "displayName": "珈琲好き005",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-006",
+      "displayName": "珈琲好き006",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-007",
+      "displayName": "珈琲好き007",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-008",
+      "displayName": "珈琲好き008",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-009",
+      "displayName": "珈琲好き009",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-010",
+      "displayName": "珈琲好き010",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-011",
+      "displayName": "珈琲好き011",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-012",
+      "displayName": "珈琲好き012",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-013",
+      "displayName": "珈琲好き013",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-014",
+      "displayName": "珈琲好き014",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-015",
+      "displayName": "珈琲好き015",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-016",
+      "displayName": "珈琲好き016",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-017",
+      "displayName": "珈琲好き017",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-018",
+      "displayName": "珈琲好き018",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-019",
+      "displayName": "珈琲好き019",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-020",
+      "displayName": "珈琲好き020",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-021",
+      "displayName": "珈琲好き021",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-022",
+      "displayName": "珈琲好き022",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-023",
+      "displayName": "珈琲好き023",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-024",
+      "displayName": "珈琲好き024",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-025",
+      "displayName": "珈琲好き025",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-026",
+      "displayName": "珈琲好き026",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-027",
+      "displayName": "珈琲好き027",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-028",
+      "displayName": "珈琲好き028",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-029",
+      "displayName": "珈琲好き029",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-030",
+      "displayName": "珈琲好き030",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-DEMO",
+      "displayName": "珈琲好き031",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-CANCEL-04",
+      "displayName": "珈琲好き032",
+      "loyaltyTier": "一般"
+    },
+    {
+      "id": "CUS-CANCEL-06",
+      "displayName": "珈琲好き033",
+      "loyaltyTier": "一般"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-001",
+      "customerId": "CUS-001",
+      "storeId": "STR-01",
+      "orderedAt": "2026-05-12T09:00:00+09:00",
+      "fulfilledAt": "2026-05-12T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-002",
+      "customerId": "CUS-002",
+      "storeId": "STR-01",
+      "orderedAt": "2026-06-02T09:00:00+09:00",
+      "fulfilledAt": "2026-06-02T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-003",
+      "customerId": "CUS-003",
+      "storeId": "STR-01",
+      "orderedAt": "2026-06-16T09:00:00+09:00",
+      "fulfilledAt": "2026-06-16T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-004",
+      "customerId": "CUS-004",
+      "storeId": "STR-01",
+      "orderedAt": "2026-06-24T09:00:00+09:00",
+      "fulfilledAt": "2026-06-24T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-005",
+      "customerId": "CUS-005",
+      "storeId": "STR-02",
+      "orderedAt": "2026-05-13T09:00:00+09:00",
+      "fulfilledAt": "2026-05-13T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-006",
+      "customerId": "CUS-006",
+      "storeId": "STR-02",
+      "orderedAt": "2026-06-03T09:00:00+09:00",
+      "fulfilledAt": "2026-06-03T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-007",
+      "customerId": "CUS-007",
+      "storeId": "STR-02",
+      "orderedAt": "2026-06-17T09:00:00+09:00",
+      "fulfilledAt": "2026-06-17T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-008",
+      "customerId": "CUS-008",
+      "storeId": "STR-02",
+      "orderedAt": "2026-06-25T09:00:00+09:00",
+      "fulfilledAt": "2026-06-25T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-009",
+      "customerId": "CUS-009",
+      "storeId": "STR-03",
+      "orderedAt": "2026-05-14T09:00:00+09:00",
+      "fulfilledAt": "2026-05-14T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-010",
+      "customerId": "CUS-010",
+      "storeId": "STR-03",
+      "orderedAt": "2026-06-04T09:00:00+09:00",
+      "fulfilledAt": "2026-06-04T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-011",
+      "customerId": "CUS-011",
+      "storeId": "STR-03",
+      "orderedAt": "2026-06-18T09:00:00+09:00",
+      "fulfilledAt": "2026-06-18T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-012",
+      "customerId": "CUS-012",
+      "storeId": "STR-03",
+      "orderedAt": "2026-06-26T09:00:00+09:00",
+      "fulfilledAt": "2026-06-26T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-013",
+      "customerId": "CUS-013",
+      "storeId": "STR-04",
+      "orderedAt": "2026-05-15T09:00:00+09:00",
+      "fulfilledAt": "2026-05-15T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-014",
+      "customerId": "CUS-014",
+      "storeId": "STR-04",
+      "orderedAt": "2026-06-05T09:00:00+09:00",
+      "fulfilledAt": "2026-06-05T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-015",
+      "customerId": "CUS-015",
+      "storeId": "STR-04",
+      "orderedAt": "2026-06-19T09:00:00+09:00",
+      "fulfilledAt": "2026-06-19T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-016",
+      "customerId": "CUS-016",
+      "storeId": "STR-04",
+      "orderedAt": "2026-06-27T09:00:00+09:00",
+      "fulfilledAt": "2026-06-27T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-017",
+      "customerId": "CUS-017",
+      "storeId": "STR-05",
+      "orderedAt": "2026-05-16T09:00:00+09:00",
+      "fulfilledAt": "2026-05-16T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-018",
+      "customerId": "CUS-018",
+      "storeId": "STR-05",
+      "orderedAt": "2026-06-06T09:00:00+09:00",
+      "fulfilledAt": "2026-06-06T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-019",
+      "customerId": "CUS-019",
+      "storeId": "STR-05",
+      "orderedAt": "2026-06-20T09:00:00+09:00",
+      "fulfilledAt": "2026-06-20T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-020",
+      "customerId": "CUS-020",
+      "storeId": "STR-05",
+      "orderedAt": "2026-06-28T09:00:00+09:00",
+      "fulfilledAt": "2026-06-28T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-021",
+      "customerId": "CUS-021",
+      "storeId": "STR-06",
+      "orderedAt": "2026-05-17T09:00:00+09:00",
+      "fulfilledAt": "2026-05-17T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-022",
+      "customerId": "CUS-022",
+      "storeId": "STR-06",
+      "orderedAt": "2026-06-07T09:00:00+09:00",
+      "fulfilledAt": "2026-06-07T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-023",
+      "customerId": "CUS-023",
+      "storeId": "STR-06",
+      "orderedAt": "2026-06-21T09:00:00+09:00",
+      "fulfilledAt": "2026-06-21T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-024",
+      "customerId": "CUS-024",
+      "storeId": "STR-06",
+      "orderedAt": "2026-06-29T09:00:00+09:00",
+      "fulfilledAt": "2026-06-29T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-025",
+      "customerId": "CUS-025",
+      "storeId": "STR-01",
+      "orderedAt": "2026-06-22T09:00:00+09:00",
+      "fulfilledAt": "2026-06-22T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-026",
+      "customerId": "CUS-026",
+      "storeId": "STR-02",
+      "orderedAt": "2026-06-22T09:00:00+09:00",
+      "fulfilledAt": "2026-06-22T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-027",
+      "customerId": "CUS-027",
+      "storeId": "STR-03",
+      "orderedAt": "2026-06-22T09:00:00+09:00",
+      "fulfilledAt": "2026-06-22T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-028",
+      "customerId": "CUS-028",
+      "storeId": "STR-04",
+      "orderedAt": "2026-06-22T09:00:00+09:00",
+      "fulfilledAt": "2026-06-22T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-029",
+      "customerId": "CUS-029",
+      "storeId": "STR-05",
+      "orderedAt": "2026-06-22T09:00:00+09:00",
+      "fulfilledAt": "2026-06-22T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-030",
+      "customerId": "CUS-030",
+      "storeId": "STR-06",
+      "orderedAt": "2026-06-22T09:00:00+09:00",
+      "fulfilledAt": "2026-06-22T12:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-DEMO-0702",
+      "customerId": "CUS-DEMO",
+      "storeId": "STR-04",
+      "orderedAt": "2026-07-02T10:00:00+09:00",
+      "fulfilledAt": "2026-07-02T15:00:00+09:00",
+      "status": "completed"
+    },
+    {
+      "id": "ORD-CANCEL-04",
+      "customerId": "CUS-CANCEL-04",
+      "storeId": "STR-04",
+      "orderedAt": "2026-07-03T09:00:00+09:00",
+      "fulfilledAt": null,
+      "status": "cancelled"
+    },
+    {
+      "id": "ORD-CANCEL-06",
+      "customerId": "CUS-CANCEL-06",
+      "storeId": "STR-06",
+      "orderedAt": "2026-07-04T09:00:00+09:00",
+      "fulfilledAt": null,
+      "status": "cancelled"
+    }
+  ],
+  "orderLines": [
+    {
+      "id": "LINE-001",
+      "orderId": "ORD-001",
+      "productId": "PRD-002",
+      "quantity": 1,
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-002",
+      "orderId": "ORD-002",
+      "productId": "PRD-002",
+      "quantity": 1,
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-003",
+      "orderId": "ORD-003",
+      "productId": "PRD-002",
+      "quantity": 1,
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-004",
+      "orderId": "ORD-004",
+      "productId": "PRD-002",
+      "quantity": 1,
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-005",
+      "orderId": "ORD-005",
+      "productId": "PRD-002",
+      "quantity": 1,
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-006",
+      "orderId": "ORD-006",
+      "productId": "PRD-002",
+      "quantity": 1,
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-007",
+      "orderId": "ORD-007",
+      "productId": "PRD-002",
+      "quantity": 1,
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-008",
+      "orderId": "ORD-008",
+      "productId": "PRD-002",
+      "quantity": 1,
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-009",
+      "orderId": "ORD-009",
+      "productId": "PRD-002",
+      "quantity": 1,
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-010",
+      "orderId": "ORD-010",
+      "productId": "PRD-002",
+      "quantity": 1,
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-011",
+      "orderId": "ORD-011",
+      "productId": "PRD-002",
+      "quantity": 1,
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-012",
+      "orderId": "ORD-012",
+      "productId": "PRD-002",
+      "quantity": 1,
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-013",
+      "orderId": "ORD-013",
+      "productId": "PRD-002",
+      "quantity": 1,
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-014",
+      "orderId": "ORD-014",
+      "productId": "PRD-002",
+      "quantity": 1,
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-015",
+      "orderId": "ORD-015",
+      "productId": "PRD-002",
+      "quantity": 1,
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-016",
+      "orderId": "ORD-016",
+      "productId": "PRD-002",
+      "quantity": 1,
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-017",
+      "orderId": "ORD-017",
+      "productId": "PRD-002",
+      "quantity": 1,
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-018",
+      "orderId": "ORD-018",
+      "productId": "PRD-002",
+      "quantity": 1,
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-019",
+      "orderId": "ORD-019",
+      "productId": "PRD-002",
+      "quantity": 1,
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-020",
+      "orderId": "ORD-020",
+      "productId": "PRD-002",
+      "quantity": 1,
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-021",
+      "orderId": "ORD-021",
+      "productId": "PRD-002",
+      "quantity": 1,
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-022",
+      "orderId": "ORD-022",
+      "productId": "PRD-002",
+      "quantity": 1,
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-023",
+      "orderId": "ORD-023",
+      "productId": "PRD-002",
+      "quantity": 1,
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-024",
+      "orderId": "ORD-024",
+      "productId": "PRD-002",
+      "quantity": 1,
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-025",
+      "orderId": "ORD-025",
+      "productId": "PRD-003",
+      "quantity": 1,
+      "priceExTax": 650,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-026",
+      "orderId": "ORD-026",
+      "productId": "PRD-003",
+      "quantity": 1,
+      "priceExTax": 650,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-027",
+      "orderId": "ORD-027",
+      "productId": "PRD-003",
+      "quantity": 1,
+      "priceExTax": 650,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-028",
+      "orderId": "ORD-028",
+      "productId": "PRD-003",
+      "quantity": 1,
+      "priceExTax": 650,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-029",
+      "orderId": "ORD-029",
+      "productId": "PRD-003",
+      "quantity": 1,
+      "priceExTax": 650,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-030",
+      "orderId": "ORD-030",
+      "productId": "PRD-003",
+      "quantity": 1,
+      "priceExTax": 650,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-DEMO-0702",
+      "orderId": "ORD-DEMO-0702",
+      "productId": "PRD-002",
+      "quantity": 2,
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-CANCEL-04",
+      "orderId": "ORD-CANCEL-04",
+      "productId": "PRD-002",
+      "quantity": 2,
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "discountExTax": 0
+    },
+    {
+      "id": "LINE-CANCEL-06",
+      "orderId": "ORD-CANCEL-06",
+      "productId": "PRD-002",
+      "quantity": 2,
+      "priceExTax": 600,
+      "taxPercent": 8,
+      "discountExTax": 0
+    }
+  ],
+  "reviews": [
+    {
+      "id": "REV-001",
+      "lineId": "LINE-001",
+      "customerId": "CUS-001",
+      "revision": 1,
+      "rating": 4,
+      "text": "香りは好きです。甘さ控えめも選びたいです。",
+      "publishedAt": "2026-05-12T16:00:00+09:00",
+      "analyzedAt": "2026-05-12T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-002",
+      "lineId": "LINE-002",
+      "customerId": "CUS-002",
+      "revision": 1,
+      "rating": 4,
+      "text": "普段は無糖なので、香りを残して甘さを減らせるとうれしいです。",
+      "publishedAt": "2026-06-02T16:00:00+09:00",
+      "analyzedAt": "2026-06-02T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-003",
+      "lineId": "LINE-003",
+      "customerId": "CUS-003",
+      "revision": 1,
+      "rating": 5,
+      "text": "バニラの香りが気に入りました。",
+      "publishedAt": "2026-06-16T16:00:00+09:00",
+      "analyzedAt": "2026-06-16T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-004",
+      "lineId": "LINE-004",
+      "customerId": "CUS-004",
+      "revision": 1,
+      "rating": 5,
+      "text": "今の甘さがちょうどよく、変更しないでほしいです。",
+      "publishedAt": "2026-06-24T16:00:00+09:00",
+      "analyzedAt": "2026-06-24T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-005",
+      "lineId": "LINE-005",
+      "customerId": "CUS-005",
+      "revision": 1,
+      "rating": 3,
+      "text": "午後に飲むには少し甘いです。甘さ控えめ版を希望します。",
+      "publishedAt": "2026-05-13T16:00:00+09:00",
+      "analyzedAt": "2026-05-13T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-006",
+      "lineId": "LINE-006",
+      "customerId": "CUS-006",
+      "revision": 1,
+      "rating": 4,
+      "text": "香りはそのままで、シロップが少ない選択肢があると助かります。",
+      "publishedAt": "2026-06-03T16:00:00+09:00",
+      "analyzedAt": "2026-06-03T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-007",
+      "lineId": "LINE-007",
+      "customerId": "CUS-007",
+      "revision": 1,
+      "rating": 5,
+      "text": "ふたを開けたときの香りがよかったです。",
+      "publishedAt": "2026-06-17T16:00:00+09:00",
+      "analyzedAt": "2026-06-17T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-008",
+      "lineId": "LINE-008",
+      "customerId": "CUS-008",
+      "revision": 1,
+      "rating": 4,
+      "text": "今の価格ならまた購入したいです。",
+      "publishedAt": "2026-06-25T16:00:00+09:00",
+      "analyzedAt": "2026-06-25T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-009",
+      "lineId": "LINE-009",
+      "customerId": "CUS-009",
+      "revision": 1,
+      "rating": 4,
+      "text": "飲みやすいですが、甘さ控えめの商品も試したいです。",
+      "publishedAt": "2026-05-14T16:00:00+09:00",
+      "analyzedAt": "2026-05-14T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-010",
+      "lineId": "LINE-010",
+      "customerId": "CUS-010",
+      "revision": 1,
+      "rating": 3,
+      "text": "甘さより珈琲の香りを楽しみたいです。",
+      "publishedAt": "2026-06-04T16:00:00+09:00",
+      "analyzedAt": "2026-06-04T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-011",
+      "lineId": "LINE-011",
+      "customerId": "CUS-011",
+      "revision": 1,
+      "rating": 5,
+      "text": "甘いものが欲しい日に選んでいます。",
+      "publishedAt": "2026-06-18T16:00:00+09:00",
+      "analyzedAt": "2026-06-18T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-012",
+      "lineId": "LINE-012",
+      "customerId": "CUS-012",
+      "revision": 1,
+      "rating": 4,
+      "text": "今の量が休憩にちょうどよいです。",
+      "publishedAt": "2026-06-26T16:00:00+09:00",
+      "analyzedAt": "2026-06-26T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-013",
+      "lineId": "LINE-013",
+      "customerId": "CUS-013",
+      "revision": 1,
+      "rating": 4,
+      "text": "好きな香りなので、甘さが少ない別商品を希望します。",
+      "publishedAt": "2026-05-15T16:00:00+09:00",
+      "analyzedAt": "2026-05-15T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-014",
+      "lineId": "LINE-014",
+      "customerId": "CUS-014",
+      "revision": 1,
+      "rating": 3,
+      "text": "最後まで飲むと甘く感じます。控えめ版なら選びたいです。",
+      "publishedAt": "2026-06-05T16:00:00+09:00",
+      "analyzedAt": "2026-06-05T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-015",
+      "lineId": "LINE-015",
+      "customerId": "CUS-015",
+      "revision": 1,
+      "rating": 5,
+      "text": "珈琲とバニラの組み合わせがよかったです。",
+      "publishedAt": "2026-06-19T16:00:00+09:00",
+      "analyzedAt": "2026-06-19T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-016",
+      "lineId": "LINE-016",
+      "customerId": "CUS-016",
+      "revision": 1,
+      "rating": 4,
+      "text": "甘さを楽しみたいので現行品も残してほしいです。",
+      "publishedAt": "2026-06-27T16:00:00+09:00",
+      "analyzedAt": "2026-06-27T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-017",
+      "lineId": "LINE-017",
+      "customerId": "CUS-017",
+      "revision": 1,
+      "rating": 4,
+      "text": "定刻で受け取れました。味は甘さ控えめも欲しいです。",
+      "publishedAt": "2026-05-16T16:00:00+09:00",
+      "analyzedAt": "2026-05-16T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-018",
+      "lineId": "LINE-018",
+      "customerId": "CUS-018",
+      "revision": 1,
+      "rating": 3,
+      "text": "香りを弱くせず甘さだけ減らせませんか。",
+      "publishedAt": "2026-06-06T16:00:00+09:00",
+      "analyzedAt": "2026-06-06T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-019",
+      "lineId": "LINE-019",
+      "customerId": "CUS-019",
+      "revision": 1,
+      "rating": 5,
+      "text": "バニラの香りがしっかり感じられました。",
+      "publishedAt": "2026-06-20T16:00:00+09:00",
+      "analyzedAt": "2026-06-20T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-020",
+      "lineId": "LINE-020",
+      "customerId": "CUS-020",
+      "revision": 1,
+      "rating": 4,
+      "text": "現行の甘さが好みです。",
+      "publishedAt": "2026-06-28T16:00:00+09:00",
+      "analyzedAt": "2026-06-28T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-021",
+      "lineId": "LINE-021",
+      "customerId": "CUS-021",
+      "revision": 1,
+      "rating": 3,
+      "text": "飲み終わりが少し甘いので控えめ版を希望します。",
+      "publishedAt": "2026-05-17T16:00:00+09:00",
+      "analyzedAt": "2026-05-17T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-022",
+      "lineId": "LINE-022",
+      "customerId": "CUS-022",
+      "revision": 1,
+      "rating": 4,
+      "text": "香りが好きです。甘さを選べるとうれしいです。",
+      "publishedAt": "2026-06-07T16:00:00+09:00",
+      "analyzedAt": "2026-06-07T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-023",
+      "lineId": "LINE-023",
+      "customerId": "CUS-023",
+      "revision": 1,
+      "rating": 5,
+      "text": "休日の休憩にちょうどよい香りでした。",
+      "publishedAt": "2026-06-21T16:00:00+09:00",
+      "analyzedAt": "2026-06-21T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-024",
+      "lineId": "LINE-024",
+      "customerId": "CUS-024",
+      "revision": 1,
+      "rating": 4,
+      "text": "この価格なら定期的に注文したいです。",
+      "publishedAt": "2026-06-29T16:00:00+09:00",
+      "analyzedAt": "2026-06-29T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-025",
+      "lineId": "LINE-025",
+      "customerId": "CUS-025",
+      "revision": 1,
+      "rating": 5,
+      "text": "泡の口当たりがなめらかでした。",
+      "publishedAt": "2026-06-22T16:00:00+09:00",
+      "analyzedAt": "2026-06-22T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-026",
+      "lineId": "LINE-026",
+      "customerId": "CUS-026",
+      "revision": 1,
+      "rating": 4,
+      "text": "香りがよく、また注文したいです。",
+      "publishedAt": "2026-06-22T16:00:00+09:00",
+      "analyzedAt": "2026-06-22T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-027",
+      "lineId": "LINE-027",
+      "customerId": "CUS-027",
+      "revision": 1,
+      "rating": 4,
+      "text": "休憩時間にちょうどよい量でした。",
+      "publishedAt": "2026-06-22T16:00:00+09:00",
+      "analyzedAt": "2026-06-22T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-028",
+      "lineId": "LINE-028",
+      "customerId": "CUS-028",
+      "revision": 1,
+      "rating": 5,
+      "text": "泡が軽くて飲みやすいです。",
+      "publishedAt": "2026-06-22T16:00:00+09:00",
+      "analyzedAt": "2026-06-22T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-029",
+      "lineId": "LINE-029",
+      "customerId": "CUS-029",
+      "revision": 1,
+      "rating": 4,
+      "text": "時々楽しむ商品として選びます。",
+      "publishedAt": "2026-06-22T16:00:00+09:00",
+      "analyzedAt": "2026-06-22T16:05:00+09:00",
+      "status": "published"
+    },
+    {
+      "id": "REV-030",
+      "lineId": "LINE-030",
+      "customerId": "CUS-030",
+      "revision": 1,
+      "rating": 4,
+      "text": "珈琲の香りが気に入りました。",
+      "publishedAt": "2026-06-22T16:00:00+09:00",
+      "analyzedAt": "2026-06-22T16:05:00+09:00",
+      "status": "published"
+    }
+  ],
+  "reviewTopics": [
+    {
+      "id": "TOP-001",
+      "reviewId": "REV-001",
+      "revision": 1,
+      "topic": "甘さ控えめ",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-002",
+      "reviewId": "REV-002",
+      "revision": 1,
+      "topic": "甘さ控えめ",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-003",
+      "reviewId": "REV-003",
+      "revision": 1,
+      "topic": "香り",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-004",
+      "reviewId": "REV-004",
+      "revision": 1,
+      "topic": "現行支持",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-005",
+      "reviewId": "REV-005",
+      "revision": 1,
+      "topic": "甘さ控えめ",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-006",
+      "reviewId": "REV-006",
+      "revision": 1,
+      "topic": "甘さ控えめ",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-007",
+      "reviewId": "REV-007",
+      "revision": 1,
+      "topic": "香り",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-008",
+      "reviewId": "REV-008",
+      "revision": 1,
+      "topic": "価格",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-009",
+      "reviewId": "REV-009",
+      "revision": 1,
+      "topic": "甘さ控えめ",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-010",
+      "reviewId": "REV-010",
+      "revision": 1,
+      "topic": "甘さ控えめ",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-011",
+      "reviewId": "REV-011",
+      "revision": 1,
+      "topic": "現行支持",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-012",
+      "reviewId": "REV-012",
+      "revision": 1,
+      "topic": "容量",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-013",
+      "reviewId": "REV-013",
+      "revision": 1,
+      "topic": "甘さ控えめ",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-014",
+      "reviewId": "REV-014",
+      "revision": 1,
+      "topic": "甘さ控えめ",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-015",
+      "reviewId": "REV-015",
+      "revision": 1,
+      "topic": "香り",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-016",
+      "reviewId": "REV-016",
+      "revision": 1,
+      "topic": "現行支持",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-017",
+      "reviewId": "REV-017",
+      "revision": 1,
+      "topic": "甘さ控えめ",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-018",
+      "reviewId": "REV-018",
+      "revision": 1,
+      "topic": "甘さ控えめ",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-019",
+      "reviewId": "REV-019",
+      "revision": 1,
+      "topic": "香り",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-020",
+      "reviewId": "REV-020",
+      "revision": 1,
+      "topic": "現行支持",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-021",
+      "reviewId": "REV-021",
+      "revision": 1,
+      "topic": "甘さ控えめ",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-022",
+      "reviewId": "REV-022",
+      "revision": 1,
+      "topic": "甘さ控えめ",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-023",
+      "reviewId": "REV-023",
+      "revision": 1,
+      "topic": "香り",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-024",
+      "reviewId": "REV-024",
+      "revision": 1,
+      "topic": "価格",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-025",
+      "reviewId": "REV-025",
+      "revision": 1,
+      "topic": "口当たり",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-026",
+      "reviewId": "REV-026",
+      "revision": 1,
+      "topic": "香り",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-027",
+      "reviewId": "REV-027",
+      "revision": 1,
+      "topic": "容量",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-028",
+      "reviewId": "REV-028",
+      "revision": 1,
+      "topic": "口当たり",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-029",
+      "reviewId": "REV-029",
+      "revision": 1,
+      "topic": "価格",
+      "classifierVersion": "synthetic-author-v1"
+    },
+    {
+      "id": "TOP-030",
+      "reviewId": "REV-030",
+      "revision": 1,
+      "topic": "香り",
+      "classifierVersion": "synthetic-author-v1"
+    }
+  ],
+  "serviceFeedback": [
+    {
+      "id": "SVC-01",
+      "orderId": "ORD-CANCEL-04",
+      "rating": 1,
+      "text": "予約商品が欠品となりキャンセルしました。",
+      "dissatisfied": true,
+      "publishedAt": "2026-07-03T16:00:00+09:00"
+    },
+    {
+      "id": "SVC-02",
+      "orderId": "ORD-CANCEL-06",
+      "rating": 2,
+      "text": "入荷の案内が遅く予定を変更しました。",
+      "dissatisfied": true,
+      "publishedAt": "2026-07-04T16:00:00+09:00"
+    },
+    {
+      "id": "SVC-03",
+      "orderId": "ORD-DEMO-0702",
+      "rating": 5,
+      "text": "指定時刻に受け取れました。",
+      "dissatisfied": false,
+      "publishedAt": "2026-07-02T16:00:00+09:00"
+    },
+    {
+      "id": "SVC-04",
+      "orderId": "ORD-020",
+      "rating": 5,
+      "text": "定刻で受け取れました。",
+      "dissatisfied": false,
+      "publishedAt": "2026-06-28T16:00:00+09:00"
+    }
+  ],
+  "shipments": [
+    {
+      "id": "SHP-0040",
+      "supplierId": "SUP-02",
+      "storeId": "STR-04",
+      "expectedAt": "2026-06-10T08:00:00+09:00",
+      "arrivedAt": "2026-06-12T08:00:00+09:00",
+      "status": "arrived",
+      "reason": "履歴便。配車調整で 2 日遅延。"
+    },
+    {
+      "id": "SHP-0042",
+      "supplierId": "SUP-02",
+      "storeId": "STR-06",
+      "expectedAt": "2026-06-10T09:00:00+09:00",
+      "arrivedAt": "2026-06-12T09:00:00+09:00",
+      "status": "arrived",
+      "reason": "履歴便。配車調整で 2 日遅延。"
+    },
+    {
+      "id": "SHP-JP-0703-04",
+      "supplierId": "SUP-02",
+      "storeId": "STR-04",
+      "expectedAt": "2026-07-03T08:00:00+09:00",
+      "arrivedAt": "2026-07-05T08:00:00+09:00",
+      "status": "arrived",
+      "reason": "配車調整。7 月 3 日の予約明細で欠品を確認。"
+    },
+    {
+      "id": "SHP-JP-0703-06",
+      "supplierId": "SUP-02",
+      "storeId": "STR-06",
+      "expectedAt": "2026-07-03T09:00:00+09:00",
+      "arrivedAt": "2026-07-05T09:00:00+09:00",
+      "status": "arrived",
+      "reason": "配車調整。7 月 4 日の予約明細で欠品を確認。"
+    },
+    {
+      "id": "SHP-JP-0703-05",
+      "supplierId": "SUP-02",
+      "storeId": "STR-05",
+      "expectedAt": "2026-07-03T08:00:00+09:00",
+      "arrivedAt": "2026-07-03T08:00:00+09:00",
+      "status": "arrived",
+      "reason": "比較便。定刻到着。"
+    }
+  ],
+  "supplyImpacts": [
+    {
+      "id": "IMPACT-04",
+      "shipmentId": "SHP-JP-0703-04",
+      "lineId": "LINE-CANCEL-04",
+      "productId": "PRD-002",
+      "shortageAt": "2026-07-03T10:00:00+09:00",
+      "evidence": "合成欠品記録。対象商品・店舗・期間・取消明細を照合。顧客配送ではなく店舗への入荷。"
+    },
+    {
+      "id": "IMPACT-06",
+      "shipmentId": "SHP-JP-0703-06",
+      "lineId": "LINE-CANCEL-06",
+      "productId": "PRD-002",
+      "shortageAt": "2026-07-04T10:00:00+09:00",
+      "evidence": "合成欠品記録。対象商品・店舗・期間・取消明細を照合。顧客配送ではなく店舗への入荷。"
+    }
+  ]
+}

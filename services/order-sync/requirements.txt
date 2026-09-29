@@ -1,0 +1,4 @@
+-r ../../apps/storefront/postgres/requirements.txt
+azure-identity==1.25.1
+python-dotenv==1.1.1
+pyodbc==5.3.0

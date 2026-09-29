@@ -1,0 +1,70 @@
+{
+  "datasetId": "maikuro-development-v3",
+  "version": "2026-09-11.2",
+  "asOf": "2026-07-08T18:00:00+09:00",
+  "dataOrigin": "synthetic",
+  "origins": [
+    { "id": "ORIGIN-BR", "name": "ブラジル", "region": "南米" },
+    { "id": "ORIGIN-CO", "name": "コロンビア", "region": "南米" },
+    { "id": "ORIGIN-ET", "name": "エチオピア", "region": "アフリカ" },
+    { "id": "ORIGIN-GT", "name": "グアテマラ", "region": "中米" },
+    { "id": "ORIGIN-KE", "name": "ケニア", "region": "アフリカ" },
+    { "id": "ORIGIN-ID", "name": "インドネシア", "region": "アジア" }
+  ],
+  "suppliers": [
+    { "id": "SUP-01", "name": "武蔵野珈琲・菓子商会", "city": "東京都三鷹市" },
+    { "id": "SUP-02", "name": "相模焙煎工房", "city": "神奈川県相模原市" },
+    { "id": "SUP-03", "name": "蔵前珈琲焙煎所", "city": "東京都台東区" }
+  ],
+  "materials": [
+    { "id": "ROASTED-BR", "name": "ブラジル豆", "originId": "ORIGIN-BR", "supplierId": "SUP-01", "specification": "焙煎済み / 規格 BR-01", "pricePerKg": 2100 },
+    { "id": "ROASTED-CO", "name": "コロンビア豆", "originId": "ORIGIN-CO", "supplierId": "SUP-02", "specification": "焙煎済み / 規格 CO-01", "pricePerKg": 2600 },
+    { "id": "ROASTED-ET", "name": "エチオピア豆", "originId": "ORIGIN-ET", "supplierId": "SUP-03", "specification": "焙煎済み / 規格 ET-01", "pricePerKg": 3200 },
+    { "id": "ROASTED-GT", "name": "グアテマラ豆", "originId": "ORIGIN-GT", "supplierId": "SUP-01", "specification": "焙煎済み / 規格 GT-01", "pricePerKg": 2800 },
+    { "id": "ROASTED-KE", "name": "ケニア豆", "originId": "ORIGIN-KE", "supplierId": "SUP-03", "specification": "焙煎済み / 規格 KE-01", "pricePerKg": 3500 },
+    { "id": "ROASTED-ID", "name": "インドネシア豆", "originId": "ORIGIN-ID", "supplierId": "SUP-02", "specification": "焙煎済み / 規格 ID-01", "pricePerKg": 2500 }
+  ],
+  "facilities": [{ "id": "CENTRAL", "name": "中央製造拠点" }],
+  "products": [
+    { "id": "DEV-LATTE", "name": "オリジナルラテ", "category": "beverage", "unit": "杯", "gramsPerUnit": 20 },
+    { "id": "DEV-DRIP", "name": "ハウスドリップ", "category": "beverage", "unit": "杯", "gramsPerUnit": 15 },
+    { "id": "DEV-BLEND", "name": "オリジナルブレンド", "category": "blend", "unit": "袋", "gramsPerUnit": 200 }
+  ],
+  "recipes": [
+    { "id": "LATTE-A", "productId": "DEV-LATTE", "name": "案 A", "status": "registered" },
+    { "id": "LATTE-B", "productId": "DEV-LATTE", "name": "案 B", "status": "registered" },
+    { "id": "DRIP-A", "productId": "DEV-DRIP", "name": "案 A", "status": "registered" },
+    { "id": "DRIP-B", "productId": "DEV-DRIP", "name": "案 B", "status": "registered" },
+    { "id": "BLEND-A", "productId": "DEV-BLEND", "name": "案 A", "status": "registered" },
+    { "id": "BLEND-B", "productId": "DEV-BLEND", "name": "案 B", "status": "registered" }
+  ],
+  "recipeLines": [
+    { "id": "LATTE-A-BR", "recipeId": "LATTE-A", "materialId": "ROASTED-BR", "percent": 50 },
+    { "id": "LATTE-A-CO", "recipeId": "LATTE-A", "materialId": "ROASTED-CO", "percent": 50 },
+    { "id": "LATTE-B-ET", "recipeId": "LATTE-B", "materialId": "ROASTED-ET", "percent": 60 },
+    { "id": "LATTE-B-GT", "recipeId": "LATTE-B", "materialId": "ROASTED-GT", "percent": 40 },
+    { "id": "DRIP-A-BR", "recipeId": "DRIP-A", "materialId": "ROASTED-BR", "percent": 50 },
+    { "id": "DRIP-A-CO", "recipeId": "DRIP-A", "materialId": "ROASTED-CO", "percent": 50 },
+    { "id": "DRIP-B-ET", "recipeId": "DRIP-B", "materialId": "ROASTED-ET", "percent": 60 },
+    { "id": "DRIP-B-GT", "recipeId": "DRIP-B", "materialId": "ROASTED-GT", "percent": 40 },
+    { "id": "BLEND-A-BR", "recipeId": "BLEND-A", "materialId": "ROASTED-BR", "percent": 50 },
+    { "id": "BLEND-A-CO", "recipeId": "BLEND-A", "materialId": "ROASTED-CO", "percent": 50 },
+    { "id": "BLEND-B-ET", "recipeId": "BLEND-B", "materialId": "ROASTED-ET", "percent": 60 },
+    { "id": "BLEND-B-GT", "recipeId": "BLEND-B", "materialId": "ROASTED-GT", "percent": 40 }
+  ],
+  "plans": [
+    { "id": "PLAN-LATTE", "productId": "DEV-LATTE", "recipeId": "LATTE-A", "facilityId": "CENTRAL", "units": 500, "status": "confirmed" }
+  ],
+  "reservations": [
+    { "id": "RESERVE-LATTE-BR", "planId": "PLAN-LATTE", "materialId": "ROASTED-BR", "grams": 5000 },
+    { "id": "RESERVE-LATTE-CO", "planId": "PLAN-LATTE", "materialId": "ROASTED-CO", "grams": 5000 }
+  ],
+  "stocks": [
+    { "id": "STOCK-BR", "materialId": "ROASTED-BR", "facilityId": "CENTRAL", "grams": 30000 },
+    { "id": "STOCK-CO", "materialId": "ROASTED-CO", "facilityId": "CENTRAL", "grams": 20000 },
+    { "id": "STOCK-ET", "materialId": "ROASTED-ET", "facilityId": "CENTRAL", "grams": 12000 },
+    { "id": "STOCK-GT", "materialId": "ROASTED-GT", "facilityId": "CENTRAL", "grams": 18000 },
+    { "id": "STOCK-KE", "materialId": "ROASTED-KE", "facilityId": "CENTRAL", "grams": 6000 },
+    { "id": "STOCK-ID", "materialId": "ROASTED-ID", "facilityId": "CENTRAL", "grams": null }
+  ]
+}

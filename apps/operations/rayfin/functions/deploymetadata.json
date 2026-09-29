@@ -1,0 +1,118 @@
+{
+  "runtime": "TypeScript",
+  "functionsMetadata": [
+    {
+      "name": "getCopilotHistory",
+      "scriptFile": "src\\function_app.ts",
+      "bindings": [
+        {
+          "name": "req",
+          "type": "httpTrigger",
+          "direction": "in",
+          "authLevel": "anonymous",
+          "methods": [
+            "post"
+          ],
+          "route": "getCopilotHistory"
+        },
+        {
+          "name": "$return",
+          "type": "http",
+          "direction": "out"
+        }
+      ],
+      "fabricProperties": {
+        "fabricMetadataSchemaVersion": "1.0",
+        "fabricFunctionReturnType": "Promise<{ conversationId: string; messages: CopilotStoredMessage[] }>",
+        "fabricFunctionParameters": [
+          {
+            "name": "userId",
+            "dataType": "string",
+            "hasDefaultValue": false
+          },
+          {
+            "name": "conversationId",
+            "dataType": "string",
+            "hasDefaultValue": false
+          },
+          {
+            "name": "context",
+            "dataType": "RayfinContext<Schema>",
+            "hasDefaultValue": false
+          }
+        ]
+      },
+      "functionCode": "udf.func('getCopilotHistory', async (\r\n  userId: string,\r\n  conversationId: string,\r\n  context: RayfinContext<Schema>,\r\n): Promise<{ conversationId: string; messages: CopilotStoredMessage[] }> => {\r\n  const normalizedUserId = normalizeUserId(userId);\r\n  const normalizedConversationId = normalizeId(conversationId, '会話 ID', true);\r\n  if (!normalizedConversationId) return { conversationId: '', messages: [] };\r\n  const conversation = await readConversation(context, normalizedConversationId, normalizedUserId);\r\n  if (!conversation || conversation.status !== 'active') return { conversationId: '', messages: [] };\r\n  return { conversationId: normalizedConversationId, messages: storedMessages(await readMessages(context, normalizedConversationId, normalizedUserId)) };\r\n}, [])"
+    },
+    {
+      "name": "chat",
+      "scriptFile": "src\\function_app.ts",
+      "bindings": [
+        {
+          "name": "req",
+          "type": "httpTrigger",
+          "direction": "in",
+          "authLevel": "anonymous",
+          "methods": [
+            "post"
+          ],
+          "route": "chat"
+        },
+        {
+          "name": "$return",
+          "type": "http",
+          "direction": "out"
+        },
+        {
+          "name": "__generic_AzureAI",
+          "direction": "in",
+          "type": "FabricItem",
+          "alias": "",
+          "audienceType": "AzureAI"
+        }
+      ],
+      "fabricProperties": {
+        "fabricMetadataSchemaVersion": "1.0",
+        "fabricFunctionReturnType": "Promise<CopilotChatOutput>",
+        "fabricFunctionParameters": [
+          {
+            "name": "userId",
+            "dataType": "string",
+            "hasDefaultValue": false
+          },
+          {
+            "name": "conversationId",
+            "dataType": "string",
+            "hasDefaultValue": false
+          },
+          {
+            "name": "messageId",
+            "dataType": "string",
+            "hasDefaultValue": false
+          },
+          {
+            "name": "question",
+            "dataType": "string",
+            "hasDefaultValue": false
+          },
+          {
+            "name": "history",
+            "dataType": "CopilotHistoryMessage[]",
+            "hasDefaultValue": false
+          },
+          {
+            "name": "contextJson",
+            "dataType": "string",
+            "hasDefaultValue": false
+          },
+          {
+            "name": "context",
+            "dataType": "RayfinContext<Schema>",
+            "hasDefaultValue": false
+          }
+        ]
+      },
+      "functionCode": "udf.func('chat', async (\r\n  userId: string,\r\n  conversationId: string,\r\n  messageId: string,\r\n  question: string,\r\n  history: CopilotHistoryMessage[],\r\n  contextJson: string,\r\n  context: RayfinContext<Schema>,\r\n): Promise<CopilotChatOutput> => {\r\n  const normalizedUserId = normalizeUserId(userId);\r\n  const requestedConversationId = normalizeId(conversationId, '会話 ID', true);\r\n  const normalizedMessageId = normalizeId(messageId, 'メッセージ ID');\r\n  const normalizedQuestion = normalizeQuestion(question);\r\n  const normalizedHistory = normalizeHistory(history);\r\n  const normalizedContextJson = normalizeContext(contextJson);\r\n  const token = context.getToken(AudienceType.AzureAI);\r\n  const data = context.getDataClient();\r\n  let conversation = requestedConversationId ? await readConversation(context, requestedConversationId, normalizedUserId) : undefined;\r\n  const activeConversationId = (conversation?.id ?? requestedConversationId) || crypto.randomUUID();\r\n\r\n  if (!conversation) {\r\n    const created = await foundryRequest('/openai/v1/conversations', token, {});\r\n    if (typeof created.id !== 'string' || !created.id) throw new Error('Foundry の会話 ID を取得できませんでした。');\r\n    await data.CopilotConversation.create({\r\n      id: activeConversationId,\r\n      userId: normalizedUserId,\r\n      foundryConversationId: created.id,\r\n      agentName,\r\n      agentVersion,\r\n      title: normalizedQuestion.slice(0, 80),\r\n      status: 'active',\r\n      createdAt: new Date().toISOString(),\r\n    });\r\n    conversation = await readConversation(context, activeConversationId, normalizedUserId);\r\n    if (!conversation) throw new Error('会話を保存できませんでした。');\r\n  }\r\n\r\n  const existingRows = await readMessages(context, activeConversationId, normalizedUserId);\r\n  const existingAnswer = existingRows.find(row => row.role === 'assistant' && row.requestMessageId === normalizedMessageId);\r\n  if (existingAnswer) {\r\n    const references = storedMessages([existingAnswer])[0]?.references ?? [];\r\n    return { answer: existingAnswer.content, context: contextLabel(existingAnswer.contextJson), conversationId: activeConversationId, references };\r\n  }\r\n  const existingQuestion = existingRows.find(row => row.role === 'user' && row.id === normalizedMessageId);\r\n  const historyRows = existingQuestion ? existingRows.filter(row => row.id !== normalizedMessageId) : existingRows;\r\n  const expectedHistory = storedMessages(historyRows).slice(-maxHistoryMessages).map(message => ({ role: message.role, content: message.content }));\r\n  if (JSON.stringify(normalizedHistory) !== JSON.stringify(expectedHistory)) {\r\n    throw new Error('チャット履歴が更新されています。会話を開き直して再試行してください。');\r\n  }\r\n\r\n  const sequence = existingQuestion?.sequence ?? (existingRows.length ? Math.max(...existingRows.map(row => row.sequence)) + 1 : 0);\r\n  if (!existingQuestion) {\r\n    await data.CopilotMessage.create({\r\n      id: normalizedMessageId,\r\n      conversationId: activeConversationId,\r\n      userId: normalizedUserId,\r\n      role: 'user',\r\n      content: normalizedQuestion,\r\n      contextJson: normalizedContextJson,\r\n      referencesJson: '[]',\r\n      requestMessageId: normalizedMessageId,\r\n      sequence,\r\n      createdAt: new Date().toISOString(),\r\n    });\r\n  }\r\n\r\n  const payload = await foundryRequest('/openai/v1/responses', token, {\r\n    conversation: conversation.foundryConversationId,\r\n    input: [{ role: 'user', content: `画面コンテキスト: ${normalizedContextJson}\\n\\n質問: ${normalizedQuestion}` }],\r\n    agent_reference: { name: agentName, version: agentVersion, type: 'agent_reference' },\r\n  }) as FoundryResponse;\r\n  const answer = responseText(payload);\r\n  if (!answer) throw new Error('Foundry Agent が回答テキストを返しませんでした。');\r\n  const references = responseReferences(payload);\r\n  await data.CopilotMessage.create({\r\n    id: crypto.randomUUID(),\r\n    conversationId: activeConversationId,\r\n    userId: normalizedUserId,\r\n    role: 'assistant',\r\n    content: answer.slice(0, maxMessageLength),\r\n    contextJson: normalizedContextJson,\r\n    referencesJson: JSON.stringify(references).slice(0, maxMessageLength),\r\n    requestMessageId: normalizedMessageId,\r\n    foundryResponseId: payload.id?.slice(0, 128),\r\n    sequence: sequence + 1,\r\n    createdAt: new Date().toISOString(),\r\n  });\r\n  return { answer, context: contextLabel(normalizedContextJson), conversationId: activeConversationId, references };\r\n}, [udf.connection({ audienceType: AudienceType.AzureAI })])"
+    }
+  ]
+}

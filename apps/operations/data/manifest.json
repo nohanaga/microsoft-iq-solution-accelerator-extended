@@ -1,0 +1,2271 @@
+{
+  "datasetId": "maikuro-jp-v1",
+  "version": "2026-09-10.1",
+  "asOf": "2026-07-08T18:00:00+09:00",
+  "contentId": "sha256:f9053c21723da8d4d8e31656d62b1f1c8131895564a6b085ed26eb830d0492ec",
+  "tables": [
+    {
+      "name": "products",
+      "rows": 12,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "serving",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "priceExTax",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "taxPercent",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "supplierId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "supplierId"
+          ],
+          "referencedTable": "suppliers",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "stores",
+      "rows": 6,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "city",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "coldEquipment",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "cupsPerDay",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": []
+    },
+    {
+      "name": "suppliers",
+      "rows": 5,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "city",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": []
+    },
+    {
+      "name": "customers",
+      "rows": 33,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "displayName",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "loyaltyTier",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": []
+    },
+    {
+      "name": "orders",
+      "rows": 33,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "customerId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "storeId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "orderedAt",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "fulfilledAt",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "customerId"
+          ],
+          "referencedTable": "customers",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        },
+        {
+          "columns": [
+            "storeId"
+          ],
+          "referencedTable": "stores",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "orderLines",
+      "rows": 33,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "orderId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "productId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "quantity",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "priceExTax",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "taxPercent",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "discountExTax",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "orderId"
+          ],
+          "referencedTable": "orders",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        },
+        {
+          "columns": [
+            "productId"
+          ],
+          "referencedTable": "products",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "reviews",
+      "rows": 30,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "lineId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "customerId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "revision",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "rating",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "text",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "publishedAt",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "analyzedAt",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "lineId"
+          ],
+          "referencedTable": "orderLines",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "reviewTopics",
+      "rows": 30,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "reviewId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "revision",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "topic",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "classifierVersion",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "reviewId"
+          ],
+          "referencedTable": "reviews",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "serviceFeedback",
+      "rows": 4,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "orderId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "rating",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "text",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "dissatisfied",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "publishedAt",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "orderId"
+          ],
+          "referencedTable": "orders",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "materials",
+      "rows": 7,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "unit",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": []
+    },
+    {
+      "name": "offers",
+      "rows": 7,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "materialId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "supplierId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "pricePer100Units",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "validFrom",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "validUntil",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "qualification",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "sampleShipDate",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "evidenceId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "materialId"
+          ],
+          "referencedTable": "materials",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        },
+        {
+          "columns": [
+            "supplierId"
+          ],
+          "referencedTable": "suppliers",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        },
+        {
+          "columns": [
+            "evidenceId"
+          ],
+          "referencedTable": "evidence",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "concepts",
+      "rows": 3,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "projectId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "priceExTax",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "taxPercent",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "aromaScore",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "projectId"
+          ],
+          "referencedTable": "projects",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "recipeLines",
+      "rows": 15,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "conceptId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "materialId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "offerId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "quantity",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "yieldPercent",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "conceptId"
+          ],
+          "referencedTable": "concepts",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        },
+        {
+          "columns": [
+            "materialId"
+          ],
+          "referencedTable": "materials",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        },
+        {
+          "columns": [
+            "offerId"
+          ],
+          "referencedTable": "offers",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "currentRecipes",
+      "rows": 8,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "productId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "materialId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "quantity",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "productId"
+          ],
+          "referencedTable": "products",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        },
+        {
+          "columns": [
+            "materialId"
+          ],
+          "referencedTable": "materials",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "inventory",
+      "rows": 14,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "storeId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "materialId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "onHand",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "reserved",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "asOf",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "storeId"
+          ],
+          "referencedTable": "stores",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        },
+        {
+          "columns": [
+            "materialId"
+          ],
+          "referencedTable": "materials",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "inbound",
+      "rows": 2,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "storeId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "materialId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "quantity",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "expectedAt",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "confirmed",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "storeId"
+          ],
+          "referencedTable": "stores",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        },
+        {
+          "columns": [
+            "materialId"
+          ],
+          "referencedTable": "materials",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "shipments",
+      "rows": 5,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "supplierId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "storeId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "expectedAt",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "arrivedAt",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "reason",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "supplierId"
+          ],
+          "referencedTable": "suppliers",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        },
+        {
+          "columns": [
+            "storeId"
+          ],
+          "referencedTable": "stores",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "supplyImpacts",
+      "rows": 2,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "shipmentId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "lineId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "productId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "shortageAt",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "evidence",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "shipmentId"
+          ],
+          "referencedTable": "shipments",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        },
+        {
+          "columns": [
+            "lineId"
+          ],
+          "referencedTable": "orderLines",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        },
+        {
+          "columns": [
+            "productId"
+          ],
+          "referencedTable": "products",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "evidence",
+      "rows": 7,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "kind",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "effectiveAt",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "path",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "quote",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "projectId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "sourceUrl",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "dataOrigin",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": []
+    },
+    {
+      "name": "rules",
+      "rows": 5,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "kind",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "threshold",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "evidenceId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "evidenceId"
+          ],
+          "referencedTable": "evidence",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "decisionReasons",
+      "rows": 4,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "projectId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "reason",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "pastEvidenceId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "currentEvidenceId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "change",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "pastEvidenceId"
+          ],
+          "referencedTable": "evidence",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        },
+        {
+          "columns": [
+            "projectId"
+          ],
+          "referencedTable": "projects",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "projects",
+      "rows": 1,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "sourceProductId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "asOf",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "sourceProductId"
+          ],
+          "referencedTable": "products",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "needs",
+      "rows": 1,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "projectId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "topic",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "projectId"
+          ],
+          "referencedTable": "projects",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "needReviews",
+      "rows": 12,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "needId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "reviewId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "needId"
+          ],
+          "referencedTable": "needs",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        },
+        {
+          "columns": [
+            "reviewId"
+          ],
+          "referencedTable": "reviews",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "conceptRules",
+      "rows": 15,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "conceptId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "ruleId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "conceptId"
+          ],
+          "referencedTable": "concepts",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        },
+        {
+          "columns": [
+            "ruleId"
+          ],
+          "referencedTable": "rules",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "currentEvidenceLinks",
+      "rows": 3,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "reasonId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "evidenceId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "reasonId"
+          ],
+          "referencedTable": "decisionReasons",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        },
+        {
+          "columns": [
+            "evidenceId"
+          ],
+          "referencedTable": "evidence",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "scenarios",
+      "rows": 1,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "projectId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "conceptId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "startDate",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "endDate",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "asOf",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "conceptId"
+          ],
+          "referencedTable": "concepts",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        },
+        {
+          "columns": [
+            "projectId"
+          ],
+          "referencedTable": "projects",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "scenarioStores",
+      "rows": 2,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "scenarioId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "storeId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "quantity",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "scenarioId"
+          ],
+          "referencedTable": "scenarios",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        },
+        {
+          "columns": [
+            "storeId"
+          ],
+          "referencedTable": "stores",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "blendProjects",
+      "rows": 1,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "facilityId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "facilityId"
+          ],
+          "referencedTable": "roastingFacilities",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "roastingFacilities",
+      "rows": 1,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "dailyCapacityGrams",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": []
+    },
+    {
+      "name": "greenBeans",
+      "rows": 3,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "origin",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": []
+    },
+    {
+      "name": "beanImporters",
+      "rows": 2,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": []
+    },
+    {
+      "name": "beanOffers",
+      "rows": 4,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "beanId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "supplierId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "importerId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "costPerKgYen",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "roastYieldPercent",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "qualification",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "leadDays",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "validFrom",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "validUntil",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "beanId"
+          ],
+          "referencedTable": "greenBeans",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        },
+        {
+          "columns": [
+            "supplierId"
+          ],
+          "referencedTable": "suppliers",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        },
+        {
+          "columns": [
+            "importerId"
+          ],
+          "referencedTable": "beanImporters",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "beanStocks",
+      "rows": 3,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "facilityId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "beanId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "onHandGrams",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "asOf",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "facilityId"
+          ],
+          "referencedTable": "roastingFacilities",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        },
+        {
+          "columns": [
+            "beanId"
+          ],
+          "referencedTable": "greenBeans",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "beanInbounds",
+      "rows": 2,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "facilityId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "beanId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "incomingGrams",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "arrivalDate",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "confirmed",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "facilityId"
+          ],
+          "referencedTable": "roastingFacilities",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        },
+        {
+          "columns": [
+            "beanId"
+          ],
+          "referencedTable": "greenBeans",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "beanProducts",
+      "rows": 2,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": []
+    },
+    {
+      "name": "beanAllocations",
+      "rows": 4,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "facilityId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "beanId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "beanProductId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "allocatedGrams",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "facilityId"
+          ],
+          "referencedTable": "roastingFacilities",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        },
+        {
+          "columns": [
+            "beanId"
+          ],
+          "referencedTable": "greenBeans",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        },
+        {
+          "columns": [
+            "beanProductId"
+          ],
+          "referencedTable": "beanProducts",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "blendDrafts",
+      "rows": 2,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "projectId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "bagGrams",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "unitPriceYen",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "packCostYen",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "productionDate",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "projectId"
+          ],
+          "referencedTable": "blendProjects",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "blendComponents",
+      "rows": 6,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "draftId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "offerId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "sharePercent",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "draftId"
+          ],
+          "referencedTable": "blendDrafts",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        },
+        {
+          "columns": [
+            "offerId"
+          ],
+          "referencedTable": "beanOffers",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    },
+    {
+      "name": "blendDestinations",
+      "rows": 4,
+      "columns": [
+        {
+          "name": "id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "draftId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "storeId",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "bags",
+          "type": "long",
+          "nullable": false
+        },
+        {
+          "name": "datasetId",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "primaryKey": [
+        "id"
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "draftId"
+          ],
+          "referencedTable": "blendDrafts",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        },
+        {
+          "columns": [
+            "storeId"
+          ],
+          "referencedTable": "stores",
+          "referencedColumns": [
+            "id"
+          ],
+          "allowNull": false
+        }
+      ]
+    }
+  ],
+  "validationStatus": "not-run",
+  "generatedFilesOnly": true
+}

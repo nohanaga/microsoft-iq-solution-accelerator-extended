@@ -1,0 +1,20 @@
+{
+  "projectEndpoint": "https://<account>.services.ai.azure.com/api/projects/<project>",
+  "agentName": "micro-coffee-data-copilot",
+  "modelDeployment": "<model-deployment-name>",
+  "workIqConnectionResourceId": "<work-iq-connection-arm-resource-id>",
+  "knowledgeBase": {
+    "mcpUrl": "https://<search>.search.windows.net/knowledgebases/<knowledge-base>/mcp?api-version=2026-08-01-preview",
+    "connectionName": "<knowledge-base-connection-name>"
+  },
+  "fabricIq": {
+    "development": {
+      "serverUrl": "https://api.fabric.microsoft.com/v1/mcp/dataPlane/workspaces/<workspace-id>/items/<development-ontology-id>/ontologyEndpoint",
+      "connectionResourceId": "<development-fabric-iq-connection-arm-resource-id>"
+    },
+    "supply": {
+      "serverUrl": "https://api.fabric.microsoft.com/v1/mcp/dataPlane/workspaces/<workspace-id>/items/<supply-ontology-id>/ontologyEndpoint",
+      "connectionResourceId": "<supply-fabric-iq-connection-arm-resource-id>"
+    }
+  }
+}

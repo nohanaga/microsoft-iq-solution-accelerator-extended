@@ -1,0 +1,88 @@
+.create-merge table SocialVoiceIngress (
+    schemaVersion:string,
+    eventId:string,
+    scenarioId:string,
+    source:string,
+    productId:string,
+    storeId:string,
+    postId:string,
+    authorAlias:string,
+    text:string,
+    topics:dynamic,
+    sentiment:string,
+    classifierVersion:string,
+    publishedAt:datetime,
+    producedAt:datetime,
+    isSynthetic:bool
+)
+
+.create-or-alter table SocialVoiceIngress ingestion json mapping 'social_voice_json_v1' '[{"column":"schemaVersion","Properties":{"path":"$.schemaVersion"}},{"column":"eventId","Properties":{"path":"$.eventId"}},{"column":"scenarioId","Properties":{"path":"$.scenarioId"}},{"column":"source","Properties":{"path":"$.source"}},{"column":"productId","Properties":{"path":"$.productId"}},{"column":"storeId","Properties":{"path":"$.storeId"}},{"column":"postId","Properties":{"path":"$.postId"}},{"column":"authorAlias","Properties":{"path":"$.authorAlias"}},{"column":"text","Properties":{"path":"$.text"}},{"column":"topics","Properties":{"path":"$.topics"}},{"column":"sentiment","Properties":{"path":"$.sentiment"}},{"column":"classifierVersion","Properties":{"path":"$.classifierVersion"}},{"column":"publishedAt","Properties":{"path":"$.publishedAt"}},{"column":"producedAt","Properties":{"path":"$.producedAt"}},{"column":"isSynthetic","Properties":{"path":"$.isSynthetic"}}]'
+
+.create-merge table SocialVoiceRaw (
+    schemaVersion:string,
+    eventId:string,
+    scenarioId:string,
+    source:string,
+    productId:string,
+    storeId:string,
+    postId:string,
+    authorAlias:string,
+    text:string,
+    topics:dynamic,
+    sentiment:string,
+    classifierVersion:string,
+    publishedAt:datetime,
+    producedAt:datetime,
+    ingestedAt:datetime,
+    isSynthetic:bool
+)
+
+.create-or-alter function with (folder = 'Maikuro RTI') SocialVoiceRawTransform() {
+    SocialVoiceIngress
+    | extend ingestedAt = ingestion_time()
+    | project schemaVersion, eventId, scenarioId, source, productId, storeId,
+        postId, authorAlias, text, topics, sentiment, classifierVersion,
+        publishedAt, producedAt, ingestedAt, isSynthetic
+}
+
+.alter table ['SocialVoiceIngress'] policy streamingingestion disable
+
+.alter table SocialVoiceRaw policy update @'[{"IsEnabled":true,"Source":"SocialVoiceIngress","Query":"SocialVoiceRawTransform()","IsTransactional":true,"PropagateIngestionProperties":false}]'
+
+.alter table SocialVoiceIngress policy retention @'{"SoftDeletePeriod":"1.00:00:00","Recoverability":"Disabled"}'
+.alter table SocialVoiceRaw policy retention @'{"SoftDeletePeriod":"30.00:00:00","Recoverability":"Enabled"}'
+.alter table SocialVoiceIngress policy caching hot = 1d
+.alter table SocialVoiceRaw policy caching hot = 3d
+
+.create-or-alter function with (folder = 'Maikuro RTI') SocialVoiceConflicts() {
+    SocialVoiceRaw
+    | extend contentHash = hash_sha256(strcat(
+        schemaVersion, '|', scenarioId, '|', source, '|', productId, '|',
+        coalesce(storeId, ''), '|', postId, '|', authorAlias, '|', text, '|',
+        tostring(topics), '|', sentiment, '|', classifierVersion, '|',
+        tostring(publishedAt), '|', tostring(producedAt), '|', tostring(isSynthetic)))
+    | summarize payloadVariants = dcount(contentHash), copies = count() by eventId
+    | where payloadVariants > 1
+}
+
+.create-or-alter function with (folder = 'Maikuro RTI') SocialVoiceLatest() {
+    let conflictingEventIds = SocialVoiceConflicts() | project eventId;
+    SocialVoiceRaw
+    | join kind=leftanti conflictingEventIds on eventId
+    | summarize arg_max(ingestedAt, *) by eventId
+}
+
+.create-or-alter function with (folder = 'Maikuro RTI') SocialVoiceWindow() {
+    SocialVoiceLatest()
+    | where source == 'social' and isSynthetic == true
+    | summarize
+        totalSocialCount = count(),
+        negativeCount = countif(sentiment == 'negative'),
+        scenarioIds = make_set(scenarioId)
+        by productId, windowStart = bin(publishedAt, 5m)
+    | extend
+        windowEnd = windowStart + 5m,
+        negativeRate = todouble(negativeCount) / todouble(totalSocialCount)
+    | project productId, windowStart, windowEnd, totalSocialCount, negativeCount,
+        negativeRate, scenarioIds
+}

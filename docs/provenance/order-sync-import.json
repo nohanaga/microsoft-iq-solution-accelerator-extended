@@ -1,0 +1,6 @@
+{
+  "source": "workshops/Rayfin/micro-coffee-demo2/scripts/sync-postgres-orders-to-rayfin.py",
+  "target": "services/order-sync/sync.py",
+  "sourceSha256": "e2ed02d1633b6389f63fbb481778355ea9687c08c42c581a62f0f43b0e49e9a4",
+  "scope": "before portability edits"
+}

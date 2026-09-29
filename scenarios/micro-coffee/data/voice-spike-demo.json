@@ -1,0 +1,102 @@
+{
+  "dataOrigin": "synthetic",
+  "purpose": "isolated-alert-demo",
+  "entries": [
+    {
+      "id": "SPIKE-01",
+      "hoursAgo": 45,
+      "text": "持ち帰りの予約時刻を確認しました。",
+      "sentiment": "neutral"
+    },
+    {
+      "id": "SPIKE-02",
+      "hoursAgo": 40,
+      "text": "バニラの香りが気に入りました。",
+      "sentiment": "positive"
+    },
+    {
+      "id": "SPIKE-03",
+      "hoursAgo": 34,
+      "text": "受取時に少し待ちました。改善してほしいです。",
+      "sentiment": "negative"
+    },
+    {
+      "id": "SPIKE-04",
+      "hoursAgo": 27,
+      "text": "水出しの販売時間を知りたいです。",
+      "sentiment": "neutral"
+    },
+    {
+      "id": "SPIKE-05",
+      "hoursAgo": 22,
+      "text": "予約したのに受取が遅く、休憩時間が足りませんでした。",
+      "sentiment": "negative"
+    },
+    {
+      "id": "SPIKE-06",
+      "hoursAgo": 20,
+      "text": "受取待ちが長く、案内もなく困りました。",
+      "sentiment": "negative"
+    },
+    {
+      "id": "SPIKE-07",
+      "hoursAgo": 18,
+      "text": "注文後に在庫がないと言われ、残念でした。",
+      "sentiment": "negative"
+    },
+    {
+      "id": "SPIKE-08",
+      "hoursAgo": 16,
+      "text": "予約時間を過ぎても商品が用意されていませんでした。",
+      "sentiment": "negative"
+    },
+    {
+      "id": "SPIKE-09",
+      "hoursAgo": 14,
+      "text": "受取の列がわかりにくく、何度も並び直しました。",
+      "sentiment": "negative"
+    },
+    {
+      "id": "SPIKE-10",
+      "hoursAgo": 12,
+      "text": "遅延の連絡がなく、予定を変更することになりました。",
+      "sentiment": "negative"
+    },
+    {
+      "id": "SPIKE-11",
+      "hoursAgo": 10,
+      "text": "予約済み商品の欠品は早めに知らせてほしいです。困りました。",
+      "sentiment": "negative"
+    },
+    {
+      "id": "SPIKE-12",
+      "hoursAgo": 8,
+      "text": "受取方法の説明が食い違い、時間を使ってしまいました。",
+      "sentiment": "negative"
+    },
+    {
+      "id": "SPIKE-13",
+      "hoursAgo": 6,
+      "text": "今日の受取窓口を確認したいです。",
+      "sentiment": "neutral"
+    },
+    {
+      "id": "SPIKE-14",
+      "hoursAgo": 4,
+      "text": "商品は受け取れました。水出しの香りは良かったです。",
+      "sentiment": "positive"
+    },
+    {
+      "id": "SPIKE-15",
+      "hoursAgo": 2,
+      "text": "明日の予約枠を調べています。",
+      "sentiment": "neutral"
+    },
+    {
+      "id": "SPIKE-16",
+      "hoursAgo": 1,
+      "text": "クリームの口当たりが好みでした。",
+      "sentiment": "positive"
+    }
+  ]
+}

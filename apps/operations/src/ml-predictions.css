@@ -1,0 +1,110 @@
+.mlp-panel {
+  background: var(--cp-surface);
+  border: 1px solid var(--cp-border);
+  border-radius: 14px;
+  padding: 18px 20px 16px;
+  display: grid;
+  gap: 16px;
+}
+
+.mlp-block { display: grid; gap: 10px; }
+
+.mlp-block h3 {
+  margin: 0;
+  font-size: .86rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--cp-text);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mlp-headline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 16px;
+}
+
+.mlp-headline strong {
+  font-family: Bahnschrift, 'DIN Alternate', system-ui, sans-serif;
+  font-size: 1.7rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.mlp-headline strong small { font-size: .8rem; margin-left: 3px; font-weight: 500; }
+.mlp-headline span { font-size: .76rem; color: var(--cp-text-muted); }
+
+/* 予測区間を網掛けの帯、点推定を実線のバーで重ねて描く。 */
+.mlp-spark {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 68px;
+  padding: 4px 2px;
+  border-bottom: 1px solid var(--cp-border);
+}
+
+.mlp-spark > span {
+  position: relative;
+  flex: 1 1 0;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.mlp-spark i { position: absolute; bottom: 0; width: 100%; border-radius: 2px 2px 0 0; }
+.mlp-band { background: var(--cp-accent); opacity: .18; }
+.mlp-point { background: var(--cp-accent); opacity: .85; }
+
+.mlp-table { width: 100%; border-collapse: collapse; font-size: .8rem; }
+.mlp-table th {
+  text-align: left;
+  font-weight: 500;
+  font-size: .72rem;
+  letter-spacing: .04em;
+  color: var(--cp-text-muted);
+  padding: 4px 8px 6px 0;
+  border-bottom: 1px solid var(--cp-border);
+}
+.mlp-table td {
+  padding: 6px 8px 6px 0;
+  border-bottom: 1px solid var(--cp-border-soft, var(--cp-border));
+  font-variant-numeric: tabular-nums;
+}
+.mlp-table td:first-child { font-variant-numeric: normal; }
+
+.mlp-muted { color: var(--cp-text-muted); font-size: .74rem; }
+.mlp-risk { color: var(--cp-danger); font-weight: 600; }
+
+.mlp-provenance,
+.mlp-caveat {
+  margin: 0;
+  font-size: .74rem;
+  line-height: 1.6;
+  color: var(--cp-text-muted);
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.mlp-caveat {
+  color: var(--cp-text);
+  background: var(--cp-danger);
+  background: color-mix(in srgb, var(--cp-danger) 8%, transparent);
+  border-left: 3px solid var(--cp-danger);
+  border-radius: 0 8px 8px 0;
+  padding: 8px 10px;
+}
+
+.mlp-provenance svg,
+.mlp-caveat svg { flex: none; margin-top: 2px; }
+
+@media (max-width: 700px) {
+  .mlp-panel { padding: 14px; }
+  .mlp-table { font-size: .74rem; }
+  .mlp-spark { height: 52px; }
+}

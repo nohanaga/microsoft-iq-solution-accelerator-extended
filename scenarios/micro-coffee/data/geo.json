@@ -1,0 +1,25 @@
+{
+  "datasetId": "maikuro-jp-v1",
+  "version": "2026-09-13.geo-1",
+  "asOf": "2026-07-08T18:00:00+09:00",
+  "dataOrigin": "synthetic",
+  "crs": "EPSG:4326",
+  "precision": "municipality",
+  "note": "店舗と供給会社は架空です。座標は所在市区町村のおおよその代表点であり、実在する建物の位置ではありません。日本の住所ジオコーディングは市区町村粒度までのため、これ以上細かい位置は持ちません。",
+  "pending": ["facilities（中央製造拠点の所在地が未定義）", "origins（産地国の代表点）"],
+  "stores": [
+    { "id": "STR-01", "city": "東京都武蔵野市", "latitude": 35.7177, "longitude": 139.5661 },
+    { "id": "STR-02", "city": "東京都目黒区", "latitude": 35.6415, "longitude": 139.6982 },
+    { "id": "STR-03", "city": "埼玉県さいたま市浦和区", "latitude": 35.8627, "longitude": 139.6455 },
+    { "id": "STR-04", "city": "東京都千代田区", "latitude": 35.694, "longitude": 139.7536 },
+    { "id": "STR-05", "city": "埼玉県さいたま市大宮区", "latitude": 35.9066, "longitude": 139.6235 },
+    { "id": "STR-06", "city": "神奈川県横浜市西区", "latitude": 35.4614, "longitude": 139.619 }
+  ],
+  "suppliers": [
+    { "id": "SUP-01", "city": "東京都三鷹市", "latitude": 35.6835, "longitude": 139.5596 },
+    { "id": "SUP-02", "city": "神奈川県相模原市", "latitude": 35.5714, "longitude": 139.3735 },
+    { "id": "SUP-03", "city": "東京都台東区", "latitude": 35.7126, "longitude": 139.78 },
+    { "id": "SUP-04", "city": "千葉県市原市", "latitude": 35.4979, "longitude": 140.1156 },
+    { "id": "SUP-05", "city": "静岡県静岡市", "latitude": 34.9756, "longitude": 138.3827 }
+  ]
+}

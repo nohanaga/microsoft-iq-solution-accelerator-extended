@@ -1,0 +1,29 @@
+.graph-cache-status { display: flex; align-items: center; flex-wrap: wrap; gap: 5px 12px; min-height: 24px; min-width: 0; margin: 8px 0; color: var(--cp-text-muted); font-size: 11px; line-height: 1.5; letter-spacing: 0; }
+.graph-cache-status-main, .graph-cache-status-source { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 4px; min-width: 0; }
+.graph-cache-status svg { flex: 0 0 auto; }
+.graph-cache-status-main { color: var(--cp-text); }
+.graph-cache-status[data-state="loading"] .graph-cache-status-main { color: var(--cp-link); }
+.graph-cache-status[data-state="ready"] .graph-cache-status-main > svg { color: var(--cp-success); }
+.graph-cache-status-warning { color: var(--cp-warning); }
+.graph-cache-status-error { color: var(--cp-danger); overflow-wrap: anywhere; }
+.graph-cache-status time { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.graph-status-spinner { animation: graph-status-spin .9s linear infinite; }
+.graph-activity-status { display: inline-flex; align-items: center; gap: 6px; flex: 0 0 auto; }
+.graph-cache-status-compact { position: relative; display: inline-flex; justify-content: center; flex: 0 0 34px; width: 34px; height: 34px; margin: 0; border-radius: 4px; color: var(--cp-text-muted); cursor: help; }
+.graph-cache-status-symbol { position: relative; display: inline-flex; align-items: center; justify-content: center; flex: 0 0 34px; width: 34px; height: 34px; }
+.graph-cache-status-compact:hover, .graph-cache-status-compact:focus { background: var(--cp-surface-soft); }
+.graph-cache-status-compact:focus-visible { outline: 2px solid var(--cp-link); outline-offset: 2px; }
+.graph-cache-status-badge { position: absolute; right: 1px; bottom: 1px; border-radius: 50%; background: var(--cp-surface); }
+.graph-cache-status-compact[data-state="loading"] .graph-cache-status-badge { color: var(--cp-link); }
+.graph-cache-status-compact[data-state="ready"] .graph-cache-status-badge { color: var(--cp-success); }
+.graph-cache-status-compact[data-state="error"] .graph-cache-status-badge { color: var(--cp-danger); }
+.graph-cache-status-compact[data-state="stale"] .graph-cache-status-badge { color: var(--cp-warning); }
+.graph-cache-status-tooltip { display: none; position: absolute; top: 100%; right: 0; z-index: 10; width: 260px; max-width: calc(100vw - 32px); padding: 10px 12px; border: 1px solid var(--cp-border); border-radius: 4px; background: var(--cp-surface); color: var(--cp-text); box-shadow: var(--cp-shadow); font-size: 11px; font-weight: 400; line-height: 1.6; white-space: pre-line; overflow-wrap: anywhere; }
+.graph-cache-status-compact:hover .graph-cache-status-tooltip, .graph-cache-status-compact:focus .graph-cache-status-tooltip { display: block; }
+.workspace-session { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 10px; min-width: 0; max-width: 100%; }
+.topbar:has(.workspace-session) { height: auto; min-height: 62px; flex-wrap: wrap; }
+.workspace-skeleton .workspace-session { flex: 1 1 380px; padding-block: 10px; }
+.workspace-skeleton .topbar:has(.workspace-session) { flex-wrap: wrap; }
+@keyframes graph-status-spin { to { transform: rotate(360deg); } }
+@media (max-width: 700px) { .workspace-session { position: relative; } .workspace-session .graph-cache-status-compact { position: static; } .graph-cache-status-tooltip { right: auto; left: 0; } }
+@media (prefers-reduced-motion: reduce) { .graph-status-spinner { animation: none; } }

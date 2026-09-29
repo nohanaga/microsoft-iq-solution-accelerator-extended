@@ -1,0 +1,43 @@
+.ontology-explorer { min-width: 0; border: 1px solid var(--cp-border); border-radius: 6px; overflow: hidden; background: var(--cp-surface-soft); }
+.ontology-heading { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 14px; background: var(--cp-surface); border-bottom: 1px solid var(--cp-border); }
+.ontology-heading h2, .ontology-record-heading h3 { display: flex; align-items: center; gap: 8px; font-size: 13px; margin: 0; }
+.ontology-heading h2 svg { color: var(--cp-accent); }
+.ontology-tools { display: flex; gap: 3px; }
+.ontology-tools button, .ontology-record-heading > button { width: 30px; height: 30px; min-height: 30px; padding: 5px; border: 0; }
+.ontology-toolbar { display: flex; align-items: center; gap: 12px; padding: 9px 14px; flex-wrap: wrap; font-size: 10px; color: var(--cp-text-muted); }
+.ontology-toolbar > div, .ontology-record-tabs { display: flex; align-items: center; gap: 3px; }
+.ontology-toolbar button, .ontology-record-tabs button { padding: 5px 10px; min-height: 29px; font-size: 10px; border: 0; background: transparent; }
+.ontology-toolbar button[aria-pressed="true"], .ontology-record-tabs button[aria-pressed="true"] { color: var(--cp-accent); background: var(--cp-surface); box-shadow: inset 0 -2px var(--cp-accent); border-radius: 3px 3px 0 0; }
+.ontology-toolbar > .ontology-data-button { margin-left: auto; }
+.ontology-graph-error { margin: 0; padding: 9px 14px; border-block: 1px solid var(--cp-danger); color: var(--cp-danger); background: var(--cp-surface); font-size: 11px; }
+.ontology-canvas { height: 420px; width: 100%; min-width: 640px; background-image: radial-gradient(var(--cp-border) .7px, transparent .7px); background-size: 18px 18px; }
+.ontology-visual { position: relative; max-width: 100%; overflow-x: auto; overscroll-behavior-x: contain; }
+.ontology-empty { position: absolute; inset: 45% 20px auto; text-align: center; color: var(--cp-text-muted); font-size: 12px; pointer-events: none; }
+.ontology-access { padding: 8px 14px; background: var(--cp-surface); border-top: 1px solid var(--cp-border); }
+.ontology-access label { display: flex; align-items: center; gap: 12px; font-size: 10px; }
+.ontology-access select { min-width: 0; flex: 1; min-height: 32px; font-size: 10px; }
+.ontology-records { background: var(--cp-surface); padding: 14px; border-top: 2px solid var(--cp-link); min-width: 0; }
+.ontology-record-heading { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.ontology-record-heading h3 { flex-wrap: wrap; }
+.ontology-record-heading code { font-size: 10px; color: var(--cp-text-muted); }
+.ontology-provenance { display: flex; flex-wrap: wrap; gap: 6px 16px; padding: 10px 0; font-size: 9px; color: var(--cp-text-muted); }
+.ontology-provenance span { display: flex; align-items: center; flex-wrap: wrap; gap: 5px; min-width: 0; }
+.ontology-provenance code { font-size: 9px; overflow-wrap: anywhere; }
+.ontology-record-tabs { border-block: 1px solid var(--cp-border); padding-block: 5px; flex-wrap: wrap; }
+.ontology-record-tabs select { margin-left: auto; font-size: 10px; min-height: 30px; max-width: 240px; }
+.ontology-record-filter { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding-block: 10px; }
+.ontology-record-filter label { display: flex; align-items: center; gap: 6px; font-size: 10px; }
+.ontology-record-filter label:first-child { flex: 1; min-width: 120px; }
+.ontology-record-filter input:not([type="checkbox"]) { width: 100%; min-height: 30px; font-size: 10px; }
+.ontology-record-filter > span { font-size: 10px; color: var(--cp-text-muted); }
+.ontology-records .table-scroll { max-height: 290px; }
+.ontology-records table { min-width: 100%; width: max-content; }
+.ontology-records th, .ontology-records td { max-width: 340px; padding: 9px 12px; font-size: 10px; overflow-wrap: anywhere; }
+.ontology-records thead { position: sticky; top: 0; z-index: 1; background: var(--cp-surface-soft); }
+.ontology-records .is-selected { background: var(--cp-accent-soft); }
+.ontology-null { color: var(--cp-text-soft); font-family: Consolas, monospace; }
+.ontology-key-link { min-height: 24px; padding: 1px 0; font-size: 10px; border: 0; color: var(--cp-link); }
+@container workspace (max-width: 700px) {
+  .ontology-canvas { height: 600px; }
+  .ontology-record-tabs select { flex-basis: 100%; margin: 6px 0 0; max-width: 100%; }
+}

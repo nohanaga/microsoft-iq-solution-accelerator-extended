@@ -1,0 +1,83 @@
+{
+  "format": "micro-coffee-ontology-v1",
+  "modelId": "supply",
+  "version": "2026-09-11.1",
+  "datasetId": "maikuro-jp-v1",
+  "dataFile": "../data/operations.json",
+  "source": "v3/data/operations.json",
+  "description": "店舗向け入荷便、欠品記録、注文への関連。登録された関連を表示するもので因果推論や中央拠点の豆在庫との連携ではない。",
+  "tables": [
+    { "id": "suppliers", "entityType": "Supplier", "label": "供給会社", "key": "id", "displayColumn": "name", "description": "販売商品の供給会社および店舗向け便の出荷元。", "properties": [
+      { "name": "suppliers_id", "sourceColumn": "id", "valueType": "String", "nullable": false },
+      { "name": "suppliers_name", "sourceColumn": "name", "valueType": "String", "nullable": false },
+      { "name": "suppliers_city", "sourceColumn": "city", "valueType": "String", "nullable": false }
+    ] },
+    { "id": "shipments", "entityType": "Shipment", "label": "入荷便", "key": "id", "displayColumn": "id", "description": "供給会社から店舗への便。遅延は予定・実績と分析基準日時から計算する。", "properties": [
+      { "name": "shipments_id", "sourceColumn": "id", "valueType": "String", "nullable": false },
+      { "name": "shipments_supplierId", "sourceColumn": "supplierId", "valueType": "String", "nullable": false },
+      { "name": "shipments_storeId", "sourceColumn": "storeId", "valueType": "String", "nullable": false },
+      { "name": "shipments_expectedAt", "sourceColumn": "expectedAt", "valueType": "DateTime", "nullable": false },
+      { "name": "shipments_arrivedAt", "sourceColumn": "arrivedAt", "valueType": "DateTime", "nullable": true },
+      { "name": "shipments_status", "sourceColumn": "status", "valueType": "String", "nullable": false },
+      { "name": "shipments_reason", "sourceColumn": "reason", "valueType": "String", "nullable": false }
+    ] },
+    { "id": "stores", "entityType": "Store", "label": "店舗", "key": "id", "displayColumn": "name", "description": "入荷先および注文受付店舗。設備と能力には不明値を許容する。", "properties": [
+      { "name": "stores_id", "sourceColumn": "id", "valueType": "String", "nullable": false },
+      { "name": "stores_name", "sourceColumn": "name", "valueType": "String", "nullable": false },
+      { "name": "stores_city", "sourceColumn": "city", "valueType": "String", "nullable": false },
+      { "name": "stores_coldEquipment", "sourceColumn": "coldEquipment", "valueType": "Boolean", "nullable": true },
+      { "name": "stores_cupsPerDay", "sourceColumn": "cupsPerDay", "valueType": "BigInt", "nullable": true, "unit": "cups/day" }
+    ] },
+    { "id": "supplyImpacts", "entityType": "SupplyImpact", "label": "欠品記録", "key": "id", "displayColumn": "id", "description": "便・商品・注文明細の関係に、欠品日時と説明用の根拠を付与した記録。", "properties": [
+      { "name": "supplyImpacts_id", "sourceColumn": "id", "valueType": "String", "nullable": false },
+      { "name": "supplyImpacts_shipmentId", "sourceColumn": "shipmentId", "valueType": "String", "nullable": false },
+      { "name": "supplyImpacts_lineId", "sourceColumn": "lineId", "valueType": "String", "nullable": false },
+      { "name": "supplyImpacts_productId", "sourceColumn": "productId", "valueType": "String", "nullable": false },
+      { "name": "supplyImpacts_shortageAt", "sourceColumn": "shortageAt", "valueType": "DateTime", "nullable": false },
+      { "name": "supplyImpacts_evidence", "sourceColumn": "evidence", "valueType": "String", "nullable": false }
+    ] },
+    { "id": "orderLines", "entityType": "OrderLine", "label": "注文明細", "key": "id", "displayColumn": "id", "description": "注文中の販売商品と数量・価格。金額は数量×税抜単価から明細割引を控除する。", "properties": [
+      { "name": "orderLines_id", "sourceColumn": "id", "valueType": "String", "nullable": false },
+      { "name": "orderLines_orderId", "sourceColumn": "orderId", "valueType": "String", "nullable": false },
+      { "name": "orderLines_productId", "sourceColumn": "productId", "valueType": "String", "nullable": false },
+      { "name": "orderLines_quantity", "sourceColumn": "quantity", "valueType": "BigInt", "nullable": false },
+      { "name": "orderLines_priceExTax", "sourceColumn": "priceExTax", "valueType": "Double", "nullable": false, "unit": "JPY/unit" },
+      { "name": "orderLines_taxPercent", "sourceColumn": "taxPercent", "valueType": "Double", "nullable": false, "unit": "%" },
+      { "name": "orderLines_discountExTax", "sourceColumn": "discountExTax", "valueType": "Double", "nullable": false, "unit": "JPY" }
+    ] },
+    { "id": "products", "entityType": "Product", "label": "商品", "key": "id", "displayColumn": "name", "description": "販売商品。開発モデルの DevelopmentProduct とは別の実体。", "properties": [
+      { "name": "products_id", "sourceColumn": "id", "valueType": "String", "nullable": false },
+      { "name": "products_name", "sourceColumn": "name", "valueType": "String", "nullable": false },
+      { "name": "products_category", "sourceColumn": "category", "valueType": "String", "nullable": false },
+      { "name": "products_serving", "sourceColumn": "serving", "valueType": "String", "nullable": false },
+      { "name": "products_priceExTax", "sourceColumn": "priceExTax", "valueType": "Double", "nullable": false, "unit": "JPY/unit" },
+      { "name": "products_taxPercent", "sourceColumn": "taxPercent", "valueType": "Double", "nullable": false, "unit": "%" },
+      { "name": "products_supplierId", "sourceColumn": "supplierId", "valueType": "String", "nullable": true }
+    ] },
+    { "id": "orders", "entityType": "Order", "label": "注文", "key": "id", "displayColumn": "id", "description": "店舗・注文者・注文状態・日時。受取実績のない注文の fulfilledAt は null。", "properties": [
+      { "name": "orders_id", "sourceColumn": "id", "valueType": "String", "nullable": false },
+      { "name": "orders_customerId", "sourceColumn": "customerId", "valueType": "String", "nullable": false },
+      { "name": "orders_storeId", "sourceColumn": "storeId", "valueType": "String", "nullable": false },
+      { "name": "orders_orderedAt", "sourceColumn": "orderedAt", "valueType": "DateTime", "nullable": false },
+      { "name": "orders_fulfilledAt", "sourceColumn": "fulfilledAt", "valueType": "DateTime", "nullable": true },
+      { "name": "orders_status", "sourceColumn": "status", "valueType": "String", "nullable": false }
+    ] },
+    { "id": "customers", "entityType": "Customer", "label": "顧客", "key": "id", "displayColumn": "displayName", "description": "注文者の合成レコード。追加情報源の投稿者と同一人物かどうかは照合していない。", "properties": [
+      { "name": "customers_id", "sourceColumn": "id", "valueType": "String", "nullable": false },
+      { "name": "customers_displayName", "sourceColumn": "displayName", "valueType": "String", "nullable": false },
+      { "name": "customers_loyaltyTier", "sourceColumn": "loyaltyTier", "valueType": "String", "nullable": false }
+    ] }
+  ],
+  "relations": [
+    { "id": "shipments-supplierId", "name": "出荷元", "source": "shipments", "target": "suppliers", "mappingTable": "shipments", "sourceColumn": "id", "targetColumn": "supplierId" },
+    { "id": "shipments-storeId", "name": "入荷先", "source": "shipments", "target": "stores", "mappingTable": "shipments", "sourceColumn": "id", "targetColumn": "storeId" },
+    { "id": "supplyImpacts-shipmentId", "name": "対象便", "source": "supplyImpacts", "target": "shipments", "mappingTable": "supplyImpacts", "sourceColumn": "id", "targetColumn": "shipmentId" },
+    { "id": "supplyImpacts-lineId", "name": "対象明細", "source": "supplyImpacts", "target": "orderLines", "mappingTable": "supplyImpacts", "sourceColumn": "id", "targetColumn": "lineId" },
+    { "id": "supplyImpacts-productId", "name": "欠品商品", "source": "supplyImpacts", "target": "products", "mappingTable": "supplyImpacts", "sourceColumn": "id", "targetColumn": "productId" },
+    { "id": "orderLines-orderId", "name": "所属注文", "source": "orderLines", "target": "orders", "mappingTable": "orderLines", "sourceColumn": "id", "targetColumn": "orderId" },
+    { "id": "orderLines-productId", "name": "注文商品", "source": "orderLines", "target": "products", "mappingTable": "orderLines", "sourceColumn": "id", "targetColumn": "productId" },
+    { "id": "products-supplierId", "name": "供給元", "source": "products", "target": "suppliers", "mappingTable": "products", "sourceColumn": "id", "targetColumn": "supplierId" },
+    { "id": "orders-storeId", "name": "受付店舗", "source": "orders", "target": "stores", "mappingTable": "orders", "sourceColumn": "id", "targetColumn": "storeId" },
+    { "id": "orders-customerId", "name": "注文者", "source": "orders", "target": "customers", "mappingTable": "orders", "sourceColumn": "id", "targetColumn": "customerId" }
+  ]
+}
